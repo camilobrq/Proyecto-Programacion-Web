@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h2>Registro de Personas</h2>
+    <form >
+    <div class="form-group">
+    <label>Identificacion</label>
+    <input type="text" name="identificacion" [(ngModel)]="persona.identificacion" class="form-control" />
+    </div>
+    <div class="form-group">
+    <label>Nombre</label>
+    <input type="text" name="nombre" [(ngModel)]="persona.nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+    <label>sexo</label>
+    <input type="text" name="sexo" [(ngModel)]="persona.sexo" class="form-control" />
+    </div>
+    <div class="form-group">
+    <label>Edad</label>
+    <input type="number" name="edad" [(ngModel)]="persona.edad" class="form-control" />
+    </div>
+    <div class="form-group">
+    <label>Telefono</label>
+    <input type="number" name="telefono" [(ngModel)]="persona.telefono" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>direccion</label>
+        <input type="text" name="direccion" [(ngModel)]="persona.direccion" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Nombre EPS</label>
+            <input type="text" name="nombreEps" [(ngModel)]="persona.nombreEps" class="form-control" />
+            </div>
+    <div class="text-center">
+    <button class="btn btn-primary mr-1"(click)="add()">Register</button>
+    <button class="btn btn-secondary" type="reset">Cancel</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>

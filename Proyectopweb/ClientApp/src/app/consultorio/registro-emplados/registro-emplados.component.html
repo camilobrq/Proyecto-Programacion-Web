@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de Personas</h2>
+            <form>
+                <div class="form-group">
+                    <label>Identificacion</label>
+                    <input type="text" name="identificacion" [(ngModel)]="persona.identificacion"
+                        class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" [(ngModel)]="persona.nombre" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>sexo</label>
+                    <input type="text" name="sexo" [(ngModel)]="persona.sexo" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Edad</label>
+                    <input type="number" name="edad" [(ngModel)]="persona.edad" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input type="number" name="telefono" [(ngModel)]="persona.telefono" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>direccion</label>
+                    <input type="text" name="direccion" [(ngModel)]="persona.direccion" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Universidad donde curso el pregrado</label>
+                    <input type="text" name="Universidad" [(ngModel)]="persona.Universidad" class="form-control" />
+                </div>
+                <div class="text-center">
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Finalizacion de estudios</label>
+                    <input type="text" name="fechaFinalizacion" [(ngModel)]="persona.fechaFinalizacion"
+                        class="form-control" />
+                </div>
+        </div>
+        <div class="form-group">
+            <label>Area en la que esta especializado</label>
+            <input type="text" name="areaExpecializada" [(ngModel)]="persona.areaExpecializada" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Meses de experiencia</label>
+        <input type="number" name="mesesExperiencia" [(ngModel)]="persona.mesesExperiencia" class="form-control" />
+    </div>
+    <div class="text-center">
+        <div class="text-center">
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+                <button class="btn btn-secondary" type="reset">Cancel</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>voy a ser grande mami</footer>
