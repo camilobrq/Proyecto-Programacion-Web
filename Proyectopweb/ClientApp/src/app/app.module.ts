@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PersonaConsultaComponent } from './consultorio/persona-consulta/persona-consulta.component';
 import { PersonaRegistroComponent } from './consultorio/persona-registro/persona-registro.component';
 import { RegistroEmpladosComponent } from './consultorio/registro-emplados/registro-emplados.component';
@@ -21,8 +19,6 @@ import { TratamientoComponent } from './consultorio/tratamiento/tratamiento.comp
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     PersonaConsultaComponent,
     PersonaRegistroComponent,
     RegistroEmpladosComponent,
@@ -36,8 +32,7 @@ import { TratamientoComponent } from './consultorio/tratamiento/tratamiento.comp
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'personaRegistro', component: PersonaRegistroComponent},
       { path: 'personaConsulta', component: PersonaConsultaComponent },
       { path: 'registroEmpleado', component: RegistroEmpladosComponent },
