@@ -1,63 +1,66 @@
-<header>
-  <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
-  >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">VitalMente</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
-        [ngClass]="{ show: isExpanded }"
-      >
-        <ul class="navbar-nav flex-grow">
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/home']"
-            >Home</a
-            >
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/personaRegistro']"
-            >Registro Paciente</a
-            >
-            </li>
+<body>
+  <div id="header">
+  
+    <ul class="nav">
+      <li class="nav-item" [routerLinkActive]="['link-active']">
+        <a class="nav-link text-dark" [routerLink]="['/home']">Home</a>
+      </li>
+
+      <li>
+        <a href="#">Pacientes</a>
+          <ul>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/registroEmpleado']"
-            >Registro Empleados</a
-            >
-            </li>
-            <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-dark" [routerLink]="['/personaConsulta']"
-              >Consulta</a
+              <a class="nav-link text-dark" [routerLink]="['/personaRegistro']"
+              >Registro Paciente</a
               >
+            </li>
+              <li class="nav-item" [routerLinkActive]="['link-active']">
+                <a class="nav-link text-dark" [routerLink]="['/personaConsulta']"
+                >Consultar Paciente.</a
+                >
               </li>
               <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-dark" [routerLink]="['/gestionCitas']"
-              >Gestionar cita</a
-              >
+                <a class="nav-link text-dark" [routerLink]="['/gestionCitas']"
+                >Apartar citas</a
+                >
+              </li>
+              <li class="nav-item" [routerLinkActive]="['link-active']">
+                <a class="nav-link text-dark" [routerLink]="['/consultarCitas']"
+                >Consultar Citas</a
+                >
               </li>
               <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link text-dark" [routerLink]="['/evaluacion']"
-                >evaluacion</a
+                >Evaluacion</a
                 >
-                </li>
-                <li class="nav-item" [routerLinkActive]="['link-active']">
+              </li>
+              <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link text-dark" [routerLink]="['/tratamiento']"
                 >Tratamiento</a
                 >
-                </li>
+              </li>
+          </ul>
+
+      </li>
+
+
+      <li><a href="#">Empleados</a>
+        <ul>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/registroEmpleado']"
+            >Registrar Empleado</a
+            >
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/consultarEmpleado']"
+            >Consultar Empleado</a
+            >
+          </li>
         </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+      </li>
+      <li><a href="">Servicio de ayuda</a></li>
+    </ul>
+  </div>
+</body>
 
 

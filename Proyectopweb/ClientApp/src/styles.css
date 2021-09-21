@@ -4,7 +4,9 @@
 a {
   color: #0366d6;
 }
-
+body{
+  background-image: url(https://img.europapress.es/fotoweb/fotonoticia_20140608100036_800.jpg);
+}
 code {
   color: #e01a76;
 }
