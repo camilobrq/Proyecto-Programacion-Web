@@ -1,1 +1,36 @@
-<p>gestion-cita works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            
+            <section class="form-empleados">
+                <h2>Apartar Cita</h2>
+                <div class="form-group">
+                  
+                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="ApartarCitas.identifiacionPaciente"
+                        class="form-control" />
+                </div>
+                <div class="form-group">
+                  
+                    <input type="text" name="nombre" placeholder="Nombre del paciente" [(ngModel)]="ApartarCitas.nombrePaciente" class="form-control" />
+                </div>
+              
+                <div class="form-group">
+                  
+                    <input type="text" name="nombreEps" placeholder="Identificacion del psicologo" [(ngModel)]="ApartarCitas.identificacionEmpleado" class="form-control" />
+                </div>
+                <div class="form-group">
+                   
+                    <input type="text" name="nombreEps" placeholder="Nombre del psicologo" [(ngModel)]="ApartarCitas.nombrePsicologo" class="form-control" />
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" name="nombreEps" placeholder="Tipo de cita" [(ngModel)]="ApartarCitas.tipoCita" class="form-control" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

@@ -4,9 +4,11 @@
 a {
   color: #0366d6;
 }
-body{
-  background-image: url(https://img.europapress.es/fotoweb/fotonoticia_20140608100036_800.jpg);
+
+body {
+  background-image: url(https://scontent.fbaq2-2.fna.fbcdn.net/v/t39.30808-6/242725775_116898460719720_646095256598541311_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeFceHtunZTAeqJV-Pep8ZZ3yUjpGvR2UPvJSOka9HZQ-1tlqB2zNno9TXZO8vNjsjU_JG-B03uodwimOab8Uetc&_nc_ohc=Zev9dadMuRUAX9ACNLv&tn=Y8Dc9jo0CPqQxLhT&_nc_ht=scontent.fbaq2-2.fna&oh=ed459dcd46f529d85f4ec3e82addb038&oe=614F62FA);
 }
+
 code {
   color: #e01a76;
 }
@@ -15,4 +17,13 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+footer {
+  background-color: black;
+  padding: 10px;
+  width:100%;
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 100%;
 }

@@ -7,8 +7,5 @@ export class Persona {
     telefono: number;
     direccion: string;
     nombreEps: string;
-    Universidad: string;
-    fechaFinalizacion: string;
-    areaEspecializada: string;
-    mesesExperiencia: number;
+   
 }
