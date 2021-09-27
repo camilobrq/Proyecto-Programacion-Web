@@ -1,1 +1,38 @@
-<p>consultar-empleado works!</p>
+<div class="row">
+    <div class="col-6">
+        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Type to filter">
+    </div>
+</div>
+<hr>
+<table class="table table-striped" *ngIf='empleados && empleados.length'>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">identificación</th>
+            <th scope="col">Nombre </th>
+            <th scope="col">sexo</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Universidad de egreso</th>
+            <th scope="col">Año de finalizacion de estudios</th>
+            <th scope="col">Area</th>
+            <th scope="col">Meses de experiencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados; index as i ">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ empleado.identificacion }} </td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{empleado.sexo }}</td>
+            <td>{{ empleado.edad }}</td>
+            <td>{{ empleado.telefono }}</td>
+            <td>{{ empleado.direccion }}</td>
+            <td>{{ empleado.Universidad }}</td>
+            <td>{{ empleado.fechaFinalizacion }}</td>
+            <td>{{ empleado.areaEspecializada }}</td>
+            <td>{{ empleado.mesesExperiencia }}</td>
+        </tr>
+    </tbody>
+</table>

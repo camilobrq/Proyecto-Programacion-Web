@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpleadoService } from 'src/app/services/empleado.service';
+import { Empleado } from '../models/empleado';
 
 @Component({
   selector: 'app-consultar-empleado',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultar-empleado.component.css']
 })
 export class ConsultarEmpleadoComponent implements OnInit {
-
-  constructor() { }
+  empleados:Empleado[];
+  searchText:string;
+  constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit() {
+    this.get();
   }
-
+  get(){
+    this.empleados=this.empleadoService.get();
+  }
 }

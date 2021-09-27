@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpleadoService } from 'src/app/services/empleado.service';
+import { Empleado } from '../models/empleado';
 
 @Component({
   selector: 'app-registro-emplados',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro-emplados.component.css']
 })
 export class RegistroEmpladosComponent implements OnInit {
-
-  constructor() { }
+empleado:Empleado;
+  constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit() {
+    this.empleado= new Empleado;
   }
-
+add(){
+  alert('Empleado registrado correctamente'+JSON.stringify(this.empleado));
+  this.empleadoService.post(this.empleado);
+}
 }
