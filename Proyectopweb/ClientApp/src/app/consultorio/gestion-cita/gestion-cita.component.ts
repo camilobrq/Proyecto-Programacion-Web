@@ -22,6 +22,7 @@ export class GestionCitaComponent implements OnInit {
       if(this.citas != null){
         for(let persona of this.personas){
           if(persona.identificacion === this.citas.identifiacionPaciente){
+            this.citas.nombrePaciente=persona.nombre;
             return true;
           }
         }
