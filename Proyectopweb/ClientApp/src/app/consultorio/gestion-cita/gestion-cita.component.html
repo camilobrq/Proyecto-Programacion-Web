@@ -6,25 +6,30 @@
                 <h2>Apartar Cita</h2>
                 <div class="form-group">
                   
-                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="ApartarCitas.identifiacionPaciente"
+                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="citas.identifiacionPaciente"
                         class="form-control" />
                 </div>
                 <div class="form-group">
                   
-                    <input type="text" name="nombre" placeholder="Nombre del paciente" [(ngModel)]="ApartarCitas.nombrePaciente" class="form-control" />
+                    <input type="text" name="nombre" placeholder="Nombre del paciente" [(ngModel)]="citas.nombrePaciente" class="form-control" />
                 </div>
-              
                 <div class="form-group">
                   
-                    <input type="text" name="nombreEps" placeholder="Identificacion del psicologo" [(ngModel)]="ApartarCitas.identificacionEmpleado" class="form-control" />
+                    <input type="text" name="email" placeholder="Correo Electronico" [(ngModel)]="citas.email" class="form-control" />
                 </div>
-                <div class="form-group">
-                   
-                    <input type="text" name="nombreEps" placeholder="Nombre del psicologo" [(ngModel)]="ApartarCitas.nombrePsicologo" class="form-control" />
-                </div>
-                <div class="form-group">
-                    
-                    <input type="text" name="nombreEps" placeholder="Tipo de cita" [(ngModel)]="ApartarCitas.tipoCita" class="form-control" />
+                <div class="form-group">  
+                    <label>Tipo de cita</label>                
+                    <select type="text" name="tipoCita"  [(ngModel)]="citas.tipoCita" class="form-control">
+                      <option>Terapia psicoanalítica</option>  
+                      <option>Terapia cognitivo-conductual</option>  
+                      <option>Terapia sistémica breve</option>  
+                      <option>Terapia neuropsicológica</option>  
+                      <option>Terapia Gestalt</option>  
+                      <option>Terapia racional emotiva racional (TREC)</option>  
+                      <option>Terapia cognitiva</option>  
+                      <option>Terapia Breve Centrada en Soluciones</option>  
+                      <option>Terapia Counseling</option>  
+                    </select>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary mr-1" (click)="add()">Register</button>

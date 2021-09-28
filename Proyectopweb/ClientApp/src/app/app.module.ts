@@ -15,6 +15,8 @@ import { EvaluacionComponent } from './consultorio/evaluacion/evaluacion.compone
 import { TratamientoComponent } from './consultorio/tratamiento/tratamiento.component';
 import { ConsultarEmpleadoComponent } from './consultorio/consultar-empleado/consultar-empleado.component';
 import { ConsultarCitasComponent } from './consultorio/consultar-citas/consultar-citas.component';
+import { ConsultaEvaluacionComponent } from './Consultorio/consulta-evaluacion/consulta-evaluacion.component';
+import { ConsultaTratamientoComponent } from './Consultorio/consulta-tratamiento/consulta-tratamiento.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ConsultarCitasComponent } from './consultorio/consultar-citas/consultar
     EvaluacionComponent,
     TratamientoComponent,
     ConsultarEmpleadoComponent,
-    ConsultarCitasComponent
+    ConsultarCitasComponent,
+    ConsultaEvaluacionComponent,
+    ConsultaTratamientoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -45,6 +49,8 @@ import { ConsultarCitasComponent } from './consultorio/consultar-citas/consultar
       { path: 'tratamiento', component: TratamientoComponent },
       { path: 'consultarEmpleado', component: ConsultarEmpleadoComponent },
       { path: 'consultarCitas', component: ConsultarCitasComponent },
+      { path: 'consultarEvaluacion', component: ConsultaEvaluacionComponent },
+      { path: 'consultarTratamiento', component: ConsultaTratamientoComponent },
     ])
   ],
   providers: [],

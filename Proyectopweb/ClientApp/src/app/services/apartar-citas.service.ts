@@ -8,7 +8,7 @@ export class ApartarCitasService {
 
   constructor() { }
   get(): ApartarCitas[] {
-    return JSON.parse(localStorage.getItem('datos'));
+    return JSON.parse(localStorage.getItem('CitasApartadas'));
     }
     post(apartarCita: ApartarCitas) {
     let apartarCitas: ApartarCitas[] = [];
@@ -16,7 +16,7 @@ export class ApartarCitasService {
       apartarCitas = this.get();
     }
     apartarCitas.push(apartarCita);
-    localStorage.setItem('datos', JSON.stringify(apartarCitas));
+    localStorage.setItem('CitasApartadas', JSON.stringify(apartarCitas));
     }
     
     

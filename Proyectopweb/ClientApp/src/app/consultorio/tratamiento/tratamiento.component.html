@@ -1,1 +1,28 @@
-<p>tratamiento works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+           
+            <section class="Form-Tratamiento">
+                <h2>Tratamiento</h2>
+                <div class="form-group">
+                   
+                    <input  type="text" name="identificacion" placeholder=" Identificacion" [(ngModel)]="tratamiento.idEvaluacion"
+                        class="form-control"  />
+                </div>
+           
+                <div class="form-group">
+                   
+                    <input type="text" name="tratamiento" placeholder=" Diagnostico paciente" [(ngModel)]="tratamiento.tratamiento" class="form-control" />
+                </div>
+                <div class="form-group">
+                   
+                    <input type="text" name="Medicacion" placeholder=" Diagnostico paciente" [(ngModel)]="tratamiento.medicacion" class="form-control" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

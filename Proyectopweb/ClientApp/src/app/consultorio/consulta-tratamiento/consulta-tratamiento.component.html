@@ -1,0 +1,24 @@
+
+<hr>
+<table class="table table-striped" *ngIf='tratamientos && tratamientos.length'>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">identificación Paciente</th>
+            <th scope="col">Evaluacion  </th>
+            <th scope="col">Tratamiento a seguir</th>
+            <th scope="col">Medicacion</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tratamiento of tratamientos; index as i ">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ tratamiento.idEvaluacion }} </td>
+            <td>{{ tratamiento.evaluacion }}</td>
+            <td>{{tratamiento.tratamiento }}</td>
+            <td>{{ tratamiento.medicacion }}</td>
+         
+        </tr> 
+    </tbody>
+</table>

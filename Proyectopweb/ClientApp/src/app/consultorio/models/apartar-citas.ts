@@ -1,7 +1,6 @@
 export class ApartarCitas {
     identifiacionPaciente: string;
     nombrePaciente: string;
-    identificacionEmpleado: string;
-    nombrePsicologo:string;
+    email: string;
     tipoCita:string;
 }

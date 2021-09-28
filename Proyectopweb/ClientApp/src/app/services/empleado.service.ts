@@ -18,4 +18,5 @@ export class EmpleadoService {
     empleados.push(empleado);
     localStorage.setItem('datosEmpleados', JSON.stringify(empleados));
     }
+    
 }

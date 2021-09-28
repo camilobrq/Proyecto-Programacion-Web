@@ -9,13 +9,32 @@ import { Empleado } from '../models/empleado';
 })
 export class RegistroEmpladosComponent implements OnInit {
 empleado:Empleado;
+empleados: Empleado[];
   constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit() {
     this.empleado= new Empleado;
   }
+  teEncontre(){
+    this.empleados = this.empleadoService.get();
+    if(this.empleado != null){
+      for(let empleado of this.empleados){
+        if(empleado.identificacion == this.empleado.identificacion){
+          return true;
+        }
+      }
+    }
+    return false;
+  }
 add(){
-  alert('Empleado registrado correctamente'+JSON.stringify(this.empleado));
-  this.empleadoService.post(this.empleado);
+    if(!this.teEncontre()){
+      alert('Empleado registrado correctamente'+JSON.stringify(this.empleado));
+      this.empleadoService.post(this.empleado);
+    }else if(this.teEncontre()){
+      alert('El empleado ya se encuentra registrado.');
+    }
+   
+
+  
 }
 }

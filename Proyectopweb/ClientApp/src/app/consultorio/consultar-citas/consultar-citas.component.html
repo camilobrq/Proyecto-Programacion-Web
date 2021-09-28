@@ -1,1 +1,24 @@
-<p>consultar-citas works!</p>
+
+<hr>
+<table class="table table-striped" *ngIf='citas && citas.length'>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">identificación</th>
+            <th scope="col">Nombre </th>
+            <th scope="col">Email</th>
+            <th scope="col">Tipo cita</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cita of citas; index as i ">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ cita.identifiacionPaciente }} </td>
+            <td>{{ cita.nombrePaciente }}</td>
+            <td>{{cita.email }}</td>
+            <td>{{ cita.tipoCita }}</td>
+         
+        </tr> 
+    </tbody>
+</table>
