@@ -1,0 +1,73 @@
+
+.Form-historiap1{
+    width: 400px;
+    background: white;
+    padding: 1px;
+    margin: -370px;
+ 
+    margin-top: 40px;
+    margin-bottom: auto;
+    font-family: 'calibri';
+    color: black;
+ }
+
+ .form-group{
+     width: 100%;
+     background: white;
+     padding: 5px;
+     border-radius: 4px;
+     margin-bottom: 4px;
+    
+     font-family: 'calibri';
+     font-size: 18px;
+ }
+ 
+.Form-historiap2{
+    width: 400px;
+    background: white;
+    padding: 1px;
+    margin: 50px;
+    
+    margin-top: -760px;
+    margin-bottom: auto;
+    font-family: 'calibri';
+    color: black;
+ }
+ .form-groupa{
+    
+    width: 100%;
+     background: white;
+     padding: 2px;
+     border-radius: 4px;
+     margin-bottom: 4px;
+    
+     font-family: 'calibri';
+     font-size: 18px;
+}
+.text-center{
+    font-family: 'calibri';
+     font-size: 18px;
+     margin-top: 90px;
+}
+.Form-historiap3{
+    width: 400px;
+    background: white;
+    padding: 1px;
+    margin: 470px;
+    
+    margin-top: -670px;
+    margin-bottom: auto;
+    font-family: 'calibri';
+    color: black;
+ }
+ .form-groupb{
+    
+    width: 100%;
+     background: white;
+     padding: -2px;
+     border-radius: 4px;
+     margin-bottom: 4px;
+    
+     font-family: 'calibri';
+     font-size: 18px;
+}

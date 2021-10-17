@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+         <section class="Form-Evaluacion">
+                    <section class="Form-Evaluacionp1">
+                        <h2>Evaluacion o Valoracion</h2>
+                        <div class="form-group">
+                        <SPan>Fecha:</SPan>
+                            <input  type="date" name="fecha"  [(ngModel)]="evaluacion.identifiacionPaciente"
+                                class="form-control"  />
+                        </div>
+                
+                        <div class="form-group">
+                        
+                            <input type="text" name="Lugar" placeholder=" Lugar" [(ngModel)]="evaluacion.diagnostico" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                        
+                            <input  type="text" name="identificacion" placeholder=" Identificacion" [(ngModel)]="evaluacion.identifiacionPaciente"
+                                class="form-control"  />
+                        </div>
+                
+                        <div class="form-group">
+                        
+                            <input type="text" name="Nombre" placeholder=" Nombres" [(ngModel)]="evaluacion.diagnostico" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                        
+                            <input  type="text" name="apellido" placeholder=" Apellidos" [(ngModel)]="evaluacion.identifiacionPaciente"
+                                class="form-control"  />
+                        </div>
+                        
+                        <div class="form-group">
+                            <span>Resultado Prueba CAQ</span><br>
+                            <span>Directa</span>
+                            <select  name="directa" placeholder=" Seleccionar" [(ngModel)]="evaluacion.identifiacionPaciente"
+                            class="form-control"  > 
+                            <option>D1</option>
+                            <option>D2</option>
+                            <option>D3</option>
+                            <option>D4</option>
+                            <option>D5</option>
+                            <option>D6</option>
+                            <option>D7</option>
+                            <option>Pa</option>
+                            <option>Pp</option>
+                            <option>Sc</option>
+                            <option>As</option>
+                            <option>Ps</option>
+                            
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <span>Decatipo</span>
+                            <select  name="decatipo" placeholder=" seleccion" [(ngModel)]="evaluacion.identifiacionPaciente"
+                            class="form-control"  > 
+                            <option>D1</option>
+                            <option>D2</option>
+                            <option>D3</option>
+                            <option>D4</option>
+                            <option>D5</option>
+                            <option>D6</option>
+                            <option>D7</option>
+                            <option>Pa</option>
+                            <option>Pp</option>
+                            <option>Sc</option>
+                            <option>As</option>
+                            <option>Ps</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <span>Resultado Prueba MMP12</span><br>
+                            <span>Postulaciones Tipicias</span><br>
+                            <span>Validacion</span>
+                            <select  name="decatipo" placeholder=" seleccion" [(ngModel)]="evaluacion.identifiacionPaciente"
+                            class="form-control"  > 
+                            <option>L</option>
+                            <option>F</option>
+                            <option>K</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <span>Escalas Basicas</span>
+                            <select  name="decatipo" placeholder=" seleccion" [(ngModel)]="evaluacion.identifiacionPaciente"
+                            class="form-control"  > 
+                            <option>Hs</option>
+                            <option>D</option>
+                            <option>Hy</option>
+                            <option>Pd</option>
+                            <option>Mf</option>
+                            <option>Pa</option>
+                            <option>Pt</option>
+                            <option>Sc</option>
+                            <option>Ma</option>
+                            <option>Si</option>
+                        
+                            </select>
+                        </div>
+                       
+                    </section>
+                        <section class="Form-Evaluacionp2">
+                            <div class="form-groupa">
+                                <span>Antecedentes Personales: Caracteristicas personales</span>
+                            <textarea name="Antecedentes" placeholder=" Antecedentes Personales: Caracteristicas personales" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                            <div class="form-groupa">
+                                <span>Familiograma</span>
+                                <textarea name="Familiograma" placeholder=" Familiograma" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                            <div class="form-groupa">
+                                <span>Motivacion</span>
+                                <textarea name="motivacion" placeholder=" Motivacion" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                            <div class="form-groupa">
+                                <span>Area Laboral</span>
+                                <textarea name="areaLabooral" placeholder=" Area Laboral" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                            <div class="form-groupa">
+                                <span>Area Social y Economica</span>
+                                <textarea name="areaSocial" placeholder=" Area Social y Economica" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                            <div class="form-groupa">
+                                <span>Antecedentes psicopatologicos</span>
+                                <textarea name="antecedentesPsicologicos" placeholder=" Antecedentes psicopatologicos" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                            <div class="form-groupa">
+                                <span>Concepto Final Psicologo</span>
+                                <textarea name="conceptoFinal" placeholder=" Concepto Final Psicologo" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                            </div>
+                
+                        </section>
+                        <div class="text-center">
+                            <button class="btn btn-secondary" [routerLink]="['/instructivo']">Instructivo</button>
+                            <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+                            <button class="btn btn-secondary" type="reset">Cancel</button>
+                        </div>
+                </section>
+        </div>
+    </div>
+</div>

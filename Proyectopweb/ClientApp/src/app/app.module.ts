@@ -7,16 +7,23 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { PersonaConsultaComponent } from './consultorio/persona-consulta/persona-consulta.component';
-import { PersonaRegistroComponent } from './consultorio/persona-registro/persona-registro.component';
-import { RegistroEmpladosComponent } from './consultorio/registro-emplados/registro-emplados.component';
-import { GestionCitaComponent } from './consultorio/gestion-cita/gestion-cita.component';
-import { EvaluacionComponent } from './consultorio/evaluacion/evaluacion.component';
-import { TratamientoComponent } from './consultorio/tratamiento/tratamiento.component';
-import { ConsultarEmpleadoComponent } from './consultorio/consultar-empleado/consultar-empleado.component';
-import { ConsultarCitasComponent } from './consultorio/consultar-citas/consultar-citas.component';
-import { ConsultaEvaluacionComponent } from './Consultorio/consulta-evaluacion/consulta-evaluacion.component';
-import { ConsultaTratamientoComponent } from './Consultorio/consulta-tratamiento/consulta-tratamiento.component';
+import { PersonaConsultaComponent } from './Administrador/persona-consulta/persona-consulta.component';
+import { PersonaRegistroComponent } from './Administrador/persona-registro/persona-registro.component';
+import { RegistroEmpladosComponent } from './Administrador/registro-emplados/registro-emplados.component';
+import { GestionCitaComponent } from './Administrador/gestion-cita/gestion-cita.component';
+import { EvaluacionComponent } from './Administrador/evaluacion/evaluacion.component';
+import { TratamientoComponent } from './Administrador/tratamiento/tratamiento.component';
+import { ConsultarEmpleadoComponent } from './Administrador/consultar-empleado/consultar-empleado.component';
+import { ConsultarCitasComponent } from './Administrador/consultar-citas/consultar-citas.component';
+import { ConsultaEvaluacionComponent } from './Administrador/consulta-evaluacion/consulta-evaluacion.component';
+import { ConsultaTratamientoComponent } from './Administrador/consulta-tratamiento/consulta-tratamiento.component';
+import { NavMenuEmpleadoComponent } from './nav-menu-empleado/nav-menu-empleado.component';
+import { NavMenuClienteComponent } from './nav-menu-Cliente/nav-menu-cliente.component';
+import { InstructivoComponent } from './Administrador/instructivo/instructivo.component';
+import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-historia-clinica/registrar-historia-clinica.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +39,13 @@ import { ConsultaTratamientoComponent } from './Consultorio/consulta-tratamiento
     ConsultarEmpleadoComponent,
     ConsultarCitasComponent,
     ConsultaEvaluacionComponent,
-    ConsultaTratamientoComponent
+    ConsultaTratamientoComponent,
+    NavMenuEmpleadoComponent,
+    NavMenuClienteComponent,
+    InstructivoComponent,
+    RegistrarHistoriaClinicaComponent,
+ 
+  
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -51,6 +64,8 @@ import { ConsultaTratamientoComponent } from './Consultorio/consulta-tratamiento
       { path: 'consultarCitas', component: ConsultarCitasComponent },
       { path: 'consultarEvaluacion', component: ConsultaEvaluacionComponent },
       { path: 'consultarTratamiento', component: ConsultaTratamientoComponent },
+      { path: 'instructivo', component: InstructivoComponent },
+      { path: 'historiaClinica', component: RegistrarHistoriaClinicaComponent },
     ])
   ],
   providers: [],

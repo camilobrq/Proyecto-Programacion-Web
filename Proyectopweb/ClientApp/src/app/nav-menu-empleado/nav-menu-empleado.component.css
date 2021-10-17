@@ -48,7 +48,7 @@
 		position: absolute;
 		background-color: var(--white-text);
 		min-width: 10rem;
-		box-shadow: 0 .8rem 1rem 0 rgba(0,0,00.2);
+		box-shadow: 0 .8rem 1rem 0 rgb(28, 157, 231);
 		z-index: 1;
 	}
 	
@@ -72,10 +72,12 @@
 	.drop-down-menu:hover .drop-down-menu-content{
 		display: block;
 		background-color: gainsboro;
+			
 	}
 	
 	nav ul{
 		display: flex;
+		
 	}
 	
 	.drawer{
@@ -92,6 +94,7 @@
 	
 	#ckbox{
 		display: none;
+		
 	}
 	
 	/*media query*/
@@ -103,14 +106,17 @@
 	
 		.drawer{
 			display: block;
+			
 		}
 	
 		.drop-down-menu-content{
 			width: 100%;
+			
 		}
 	
 		nav h1{
 			margin-left: 1rem;
+			
 		}
 	
 		ul{
@@ -129,6 +135,7 @@
 	
 		#ckbox:checked ~ .menu-box{
 			left: 0;
+		
 		}
 	}
 	

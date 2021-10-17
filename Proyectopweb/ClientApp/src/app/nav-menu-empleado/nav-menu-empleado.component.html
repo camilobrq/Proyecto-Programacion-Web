@@ -1,0 +1,39 @@
+
+<body>
+
+    <header>
+          
+      <nav>
+  
+          <input type="checkbox" id="ckbox">
+          <label for="ckbox" class="drawer">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+          </label>
+  
+          <h1>VitalMente</h1>
+  
+          <ul class="menu-box">
+  
+             
+              <div class="drop-down-menu">
+                  <button class="drop-down-button">Funciones del Psicologo
+                      <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="drop-down-menu-content">
+                    <a class="nav-link text-dark" [routerLink]="['/evaluacion']">Realizar Evaluacion</a>
+                    <a class="nav-link text-dark" [routerLink]="['/consultarEvaluacion']">Consultar evaluaciones</a>
+                    <a class="nav-link text-dark" [routerLink]="['/tratamiento']">Recetar Tratamiento</a>
+                    <a class="nav-link text-dark" [routerLink]="['/consultarTratamiento']">Consultar Tratamientos</a>
+                    <a class="nav-link text-dark" [routerLink]="['/historiaClinica']">Realizar Historia clinica</a>
+                    <a class="nav-link text-dark" [routerLink]="['/consultarTratamiento']">Consultar Hisotiras Clinicas</a>
+                  </div>
+              </div>
+  
+  
+          </ul>
+      </nav>
+  </header>
+  </body>
+  
+  
+  

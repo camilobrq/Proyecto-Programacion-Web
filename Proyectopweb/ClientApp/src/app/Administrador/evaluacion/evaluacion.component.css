@@ -1,0 +1,62 @@
+
+.Form-Evaluacionp{
+    width: 1000px;
+    background: #0E4BEF;
+    padding: 1px;
+    margin: -270px;
+ 
+    margin-top: 40px;
+    margin-bottom: auto;
+    font-family: 'calibri';
+    color: white;
+ }
+.Form-Evaluacionp1{
+    width: 400px;
+    background: white;
+    padding: 1px;
+    margin: -150px;
+ 
+    margin-top: 40px;
+    margin-bottom: auto;
+    font-family: 'calibri';
+    color: black;
+ }
+
+ .form-group{
+     width: 100%;
+     background: white;
+     padding: 2px;
+     border-radius: 4px;
+     margin-bottom: 4px;
+    
+     font-family: 'calibri';
+     font-size: 18px;
+ }
+ 
+.Form-Evaluacionp2{
+    width: 400px;
+    background: white;
+    padding: 1px;
+    margin: 320px;
+    
+    margin-top: -635px;
+    margin-bottom: auto;
+    font-family: 'calibri';
+    color: black;
+ }
+ .form-groupa{
+    
+    width: 100%;
+     background: white;
+     padding: 2px;
+     border-radius: 4px;
+     margin-bottom: 4px;
+    
+     font-family: 'calibri';
+     font-size: 18px;
+}
+.text-center{
+    font-family: 'calibri';
+     font-size: 18px;
+     margin-top: 90px;
+}

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ApartarCitas } from '../consultorio/models/apartar-citas';
+import { ApartarCitas } from '../Administrador/models/apartar-citas';
+
 
 @Injectable({
   providedIn: 'root'
