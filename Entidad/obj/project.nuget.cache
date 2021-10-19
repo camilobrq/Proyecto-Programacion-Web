@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7K1ho14kyCD3bGHI8oAifbVKulCS4uHcMAgI6TaWhj2347T91wrFotdeaWRexjsM4xb4tVYIe7311KZghXl9mg==",
+  "dgSpecHash": "ovKt/ElORUv1YCMmtnmNi1veftZ6ufGh7ldNQIMKi41ep9GbrYSTSXrltF++69bsG0zkUqI1OJIqJr/YU3aU9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\Entidad.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\windows 10\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

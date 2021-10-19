@@ -3,5 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
+<ItemGroup>
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <ProjectReference Include="..\Entidad\Entidad.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+   
+  </ItemGroup>
 </Project>

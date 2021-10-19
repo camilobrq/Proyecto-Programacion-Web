@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApartarCitasService } from 'src/app/services/apartar-citas.service';
 import { ApartarCitas } from '../models/apartar-citas';
+import { Persona } from '../models/persona';
 
 @Component({
   selector: 'app-consultar-citas',
@@ -10,6 +11,7 @@ import { ApartarCitas } from '../models/apartar-citas';
 export class ConsultarCitasComponent implements OnInit {
   citas:ApartarCitas[];
   searchText:string;
+ 
   constructor(private apartarCitasService: ApartarCitasService) { }
 
   ngOnInit() {

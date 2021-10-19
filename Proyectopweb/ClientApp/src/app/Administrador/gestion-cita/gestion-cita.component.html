@@ -10,8 +10,9 @@
                         class="form-control" />
                 </div>
                 <div class="form-group">
+
                   
-                    <input type="text" name="Nombre" placeholder="Nombres y Apellidos" [(ngModel)]="citas.identifiacionPaciente"
+                    <input type="text" name="Nombre" placeholder="Nombres y Apellidos" [(ngModel)]="citas.nombrePaciente"
                         class="form-control" />
                 </div>
                 
@@ -31,31 +32,23 @@
                 </div>
                 <div class="form-group">
                     <span>Fecha deseada de la cita:</span>
-                    <input type="date" name="fecha" [(ngModel)]="citas.email" class="form-control" />
+                    <input type="date" name="fecha" [(ngModel)]="citas.fechaDeseada" class="form-control" />
                 </div>
                 <div class="form-group">
                   
-                    <input type="text" name="email" placeholder="Eps" [(ngModel)]="citas.email" class="form-control" />
+                    <input type="text" name="eps" placeholder="Eps" [(ngModel)]="citas.eps" class="form-control" />
                 </div>
                 <div class="form-group">
                   
-                    <input type="text" name="Nautorizacion" placeholder="Numero de Autorizacion" [(ngModel)]="citas.email" class="form-control" />
+                    <input type="text" name="Nautorizacion" placeholder="Numero de Autorizacion" [(ngModel)]="citas.numeroAutorizacion" class="form-control" />
                 </div>
                 <div class="form-group">
                     <span>Fecha de vencimiento de la autorizacion:</span>
-                    <input type="date" name="fecha" [(ngModel)]="citas.email" class="form-control" />
+                    <input type="date" name="fecha" [(ngModel)]="citas.fechaVencimientoAutorizacion" class="form-control" />
                 </div>
                 <div class="form-group">
                   
-                    <input type="text" name="solicitante" placeholder="Nombre del solicitante" [(ngModel)]="citas.email" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="parentesco" placeholder="Parentesco" [(ngModel)]="citas.email" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="contacto" placeholder="Numero de telefono" [(ngModel)]="citas.email" class="form-control" />
+                    <input type="text" name="contacto" placeholder="Numero de telefono" [(ngModel)]="citas.numeroContacto" class="form-control" />
                 </div>
                 <div class="form-group">
                   

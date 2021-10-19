@@ -1,25 +1,25 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import  { tap, catchError}  from  'rxjs/operators';
 import { Persona } from '../Administrador/models/persona';
-
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
 
-  constructor() { }
+  baseUrl: string;
+  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    this.baseUrl = baseUrl;
+  }
   
-  get(): Persona[] {
-    return JSON.parse(localStorage.getItem('datos'));
-    }
-    post(persona: Persona) {
-    let personas: Persona[] = [];
-    if (this.get() != null) {
-    personas = this.get();
-    }
-    personas.push(persona);
-    localStorage.setItem('datos', JSON.stringify(personas));
-    }
-    
-    
+
+  post(persona: Persona): Observable<Persona> {
+    return this.http.post<Persona>(this.baseUrl + 'api/Persona', persona).pipe(
+      tap(_ => console.log("Guardó")),
+      catchError(err => { console.log("Error al Guardar"); return of(persona) })
+    );
+  }
 }

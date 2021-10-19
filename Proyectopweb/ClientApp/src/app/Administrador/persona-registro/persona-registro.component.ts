@@ -10,32 +10,21 @@ import { Persona } from '../models/persona';
 export class PersonaRegistroComponent implements OnInit {
 persona: Persona;
 personas: Persona[];
-  constructor(private personaService: PersonaService) { }
+  constructor(private personaService: PersonaService) { 
+    this.persona= new Persona();
+  }
 
   ngOnInit() {
-    this.persona=new Persona;
+ 
   }
-  teEncontre(){
-    this.personas = this.personaService.get();
-    if(this.persona != null){
-      for(let persona of this.personas){
-        if(persona.identificacion === this.persona.identificacion){
-          return true;
-        }
+
+  add(){
+    this.personaService.post(this.persona).subscribe(p=>{
+      if(p!=null){
+        alert('Persona Creada!');
+        this.persona=p;
       }
-    }
-    
-    return false;
+    });
   }
-add(){
-  if(this.teEncontre()){
-    alert('ya existe un paciente con esta identifiacion.');
-  }else{
-    alert('El paciente ha sido registrado correctamente.' + JSON.stringify(this.persona));
-    this.personaService.post(this.persona);
-  }
- 
- 
-}
 
 }
