@@ -8,13 +8,20 @@
     ".NETCoreApp,Version=v5.0": {
       "Entidad/1.0.0": {
         "dependencies": {
-          "System.ComponentModel.Annotations": "5.0.0"
+          "System.ComponentModel.Annotations": "6.0.0-preview.4.21253.7"
         },
         "runtime": {
           "Entidad.dll": {}
         }
       },
-      "System.ComponentModel.Annotations/5.0.0": {}
+      "System.ComponentModel.Annotations/6.0.0-preview.4.21253.7": {
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.25307"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -23,12 +30,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.ComponentModel.Annotations/5.0.0": {
+    "System.ComponentModel.Annotations/6.0.0-preview.4.21253.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
-      "path": "system.componentmodel.annotations/5.0.0",
-      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
+      "sha512": "sha512-h0eWBYUk1rLI31AAmLMgmVzy6UBMUBvRfAqB9VH+O8pMT5GBFpBJoTEIdhBfzcn7VS+aPPDzpLlASHXdjt2qXQ==",
+      "path": "system.componentmodel.annotations/6.0.0-preview.4.21253.7",
+      "hashPath": "system.componentmodel.annotations.6.0.0-preview.4.21253.7.nupkg.sha512"
     }
   }
 }

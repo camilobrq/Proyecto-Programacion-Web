@@ -1,5 +1,8 @@
 <div class="row">
-  
+    <div class="col-6">
+        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Type to filter">
+    </div>
+
 </div>
 <hr>
 <table class="table table-striped" *ngIf='personas && personas.length'>
@@ -8,23 +11,27 @@
             <th scope="col">#</th>
             <th scope="col">identificación</th>
             <th scope="col">Nombre </th>
+            <th scope="col">Apellido </th>
             <th scope="col">Sexo</th>
             <th scope="col">Edad</th>
             <th scope="col">Telefono</th>
             <th scope="col">Direccion</th>
+            <th scope="col">Correo </th>
             <th scope="col">Nombre Eps</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let persona of personas; index as i ">
+        <tr *ngFor="let persona of personas|filtroPaciente:searchText; index as i ">
             <th scope="row">{{ i + 1 }}</th>
             <td>{{ persona.identificacion }} </td>
             <td>{{ persona.nombre }}</td>
+            <td>{{ persona.apellido }}</td>
             <td>{{persona.sexo }}</td>
             <td>{{ persona.edad }}</td>
             <td>{{ persona.telefono }}</td>
             <td>{{ persona.direccion }}</td>
-            <td>{{ persona.nombreEps }}</td>
+            <td>{{ persona.correo }}</td>
+            <td>{{ persona.eps }}</td>
         </tr>
     </tbody>
 </table>

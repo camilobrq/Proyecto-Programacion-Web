@@ -1,5 +1,6 @@
-export class ApartarCitas {
-    identifiacionPaciente: string;
+export class Cita {
+    idCita: string;
+    idPaciente: string;
     nombrePaciente: string;
     email: string;
     tipoCita:string;

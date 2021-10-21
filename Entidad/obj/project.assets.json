@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "System.ComponentModel.Annotations/5.0.0": {
+      "System.ComponentModel.Annotations/6.0.0-preview.4.21253.7": {
         "type": "package",
         "compile": {
           "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
@@ -14,10 +14,10 @@
     }
   },
   "libraries": {
-    "System.ComponentModel.Annotations/5.0.0": {
-      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+    "System.ComponentModel.Annotations/6.0.0-preview.4.21253.7": {
+      "sha512": "h0eWBYUk1rLI31AAmLMgmVzy6UBMUBvRfAqB9VH+O8pMT5GBFpBJoTEIdhBfzcn7VS+aPPDzpLlASHXdjt2qXQ==",
       "type": "package",
-      "path": "system.componentmodel.annotations/5.0.0",
+      "path": "system.componentmodel.annotations/6.0.0-preview.4.21253.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -98,16 +98,14 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
-        "system.componentmodel.annotations.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "system.componentmodel.annotations.6.0.0-preview.4.21253.7.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "System.ComponentModel.Annotations >= 5.0.0"
+      "System.ComponentModel.Annotations >= 6.0.0-preview.4.21253.7"
     ]
   },
   "packageFolders": {
@@ -151,7 +149,7 @@
         "dependencies": {
           "System.ComponentModel.Annotations": {
             "target": "Package",
-            "version": "[5.0.0, )"
+            "version": "[6.0.0-preview.4.21253.7, )"
           }
         },
         "imports": [

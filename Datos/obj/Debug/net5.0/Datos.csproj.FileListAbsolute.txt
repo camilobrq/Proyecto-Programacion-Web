@@ -12,3 +12,4 @@ C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Datos\bin\Debug\net5.0\Entidad.pdb
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Datos\obj\Debug\net5.0\Datos.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Datos\obj\Debug\net5.0\ref\Datos.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Datos\obj\Debug\net5.0\Datos.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Datos\obj\Debug\net5.0\Datos.csproj.CopyComplete

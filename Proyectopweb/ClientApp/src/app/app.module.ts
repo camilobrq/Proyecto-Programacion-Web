@@ -21,6 +21,7 @@ import { NavMenuEmpleadoComponent } from './nav-menu-empleado/nav-menu-empleado.
 import { NavMenuClienteComponent } from './nav-menu-Cliente/nav-menu-cliente.component';
 import { InstructivoComponent } from './Administrador/instructivo/instructivo.component';
 import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-historia-clinica/registrar-historia-clinica.component';
+import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
 
 
 
@@ -44,6 +45,7 @@ import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-his
     NavMenuClienteComponent,
     InstructivoComponent,
     RegistrarHistoriaClinicaComponent,
+    FiltroPacientePipe,
  
   
   ],

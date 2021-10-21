@@ -14,3 +14,4 @@ C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\bin\Debug\net5.0\Entidad.pdb
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\Logica.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\ref\Logica.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\Logica.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete

@@ -8,6 +8,6 @@ export class Persona {
     telefono: number;
     direccion: string;
     correo: string;
-    nombreEps: string;
+    eps: string;
    
 }

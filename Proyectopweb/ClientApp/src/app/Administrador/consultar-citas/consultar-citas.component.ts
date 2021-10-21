@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApartarCitasService } from 'src/app/services/apartar-citas.service';
-import { ApartarCitas } from '../models/apartar-citas';
+import { CitaService } from 'src/app/services/apartar-citas.service';
+import {Cita } from '../models/Cita';
 import { Persona } from '../models/persona';
 
 @Component({
@@ -9,16 +9,14 @@ import { Persona } from '../models/persona';
   styleUrls: ['./consultar-citas.component.css']
 })
 export class ConsultarCitasComponent implements OnInit {
-  citas:ApartarCitas[];
+  citas:Cita[];
   searchText:string;
  
-  constructor(private apartarCitasService: ApartarCitasService) { }
+  constructor(private apartarCitasService: CitaService) { }
 
   ngOnInit() {
-    this.get();
+    this.apartarCitasService.get().subscribe(result => {
+      this.citas = result;
+   });
   }
-  get(){
-    this.citas=this.apartarCitasService.get();
-  }
-
 }

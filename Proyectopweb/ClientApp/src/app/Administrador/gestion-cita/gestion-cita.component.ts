@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApartarCitasService } from 'src/app/services/apartar-citas.service';
+import { CitaService } from 'src/app/services/apartar-citas.service';
 import { PersonaService } from 'src/app/services/persona.service';
-import { ApartarCitas } from '../models/apartar-citas';
+import { Cita } from '../models/Cita';
 import { Persona } from '../models/persona';
 
 @Component({
@@ -10,17 +10,15 @@ import { Persona } from '../models/persona';
   styleUrls: ['./gestion-cita.component.css']
 })
 export class GestionCitaComponent implements OnInit {
-  cita: ApartarCitas;
+  cita: Cita;
   persona: Persona;
-  constructor(private apartarCitasService: ApartarCitasService, private personaService: PersonaService) { 
-    this.cita = new ApartarCitas;
+  constructor(private apartarCitasService: CitaService) { 
+    this.cita = new Cita;
   }
 
   ngOnInit() {
   
     }
-   
-
     add(){
       this.apartarCitasService.post(this.cita).subscribe(p=>{
         if(p!=null){
