@@ -10,19 +10,20 @@ import { Persona } from '../models/persona';
 export class PersonaRegistroComponent implements OnInit {
 persona: Persona;
 personas: Persona[];
-  constructor(private personaService: PersonaService) { 
-    this.persona= new Persona();
-  }
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit() {
- 
+    this.persona= new Persona();
   }
 
   add(){
     this.personaService.post(this.persona).subscribe(p=>{
       if(p!=null){
-        alert('Persona Creada!');
+        alert('Paciente Creada!');
         this.persona=p;
+      }
+      if(p==null){
+        alert('Error al intentar guardar al paciente');
       }
     });
   }

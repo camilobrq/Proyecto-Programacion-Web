@@ -11,8 +11,7 @@ namespace Entidad
         public Paciente paciente {get; set; }
         public string tiposSolicitud{get; set; }
         public DateTime fechaDeseada{get; set; }
-        public string numeroAutorizacion{get; set; }
-        public DateTime fechaVencimientoAutorizacion{get; set; }
+        
         
     }
 }

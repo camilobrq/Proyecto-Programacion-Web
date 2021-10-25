@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    [Migration("20211021004239_InitialCreate")]
+    [Migration("20211025034221_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,20 +31,11 @@ namespace Datos.Migrations
                     b.Property<DateTime>("fechaDeseada")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("fechaVencimientoAutorizacion")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("idPaciente")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("numeroAutorizacion")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("pacienteidentificacion")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("telefonoContacto")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("tiposSolicitud")
                         .HasColumnType("nvarchar(max)");

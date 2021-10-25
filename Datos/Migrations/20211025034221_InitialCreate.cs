@@ -35,10 +35,7 @@ namespace Datos.Migrations
                     idPaciente = table.Column<string>(nullable: true),
                     pacienteidentificacion = table.Column<string>(nullable: true),
                     tiposSolicitud = table.Column<string>(nullable: true),
-                    fechaDeseada = table.Column<DateTime>(nullable: false),
-                    numeroAutorizacion = table.Column<string>(nullable: true),
-                    fechaVencimientoAutorizacion = table.Column<DateTime>(nullable: false),
-                    telefonoContacto = table.Column<string>(nullable: true)
+                    fechaDeseada = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

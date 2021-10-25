@@ -3,22 +3,22 @@
         <div class="col-md-6 offset-md-3">
             
             <section class="form-empleados">
+                
                 <h2>Apartar Cita</h2>
                 <div class="form-group">
                   
-                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="citas.identifiacionPaciente"
-                        class="form-control" />
+                    <input type="text" name="idCita" placeholder="Id Cita" [(ngModel)]="cita.idCita"
+                        class="form-control" /> 
                 </div>
                 <div class="form-group">
-
                   
-                    <input type="text" name="Nombre" placeholder="Nombres y Apellidos" [(ngModel)]="citas.nombrePaciente"
-                        class="form-control" />
+                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="cita.pacienteIdentificacion"
+                        class="form-control" /> 
                 </div>
                 
                 <div class="form-group">  
                     <label>Seleccione el Tipo de cita</label>                
-                    <select type="text" name="tipoCita"  [(ngModel)]="citas.tipoCita" class="form-control">
+                    <select type="text" name="tipoCita"  [(ngModel)]="cita.tipoCita" class="form-control">
                       <option>Terapia psicoanalítica</option>  
                       <option>Terapia cognitivo-conductual</option>  
                       <option>Terapia sistémica breve</option>  
@@ -32,28 +32,9 @@
                 </div>
                 <div class="form-group">
                     <span>Fecha deseada de la cita:</span>
-                    <input type="date" name="fecha" [(ngModel)]="citas.fechaDeseada" class="form-control" />
+                    <input type="date" name="fecha" [(ngModel)]="cita.fechaDeseada" class="form-control" />
                 </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="eps" placeholder="Eps" [(ngModel)]="citas.eps" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="Nautorizacion" placeholder="Numero de Autorizacion" [(ngModel)]="citas.numeroAutorizacion" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <span>Fecha de vencimiento de la autorizacion:</span>
-                    <input type="date" name="fecha" [(ngModel)]="citas.fechaVencimientoAutorizacion" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="contacto" placeholder="Numero de telefono" [(ngModel)]="citas.numeroContacto" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="correo" placeholder="Correo electronico" [(ngModel)]="citas.email" class="form-control" />
-                </div>
+           
                 <div class="text-center">
                     <button class="btn btn-primary mr-1" (click)="add()">Enviar</button>
                 </div>

@@ -56,15 +56,16 @@ namespace Proyectopweb.Controllers
         }
         private Cita MapearaCitas(CitaInputModel citaInputModel)
         {
-            var cita = new Cita();
-            cita.idCita = citaInputModel.idCita;
-            cita.idPaciente = citaInputModel.idPaciente;
-            cita.paciente = citaInputModel.paciente;
-            cita.tiposSolicitud = citaInputModel.tiposSolicitud;
-            cita.fechaDeseada = citaInputModel.fechaDeseada;
-            cita.numeroAutorizacion = citaInputModel.numeroAutorizacion;
-            cita.fechaVencimientoAutorizacion = citaInputModel.fechaVencimientoAutorizacion;
-            
+            var cita = new Cita{
+            idCita=citaInputModel.idCita,
+            idPaciente = citaInputModel.idPaciente,
+            tiposSolicitud = citaInputModel.tiposSolicitud,
+            fechaDeseada = citaInputModel.fechaDeseada,
+            paciente=new Paciente{
+                identificacion=citaInputModel.idPaciente,
+            },
+            };
+           
             return cita;
         } 
     }

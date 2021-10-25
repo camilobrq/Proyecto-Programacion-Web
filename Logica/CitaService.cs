@@ -19,14 +19,16 @@ namespace Logica
         {
             try
             {
-
-                if (_context.citas.Find(cita.idCita)== null)
+                var Paciente=_context.pacientes.Find(cita.paciente.identificacion);
+                if (Paciente== null)
                 {
-                    _context.citas.Add(cita);
-                    _context.SaveChanges();
-                    return new CitaGuardarResponse(cita);
+                    return new CitaGuardarResponse($"No se encuentra registrada la persona en el sistema");
+                  
                 }
-                return new CitaGuardarResponse($"No fue posible Guardar la información");
+                cita.paciente=Paciente;
+                _context.citas.Add(cita);
+                _context.SaveChanges();
+                return new CitaGuardarResponse(cita);
             }
             catch (Exception e)
             {

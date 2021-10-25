@@ -20,6 +20,7 @@ export class GestionCitaComponent implements OnInit {
   
     }
     add(){
+  
       this.apartarCitasService.post(this.cita).subscribe(p=>{
         if(p!=null){
           alert('Cita Apartada!');
