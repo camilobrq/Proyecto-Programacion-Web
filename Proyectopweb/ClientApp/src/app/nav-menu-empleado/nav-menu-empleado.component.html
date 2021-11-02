@@ -1,39 +1,40 @@
-
-<body>
-
-    <header>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 255)">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuEmpleado/Realizarevaluacion']">Realizar Evaluacion</a>
+          </li>
           
-      <nav>
-  
-          <input type="checkbox" id="ckbox">
-          <label for="ckbox" class="drawer">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </label>
-  
-          <h1>VitalMente</h1>
-  
-          <ul class="menu-box">
-  
-             
-              <div class="drop-down-menu">
-                  <button class="drop-down-button">Funciones del Psicologo
-                      <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="drop-down-menu-content">
-                    <a class="nav-link text-dark" [routerLink]="['/evaluacion']">Realizar Evaluacion</a>
-                    <a class="nav-link text-dark" [routerLink]="['/consultarEvaluacion']">Consultar evaluaciones</a>
-                    <a class="nav-link text-dark" [routerLink]="['/tratamiento']">Recetar Tratamiento</a>
-                    <a class="nav-link text-dark" [routerLink]="['/consultarTratamiento']">Consultar Tratamientos</a>
-                    <a class="nav-link text-dark" [routerLink]="['/historiaClinica']">Realizar Historia clinica</a>
-                    <a class="nav-link text-dark" [routerLink]="['/consultarTratamiento']">Consultar Hisotiras Clinicas</a>
-                  </div>
-              </div>
-  
-  
-          </ul>
-      </nav>
-  </header>
-  </body>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuEmpleado/Registrartratamiento']">Recetar Tratamiento</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuEmpleado/RegistrarhistoriaClinica']">Realizar Historia clinica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >Consultar Hisotiras Clinicas</a>
+          </li>
+            
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]='["/login"]'>Salir</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <p>Nombre de Usuario</p>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <hr>
+<body>
+  <router-outlet></router-outlet>
+</body>
+
+
+
   
   
   

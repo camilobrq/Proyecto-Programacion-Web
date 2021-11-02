@@ -10,3 +10,15 @@ C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Entidad\bin\Debug\net5.0\Entidad.pd
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Entidad\obj\Debug\net5.0\Entidad.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Entidad\obj\Debug\net5.0\ref\Entidad.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Entidad\obj\Debug\net5.0\Entidad.pdb
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.deps.json
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\ref\Entidad.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.pdb
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb

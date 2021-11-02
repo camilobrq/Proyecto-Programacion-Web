@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Datos\\Datos.csproj": {}
+    "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Datos\\Datos.csproj": {
+    "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Datos\\obj\\",
+        "projectPath": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\andres\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andres\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\Entidad.csproj"
+              "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+                "projectPath": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -72,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\Entidad.csproj": {
+    "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\Entidad.csproj",
-        "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\windows 10\\Desktop\\Upc\\ProyectoPWEB\\Entidad\\obj\\",
+        "projectPath": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+        "packagesPath": "C:\\Users\\andres\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andres\\OneDrive\\Escritorio\\Proyecto-Backend y Fronend\\Proyecto-Programacion-Web\\Entidad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andres\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

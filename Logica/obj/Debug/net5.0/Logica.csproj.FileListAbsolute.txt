@@ -15,3 +15,20 @@ C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\Logica.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\ref\Logica.dll
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\Logica.pdb
 C:\Users\windows 10\Desktop\Upc\ProyectoPWEB\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.deps.json
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\ref\Logica.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.pdb
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.pdb
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.pdb
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\ref\Logica.dll
+C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.pdb

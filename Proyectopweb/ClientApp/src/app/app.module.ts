@@ -24,6 +24,7 @@ import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-his
 import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
 import { FiltroPsicologoPipe } from './pipe/filtro-psicologo.pipe';
 import { FiltroCitaPipe } from './pipe/filtro-cita.pipe';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -50,29 +51,54 @@ import { FiltroCitaPipe } from './pipe/filtro-cita.pipe';
     FiltroPacientePipe,
     FiltroPsicologoPipe,
     FiltroCitaPipe,
-    
- 
-  
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
-      { path: 'personaRegistro', component: PersonaRegistroComponent},
-      { path: 'personaConsulta', component: PersonaConsultaComponent },
-      { path: 'registroEmpleado', component: RegistroEmpladosComponent },
-      { path: 'gestionCitas', component: GestionCitaComponent },
-      { path: 'evaluacion', component: EvaluacionComponent },
-      { path: 'tratamiento', component: TratamientoComponent },
-      { path: 'consultarEmpleado', component: ConsultarEmpleadoComponent },
-      { path: 'consultarCitas', component: ConsultarCitasComponent },
-      { path: 'consultarEvaluacion', component: ConsultaEvaluacionComponent },
-      { path: 'consultarTratamiento', component: ConsultaTratamientoComponent },
+      { path: 'personaRegistro', component: PersonaRegistroComponent },
+
+
+      {
+        path: 'menuAdministrador', component: NavMenuComponent,
+        children: [
+          { path: 'personaConsulta', component: PersonaConsultaComponent },
+          { path: 'registroEmpleado', component: RegistroEmpladosComponent },
+          { path: 'consultarEmpleado', component: ConsultarEmpleadoComponent },
+
+        ]
+      },
+
       { path: 'instructivo', component: InstructivoComponent },
-      { path: 'historiaClinica', component: RegistrarHistoriaClinicaComponent },
+
+      { path: 'login', component: LoginComponent },
+
+      {
+        path: 'menuEmpleado', component: NavMenuEmpleadoComponent,
+        children: [
+          { path: 'Realizarevaluacion', component: EvaluacionComponent },
+          { path: 'Registrartratamiento', component: TratamientoComponent },
+          { path: 'RegistrarhistoriaClinica', component: RegistrarHistoriaClinicaComponent },
+          //falta consltar Historia Clinica
+        ]
+      },
+
+      {
+        path: 'menuPaciente', component: NavMenuClienteComponent,
+        children: [
+          { path: 'AgendarCita', component: GestionCitaComponent },
+          { path: 'consultarCitas', component: ConsultarCitasComponent },
+          { path: 'consultarEvaluacion', component: ConsultaEvaluacionComponent },
+          { path: 'consultarTratamiento', component: ConsultaTratamientoComponent },
+        ]
+      },
+
+
+
+      { path: '', redirectTo: '/login', pathMatch: 'full' }
     ])
   ],
   providers: [],

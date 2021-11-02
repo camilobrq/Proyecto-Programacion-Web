@@ -1,0 +1,28 @@
+<body>
+    <div class="contenedor-formulario">
+        <div class="iniciar-sesion">
+           <h1>Vitalmente</h1>
+            <div class="mb-3">
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Usuario">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+              </div>
+              
+              <select class="form-select" aria-label="Default select example disabled" [(ngModel)]="tipousuario">
+                <option selected >Tipo de usuario</option>
+                <option value="1">Paciente</option>
+                <option value="2">Administrador</option>
+                <option value="3">Psiciologo</option>
+              </select>
+
+              <p>¿No has creado tu cuenta de paciente? <a [routerLink]='["/personaRegistro"]'>Creala aqui</a></p>
+              <button type="button" class="btn btn-primary" (click)="Ingresar()"  >iniciar sesion</button>
+        </div>
+    </div>
+
+    <div class="Fondo-login">
+        
+    </div>
+</body>
+

@@ -1,39 +1,37 @@
-<body>
-
-    <header>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 255)">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuPaciente/AgendarCita']">Agendar Cita</a>
+          </li>
           
-      <nav>
-  
-          <input type="checkbox" id="ckbox">
-          <label for="ckbox" class="drawer">
-              <i class="fa fa-bars" aria-hidden="true"></i>
-          </label>
-  
-          <h1>VitalMente</h1>
-  
-          <ul class="menu-box">
-  
-              <div class="drop-down-menu">
-                  <button class="drop-down-button" [routerLink]="['/home']">Inicio</button>
-              </div>
-  
-              <div class="drop-down-menu">
-                  <button class="drop-down-button">Paciente
-                      <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="drop-down-menu-content">
-                      <a class="nav-link text-dark" [routerLink]="['/personaRegistro']">Registrarse</a>
-                      <a class="nav-link text-dark" [routerLink]="['/gestionCitas']">Apartar citas</a>
-                      <a class="nav-link text-dark" [routerLink]="['/consultarCitas']">Consultar citas</a>
-                      <a class="nav-link text-dark" [routerLink]="['/consultarEvaluacion']">Consultar evaluaciones</a>
-                      <a class="nav-link text-dark" [routerLink]="['/consultarTratamiento']">Consultar Tratamiento</a>
-                  </div>
-              </div>
-   
-          </ul>
-      </nav>
-  </header>
-  </body>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuPaciente/consultarCitas']">Consultar Citas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuPaciente/consultarEvaluacion']">Consultar evaluaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menuPaciente/consultarTratamiento']">Consultar Tratamientos</a>
+          </li>
+            
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]='["/login"]'>Salir</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <p>Nombre de Usuario</p>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <hr>
+<body>
+  <router-outlet></router-outlet>
+</body>
+
   
   
   
