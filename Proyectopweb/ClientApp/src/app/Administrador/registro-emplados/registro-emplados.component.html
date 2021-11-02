@@ -14,6 +14,10 @@
                     <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="empleado.nombre" class="form-control" />
                 </div>
                 <div class="form-group">
+                  
+                    <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="empleado.apellido" class="form-control" />
+                </div>
+                <div class="form-group">
                
                     <input type="text" name="sexo" placeholder="Sexo" [(ngModel)]="empleado.sexo" class="form-control" />
                 </div>
@@ -23,33 +27,37 @@
                 </div>
                 <div class="form-group">
                    
-                    <input type="number" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono" class="form-control" />
+                    <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono" class="form-control" />
                 </div>
                 <div class="form-group">
                  
                     <input type="text" name="direccion" placeholder="Direccion" [(ngModel)]="empleado.direccion" class="form-control" />
                 </div>
-              
                 <div class="form-group">
-                  
-                    <input type="text" name="nombreEps" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad" class="form-control" />
+                 
+                    <input type="text" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
                 </div>
                 <div class="form-group">
+                  
+                    <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad" class="form-control" />
+                </div>
+                <div class="form-group">    
+                    <p>Fecha fenalizacion de estudios</p>
                    
-                    <input type="text" name="nombreEps" placeholder="Año de finalizacion de estudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
+                    <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
                 </div>
                 <div class="form-group">
                     
-                    <input type="text" name="nombreEps" placeholder="Area" [(ngModel)]="empleado.areaEspecializada" class="form-control"/> 
+                    <input type="text" name="Area" placeholder="Area" [(ngModel)]="empleado.areaEspecializada" class="form-control"/> 
                      
                 </div>
                 <div class="form-group">
                     
-                    <input type="text" name="nombreEps" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia" class="form-control" />
+                    <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia" class="form-control" />
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary mr-1" (click)="add()">Register</button>
-                    <button class="btn btn-secondary" type="reset">Cancel</button>
+           
                 </div>
             </section>
         </div>

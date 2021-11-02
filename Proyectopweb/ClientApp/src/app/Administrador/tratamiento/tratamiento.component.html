@@ -13,7 +13,7 @@
                 <div class="form-group">
 
                      <input type="text" name="psicologo" placeholder="identificacion del psicologo que autoriza"
-                    [(ngModel)]="tratamiento.idPsicologo" class="form-control" />
+                    [(ngModel)]="tratamiento.identificacionPsicologo" class="form-control" />
                 </div>
                 <div class="form-group">
 
@@ -24,17 +24,19 @@
                 <div class="form-group">
 
                     <input type="text" name="identificacion" placeholder=" Identificacion del paciente"
-                     [(ngModel)]="tratamiento.idEvaluacion" class="form-control" />
+                     [(ngModel)]="tratamiento.identificacionPaciente" class="form-control" />
                 </div>
 
                 <div class="form-group">
+                    <p>Tratamiento a seguir</p>
+                    <p>En este espacio se detalla el paso a paso que debe <br> seguir el paciente en su tratamiento</p>
                     <textarea name="tratamiento" placeholder=" Tratamiento a seguir"
-                    [(ngModel)]="tratamiento.tratamiento" class="form-control"></textarea>
+                    [(ngModel)]="tratamiento.tratamientoPaso" class="form-control"></textarea>
                     
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary mr-1" (click)="add()">Register</button>
-                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                    
                 </div>
             </section>
         </div>

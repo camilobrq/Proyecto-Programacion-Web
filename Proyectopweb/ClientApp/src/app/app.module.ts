@@ -22,6 +22,8 @@ import { NavMenuClienteComponent } from './nav-menu-Cliente/nav-menu-cliente.com
 import { InstructivoComponent } from './Administrador/instructivo/instructivo.component';
 import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-historia-clinica/registrar-historia-clinica.component';
 import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
+import { FiltroPsicologoPipe } from './pipe/filtro-psicologo.pipe';
+import { FiltroCitaPipe } from './pipe/filtro-cita.pipe';
 
 
 
@@ -46,6 +48,9 @@ import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
     InstructivoComponent,
     RegistrarHistoriaClinicaComponent,
     FiltroPacientePipe,
+    FiltroPsicologoPipe,
+    FiltroCitaPipe,
+    
  
   
   ],

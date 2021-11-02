@@ -15,26 +15,16 @@ empleados: Empleado[];
   ngOnInit() {
     this.empleado= new Empleado;
   }
-  teEncontre(){
-    this.empleados = this.empleadoService.get();
-    if(this.empleado != null){
-      for(let empleado of this.empleados){
-        if(empleado.identificacion == this.empleado.identificacion){
-          return true;
-        }
+  add(){
+    this.empleadoService.post(this.empleado).subscribe(p=>{
+      if(p!=null){
+        alert('psicologo Creado!');
+        this.empleado=p;
       }
-    }
-    return false;
+      
+      if(p==null){
+        alert('Error al intentar guardar al paciente');
+      }
+    });
   }
-add(){
-    if(!this.teEncontre()){
-      alert('Empleado registrado correctamente'+JSON.stringify(this.empleado));
-      this.empleadoService.post(this.empleado);
-    }else if(this.teEncontre()){
-      alert('El empleado ya se encuentra registrado.');
-    }
-   
-
-  
-}
 }

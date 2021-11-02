@@ -8,20 +8,14 @@ import { Evaluacion } from '../models/evaluacion';
   styleUrls: ['./consulta-evaluacion.component.css']
 })
 export class ConsultaEvaluacionComponent implements OnInit {
-  evalua:Evaluacion;
-evaluacion: Evaluacion [];
+evaluaciones: Evaluacion [];
 searchText:string;
   constructor(private evaluacionService: EvaluacionService) { }
 
   ngOnInit() {
-    this.get();
+    this.evaluacionService.get().subscribe(result => {
+      this.evaluaciones = result;
+   });
   }
-  buscarPorId(){
-    if(this.searchText==this.evalua.identifiacionPaciente){
-      this.evaluacion= this.evaluacionService.get();
-    }
-  }
-  get(){
-    this.evaluacion= this.evaluacionService.get();
-  }
+  
 }

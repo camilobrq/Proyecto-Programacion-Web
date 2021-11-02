@@ -45,6 +45,40 @@ namespace Datos.Migrations
                     b.ToTable("citas");
                 });
 
+            modelBuilder.Entity("Entidad.Evaluacion", b =>
+                {
+                    b.Property<int>("IdEvaluacion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Psicologoidentificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("diagnostico")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("identificacionPaciente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("identificacionPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("pacienteidentificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("IdEvaluacion");
+
+                    b.HasIndex("Psicologoidentificacion");
+
+                    b.HasIndex("pacienteidentificacion");
+
+                    b.ToTable("evaluaciones");
+                });
+
             modelBuilder.Entity("Entidad.Paciente", b =>
                 {
                     b.Property<string>("identificacion")
@@ -79,10 +113,112 @@ namespace Datos.Migrations
                     b.ToTable("pacientes");
                 });
 
+            modelBuilder.Entity("Entidad.Psicologo", b =>
+                {
+                    b.Property<string>("identificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Universidad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("apellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("areaEspecializada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("edad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("fechaFinalizacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("mesesExperiencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("sexo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("identificacion");
+
+                    b.ToTable("psicologos");
+                });
+
+            modelBuilder.Entity("Entidad.Tratamiento", b =>
+                {
+                    b.Property<int>("IdTratamiento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Psicologoidentificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("identificacionPaciente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("identificacionPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("medicacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("pacienteidentificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("tratamientoPaso")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdTratamiento");
+
+                    b.HasIndex("Psicologoidentificacion");
+
+                    b.HasIndex("pacienteidentificacion");
+
+                    b.ToTable("tratamientos");
+                });
+
             modelBuilder.Entity("Entidad.Cita", b =>
                 {
                     b.HasOne("Entidad.Paciente", "paciente")
                         .WithMany("citas")
+                        .HasForeignKey("pacienteidentificacion");
+                });
+
+            modelBuilder.Entity("Entidad.Evaluacion", b =>
+                {
+                    b.HasOne("Entidad.Psicologo", "Psicologo")
+                        .WithMany("evaluaciones")
+                        .HasForeignKey("Psicologoidentificacion");
+
+                    b.HasOne("Entidad.Paciente", "paciente")
+                        .WithMany()
+                        .HasForeignKey("pacienteidentificacion");
+                });
+
+            modelBuilder.Entity("Entidad.Tratamiento", b =>
+                {
+                    b.HasOne("Entidad.Psicologo", "Psicologo")
+                        .WithMany()
+                        .HasForeignKey("Psicologoidentificacion");
+
+                    b.HasOne("Entidad.Paciente", "paciente")
+                        .WithMany()
                         .HasForeignKey("pacienteidentificacion");
                 });
 #pragma warning restore 612, 618

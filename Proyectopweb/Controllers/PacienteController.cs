@@ -2,8 +2,8 @@ using Datos;
 using Entidad;
 using Proyectopweb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Logica;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 namespace Proyectopweb.Controllers
@@ -34,15 +34,16 @@ namespace Proyectopweb.Controllers
         }
 
         [HttpGet]
-      public ActionResult<IEnumerable<PacienteViewModel>> Gets()
-      {
+        public  ActionResult<List<PacienteViewModel>> Gets()
+        {
             var respuesta = _pacienteService.Consultar();
             if (respuesta.Error == true)
             {
                 return BadRequest(respuesta.Mensaje);
             }
             return Ok(respuesta.Pacientes.Select(p => new PacienteViewModel(p)));
-      }
+            //return Ok(new List<PacienteViewModel>());
+        }
 
         [HttpGet("byId")]
         public ActionResult<PacienteViewModel> Gets(string id)

@@ -10,6 +10,8 @@ namespace Datos
         }
         public DbSet<Paciente> pacientes { get; set; }
         public DbSet<Cita> citas { get; set; }
-
+        public DbSet<Psicologo> psicologos { get; set; }
+        public DbSet<Evaluacion> evaluaciones { get; set; }
+        public DbSet<Tratamiento> tratamientos { get; set; }
     }
 }

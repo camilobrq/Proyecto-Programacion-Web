@@ -9,6 +9,7 @@ using Datos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Text.Json.Serialization;
 
 namespace Proyectopweb
 {
@@ -26,6 +27,7 @@ namespace Proyectopweb
         {
             var connectionString=Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ConsultorioContext>(p=>p.UseSqlServer(connectionString));
+  
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
 

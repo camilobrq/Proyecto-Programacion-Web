@@ -9,7 +9,7 @@ import { Persona } from '../models/persona';
 })
 export class PersonaRegistroComponent implements OnInit {
 persona: Persona;
-personas: Persona[];
+
   constructor(private personaService: PersonaService) { }
 
   ngOnInit() {
@@ -22,6 +22,7 @@ personas: Persona[];
         alert('Paciente Creada!');
         this.persona=p;
       }
+      
       if(p==null){
         alert('Error al intentar guardar al paciente');
       }

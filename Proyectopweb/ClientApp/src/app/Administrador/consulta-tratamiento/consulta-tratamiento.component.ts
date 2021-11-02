@@ -9,13 +9,12 @@ import { Tratamiento } from '../models/tratamiento';
 })
 export class ConsultaTratamientoComponent implements OnInit {
 tratamientos:Tratamiento[];
+searchText:string;
   constructor(private tratamientoService: TratamientoService) { }
 
   ngOnInit() {
-    this.get();
+    this.tratamientoService.get().subscribe(result => {
+      this.tratamientos = result;
+   });
   }
-  get(){
-    this.tratamientos= this.tratamientoService.get();
-  }
- 
 }

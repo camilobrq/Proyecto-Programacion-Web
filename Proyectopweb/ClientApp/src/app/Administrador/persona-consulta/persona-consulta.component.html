@@ -1,10 +1,9 @@
 <div class="row">
     <div class="col-6">
-        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Type to filter">
+        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Buscar Paciente">
     </div>
 
 </div>
-<hr>
 <table class="table table-striped" *ngIf='personas && personas.length'>
     <thead>
         <tr>
@@ -32,6 +31,7 @@
             <td>{{ persona.direccion }}</td>
             <td>{{ persona.correo }}</td>
             <td>{{ persona.eps }}</td>
+           
         </tr>
     </tbody>
 </table>

@@ -1,8 +1,12 @@
 #titulo{
- color: blue;
+ color: black;
  margin: 15px;
  
  font-size: 40px;
+}
+img{
+    margin-top: 4px;
+    margin-left: center;
 }
 div p{
  font-family: Arial, Helvetica, sans-serif;

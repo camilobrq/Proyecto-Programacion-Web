@@ -30,11 +30,11 @@ namespace Proyectopweb.Controllers
             {
                 return BadRequest(respuesta.Mensaje);
             }
-            return Ok(respuesta.cita);
+            return Ok(respuesta.Cita);
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<PacienteViewModel>> Gets()
+        public ActionResult<IEnumerable<CitaViewModel>> Gets()
         {
             var respuesta = _citaService.Consultar();
             if (respuesta.Error == true)
@@ -57,12 +57,13 @@ namespace Proyectopweb.Controllers
         private Cita MapearaCitas(CitaInputModel citaInputModel)
         {
             var cita = new Cita{
-            idCita=citaInputModel.idCita,
             idPaciente = citaInputModel.idPaciente,
             tiposSolicitud = citaInputModel.tiposSolicitud,
             fechaDeseada = citaInputModel.fechaDeseada,
+            
             paciente=new Paciente{
                 identificacion=citaInputModel.idPaciente,
+                nombre=citaInputModel.idPaciente,
             },
             };
            

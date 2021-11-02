@@ -4,7 +4,7 @@
     </div>
 </div>
 <hr>
-<table class="table table-striped" *ngIf='evaluacion && evaluacion.length'>
+<table class="table table-striped" *ngIf='evaluacion && Evaluacion.length'>
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -16,12 +16,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let eva of evaluacion; index as i ">
+        <tr *ngFor="let evaluacion of Evaluacion; index as i ">
             <th scope="row">{{ i + 1 }}</th>
-            <td>{{ eva.identifiacionPaciente }} </td>
-            <td>{{ eva.nombrePaciente }}</td>
-            <td>{{eva.tipoCita }}</td>
-            <td>{{ eva.diagnostico }}</td>
+            <td>{{ evaluacion.idEvaluacion }} </td>
+            <td>{{ evaluacion.identificacionPaciente }} </td>
+            <td>{{ evaluacion.identificacionPsicologo }} </td>
+            <td>{{evaluacion.tipoCita }}</td>
+            <td>{{ evaluacion.diagnostico }}</td>
          
         </tr> 
     </tbody>

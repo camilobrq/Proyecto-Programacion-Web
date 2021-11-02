@@ -11,32 +11,25 @@ import { Tratamiento } from '../models/tratamiento';
 })
 export class TratamientoComponent implements OnInit {
 tratamiento: Tratamiento;
-evaluaciones: Evaluacion[];
-  constructor(private tratamientoService: TratamientoService, private evaluacionService: EvaluacionService) { }
+tratamientos: Tratamiento[];
+  constructor(private tratamientoService: TratamientoService) { }
 
   ngOnInit() {
     this.tratamiento= new Tratamiento;
   }
-  teEncontre(){
-    this.evaluaciones = this.evaluacionService.get();
-    if(this.evaluaciones != null){
-      for(let evaluacion of this.evaluaciones){
-        if(evaluacion.identifiacionPaciente === this.tratamiento.idEvaluacion){
-          this.tratamiento.evaluacion=evaluacion.diagnostico;
-          return true;
-        }
-      }
-    }
-    return false;
-  }
- 
+   
   add(){
-    if(!this.teEncontre()){
-      alert('no se puede resetar un tratamiento sin una previa evaluacion, por favor aparte su cita.');
-    }else if(this.teEncontre()){
-    alert('Tratamiento asignado Correctamente' + JSON.stringify(this.tratamiento));
-    this.tratamientoService.post(this.tratamiento);
-    }
-    
+    this.tratamientoService.post(this.tratamiento).subscribe(p=>{
+      if(p!=null){
+        alert('Tratamiento registrado!');
+        this.tratamiento=p;
+      }
+      
+      if(p==null){
+        alert('Error al intentar guardar el tratamiento');
+      }
+    });
   }
+
+  
 }

@@ -4,8 +4,9 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">identificación Paciente</th>
-            <th scope="col">Evaluacion  </th>
+            <th scope="col">id Tratamiento</th>
+            <th scope="col">identificacion del Paciente  </th>
+            <th scope="col">identificacion del Psicologo</th>
             <th scope="col">Tratamiento a seguir</th>
             <th scope="col">Medicacion</th>
            
@@ -14,11 +15,11 @@
     <tbody>
         <tr *ngFor="let tratamiento of tratamientos; index as i ">
             <th scope="row">{{ i + 1 }}</th>
-            <td>{{ tratamiento.idEvaluacion }} </td>
-            <td>{{ tratamiento.evaluacion }}</td>
-            <td>{{tratamiento.tratamiento }}</td>
+            <td>{{ tratamiento.idTratamiento }} </td>
+            <td>{{ tratamiento.identificacionPaciente }}</td>
+            <td>{{tratamiento.identificacionPsicologo }}</td>
+            <td>{{ tratamiento.tratamientoPaso }}</td>
             <td>{{ tratamiento.medicacion }}</td>
-         
         </tr> 
     </tbody>
 </table>

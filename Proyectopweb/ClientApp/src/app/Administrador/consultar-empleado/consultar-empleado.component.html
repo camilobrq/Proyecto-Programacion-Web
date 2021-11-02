@@ -1,4 +1,7 @@
-
+<div class="row">
+    <div class="col-6">
+        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Buscar Psicologo por id">
+    </div>
 <hr>
 <table class="table table-striped" *ngIf='empleados && empleados.length'>
     <thead>
@@ -17,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let empleado of empleados; index as i ">
+        <tr *ngFor="let empleado of empleados|filtroPsicologo:searchText; index as i ">
             <th scope="row">{{ i + 1 }}</th>
             <td>{{ empleado.identificacion }} </td>
             <td>{{ empleado.nombre }}</td>
@@ -25,7 +28,7 @@
             <td>{{ empleado.edad }}</td>
             <td>{{ empleado.telefono }}</td>
             <td>{{ empleado.direccion }}</td>
-            <td>{{ empleado.Universidad }}</td>
+            <td>{{ empleado.universidad }}</td>
             <td>{{ empleado.fechaFinalizacion }}</td>
             <td>{{ empleado.areaEspecializada }}</td>
             <td>{{ empleado.mesesExperiencia }}</td>

@@ -1,6 +1,8 @@
 export class Evaluacion {
-    identifiacionPaciente: string;
+    identificacionPaciente: string;
+    identificacionPsicologo: string;
     nombrePaciente: string;
+    fecha:Date;
     tipoCita: string;
-    diagnostico: string;
+    diagnostico: string; 
 }

@@ -5,7 +5,7 @@ namespace Proyectopweb.Models
 {
     public class CitaInputModel
     {
-        public int idCita{get; set; }
+        
         public string idPaciente{get; set; }
         public string tiposSolicitud{get; set; }
         public DateTime fechaDeseada{get; set; }
@@ -14,6 +14,7 @@ namespace Proyectopweb.Models
 
     public class CitaViewModel : CitaInputModel
     {
+       
         public CitaViewModel()
         {
 
@@ -26,6 +27,6 @@ namespace Proyectopweb.Models
            fechaDeseada = cita.fechaDeseada;
            
         }
-        
+        public int idCita{get; set; }
     }
 }

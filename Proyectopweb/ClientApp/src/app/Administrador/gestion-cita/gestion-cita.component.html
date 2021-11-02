@@ -5,20 +5,16 @@
             <section class="form-empleados">
                 
                 <h2>Apartar Cita</h2>
+                
                 <div class="form-group">
                   
-                    <input type="text" name="idCita" placeholder="Id Cita" [(ngModel)]="cita.idCita"
-                        class="form-control" /> 
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="cita.pacienteIdentificacion"
+                    <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="cita.idPaciente"
                         class="form-control" /> 
                 </div>
                 
                 <div class="form-group">  
                     <label>Seleccione el Tipo de cita</label>                
-                    <select type="text" name="tipoCita"  [(ngModel)]="cita.tipoCita" class="form-control">
+                    <select type="text" name="tipoCita"  [(ngModel)]="cita.tiposSolicitud" class="form-control">
                       <option>Terapia psicoanalítica</option>  
                       <option>Terapia cognitivo-conductual</option>  
                       <option>Terapia sistémica breve</option>  

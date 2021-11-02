@@ -5,7 +5,7 @@ export class Persona {
     apellido: string;
     sexo: string;
     edad: number;
-    telefono: number;
+    telefono: string;
     direccion: string;
     correo: string;
     eps: string;

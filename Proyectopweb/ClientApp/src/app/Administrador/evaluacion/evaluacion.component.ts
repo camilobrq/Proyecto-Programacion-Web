@@ -19,10 +19,19 @@ evaluaciones: Evaluacion[];
     this.evaluacion= new Evaluacion;
   }
  
-
-  add(){
  
-    }
+  add(){
+    this.evaluacionService.post(this.evaluacion).subscribe(p=>{
+      console.log(p);
+      if(p!=null){
+        alert('Evaluacion Realizada!');
+        this.evaluacion=p;
+      }
+      if(p==null){
+        alert('Error al intentar guardar la evaluacion');
+      }
+    });
+  }
 
 }
 

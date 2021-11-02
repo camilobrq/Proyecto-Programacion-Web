@@ -20,7 +20,7 @@ export class PersonaService {
   get(): Observable<Persona[]> {
     return this.http.get<Persona[]>(this.baseUrl + 'api/Paciente')
       .pipe(
-        tap(_ => this.handleErrorService.log('datos enviados')),
+        tap(_ => this.handleErrorService.log(_.toString())),
         catchError(this.handleErrorService.handleError<Persona[]>('Consulta Persona', null))
       );
   }

@@ -9,12 +9,13 @@ namespace Logica
 {
     public class CitaGuardarResponse
     {
-        public Cita cita { get; set; }
+        public Cita Cita { get; set; }
         public string Mensaje { get; set; }
         public bool IsError { get; set; }
 
         public CitaGuardarResponse(Cita cita)
         {
+            Cita=cita;
            
             IsError = false;
         }
