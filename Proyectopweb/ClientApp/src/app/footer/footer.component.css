@@ -1,0 +1,52 @@
+*{
+    color: #978c8c;
+}
+
+.contendor-footer{
+    width: 100%;
+    height: 200px;
+    background-color: #385A64;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: large;
+}
+
+.contenedor_derecho{
+    width: 60%;
+    height: 100px;
+    float: left;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.contenedor_Abajo{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+p{
+    margin: 0px;
+    font-size: 15px;
+
+}
+
+a{
+    margin: 10px;
+}
+
+.contenedor_Izquierdo{
+    margin-left: 10%;
+    width: 30%;
+    height: 100px;
+    float: left;
+}
+
+hr{
+    width: 90%;
+    margin-left: 5%;
+}
+
+

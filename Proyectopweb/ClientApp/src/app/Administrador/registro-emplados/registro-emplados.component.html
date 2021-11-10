@@ -1,65 +1,38 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            
-            <section class="form-empleados">
-                <h2>Registro de Empleados</h2>
-                <div class="form-group">
-                  
-                    <input type="text" name="identificacion" placeholder="Identifiacion" [(ngModel)]="empleado.identificacion"
-                        class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="empleado.nombre" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="empleado.apellido" class="form-control" />
-                </div>
-                <div class="form-group">
-               
-                    <input type="text" name="sexo" placeholder="Sexo" [(ngModel)]="empleado.sexo" class="form-control" />
-                </div>
-                <div class="form-group">
-                 
-                    <input type="number" name="edad" placeholder="Edad" [(ngModel)]="empleado.edad" class="form-control" />
-                </div>
-                <div class="form-group">
-                   
-                    <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono" class="form-control" />
-                </div>
-                <div class="form-group">
-                 
-                    <input type="text" name="direccion" placeholder="Direccion" [(ngModel)]="empleado.direccion" class="form-control" />
-                </div>
-                <div class="form-group">
-                 
-                    <input type="text" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
-                </div>
-                <div class="form-group">
-                  
-                    <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad" class="form-control" />
-                </div>
-                <div class="form-group">    
-                    <p>Fecha fenalizacion de estudios</p>
-                   
-                    <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
-                </div>
-                <div class="form-group">
-                    
-                    <input type="text" name="Area" placeholder="Area" [(ngModel)]="empleado.areaEspecializada" class="form-control"/> 
-                     
-                </div>
-                <div class="form-group">
-                    
-                    <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia" class="form-control" />
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+<div class="contenedor">
+
+    <h2>Registro de Psicologo</h2>
+    <div class="lado-derecho">
+        <input type="text" name="identificacion" placeholder="Identifiacion" [(ngModel)]="empleado.identificacion"
+        class="form-control" />
+        <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="empleado.apellido" class="form-control" />
+        <input type="number" name="edad" placeholder="Edad" [(ngModel)]="empleado.edad" class="form-control" />
+        <input type="text" name="direccion" placeholder="Direccion" [(ngModel)]="empleado.direccion" class="form-control" />
+        <input type="email" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
            
-                </div>
-            </section>
-        </div>
+    </div>
+
+    <div class="lado-izquierdo">
+        <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="empleado.nombre" class="form-control" />
+        <input type="text" name="sexo" placeholder="Sexo" [(ngModel)]="empleado.sexo" class="form-control" />
+        <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono" class="form-control" />
+        <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad" class="form-control" />
+                
+    </div>
+
+    <p>Fecha Finalización de estudios</p>
+
+    <div class="lado-derecho2">
+        <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
+        <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia" class="form-control" />
+            
+    </div>
+
+    <div class="lado-izquierdo2">
+        <input type="text" name="Area" placeholder="Area" [(ngModel)]="empleado.areaEspecializada" class="form-control"/> 
+                     
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-primary mr-1" (click)="add()">Registrar Psicologo</button>
     </div>
 </div>

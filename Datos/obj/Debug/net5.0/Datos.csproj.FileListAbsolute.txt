@@ -24,7 +24,6 @@ C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programa
 C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.AssemblyInfoInputs.cache
 C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.AssemblyInfo.cs
 C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.csproj.CoreCompileInputs.cache
-C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.csproj.CopyComplete
 C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.dll
 C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\ref\Datos.dll
 C:\Users\andres\OneDrive\Escritorio\Proyecto-Backend y Fronend\Proyecto-Programacion-Web\Datos\obj\Debug\net5.0\Datos.pdb

@@ -5,6 +5,9 @@ body{
 hr{
 	margin: 0px;
 	margin-top: 5px;
+	background-color: #9f2e34;
 }
-	
-	
+
+.Contenedor-body{
+	margin: 30px;
+}

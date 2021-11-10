@@ -28,15 +28,15 @@
                 </div>
 
                 <div class="form-group">
-                    <p>Tratamiento a seguir</p>
-                    <p>En este espacio se detalla el paso a paso que debe <br> seguir el paciente en su tratamiento</p>
                     <textarea name="tratamiento" placeholder=" Tratamiento a seguir"
                     [(ngModel)]="tratamiento.tratamientoPaso" class="form-control"></textarea>
                     
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
-                    
+                <div style="float: right;">
+                    <button class="btn btn-primary mr-1" (click)="Siguiente()">Siguiente</button>
+                </div>
+                <div style="float: left;">
+                    <button class="btn btn-primary mr-1" (click)="Anterior()">Anterior</button>
                 </div>
             </section>
         </div>

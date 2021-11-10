@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
 import { PersonaConsultaComponent } from './Administrador/persona-consulta/persona-consulta.component';
 import { PersonaRegistroComponent } from './Administrador/persona-registro/persona-registro.component';
 import { RegistroEmpladosComponent } from './Administrador/registro-emplados/registro-emplados.component';
@@ -25,6 +24,8 @@ import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
 import { FiltroPsicologoPipe } from './pipe/filtro-psicologo.pipe';
 import { FiltroCitaPipe } from './pipe/filtro-cita.pipe';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
+import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
 
 
 
@@ -33,7 +34,6 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
     PersonaConsultaComponent,
     PersonaRegistroComponent,
     RegistroEmpladosComponent,
@@ -52,6 +52,8 @@ import { LoginComponent } from './login/login.component';
     FiltroPsicologoPipe,
     FiltroCitaPipe,
     LoginComponent,
+    FooterComponent,
+    ExamenMentalComponent,
 
   ],
   imports: [
@@ -82,7 +84,6 @@ import { LoginComponent } from './login/login.component';
           { path: 'Realizarevaluacion', component: EvaluacionComponent },
           { path: 'Registrartratamiento', component: TratamientoComponent },
           { path: 'RegistrarhistoriaClinica', component: RegistrarHistoriaClinicaComponent },
-          //falta consltar Historia Clinica
         ]
       },
 
@@ -93,11 +94,10 @@ import { LoginComponent } from './login/login.component';
           { path: 'consultarCitas', component: ConsultarCitasComponent },
           { path: 'consultarEvaluacion', component: ConsultaEvaluacionComponent },
           { path: 'consultarTratamiento', component: ConsultaTratamientoComponent },
+          
         ]
+        
       },
-
-
-
       { path: '', redirectTo: '/login', pathMatch: 'full' }
     ])
   ],

@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   IngresarAdministrador(){
-    this.router.navigate(["/menuAdministrador"]);
+    this.router.navigate(["/menuAdministrador/registroEmpleado"]);
   }
 
   IngresarPsicologo(){
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   IngresarPaciente(){
-    this.router.navigate(["/menuPaciente"]);
+    this.router.navigate(["/menuPaciente/AgendarCita"]);
   }
 
   Ingresar(){

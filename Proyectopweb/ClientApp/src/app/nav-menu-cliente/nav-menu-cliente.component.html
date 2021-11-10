@@ -1,37 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 255)">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/menuPaciente/AgendarCita']">Agendar Cita</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/menuPaciente/consultarCitas']">Consultar Citas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/menuPaciente/consultarEvaluacion']">Consultar evaluaciones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/menuPaciente/consultarTratamiento']">Consultar Tratamientos</a>
-          </li>
-            
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]='["/login"]'>Salir</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <p>Nombre de Usuario</p>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <hr>
-<body>
-  <router-outlet></router-outlet>
-</body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #9f2e34;">
 
-  
-  
-  
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/menuPaciente/AgendarCita']">Agendar Cita</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Opciones de Consulta
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" [routerLink]="['/menuPaciente/consultarCitas']">Consultar Citas</a></li>
+            <li><a class="dropdown-item" href="#">Consultar Diagnostico</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]='["/login"]'>Salir</a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <a class="navbar-brand" href="#"><img src="../../assets/brain (3).png" alt="icono">Vitalmente</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="Contenedor-body">
+  <hr>
+
+  <body>
+    <router-outlet></router-outlet>
+  </body>
+</div>
+

@@ -1,20 +1,40 @@
-.form-empleados{
-    width: 400px;
-    background: white;
-    padding: 30px;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: black;
- }
- .form-group{
-     width: 100%;
-     background: white;
-     padding: 2px;
-     border-radius: 4px;
-     margin-bottom: 4px;
-     
-     font-family: 'calibri';
-     font-size: 18px;
- }
+.lado-derecho{
+    float: left;
+    width: 45%;
+    height: 250px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.lado-izquierdo{
+    float: left;
+    width: 45%;
+    height: 250px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+input{
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.lado-derecho2{
+    float: left;
+    width: 45%;
+    height: 120px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+.lado-izquierdo2{
+    float: left;
+    width: 45%;
+    height: 120px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+p{
+    font-weight: bold;
+}
