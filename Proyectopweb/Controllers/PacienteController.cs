@@ -28,6 +28,11 @@ namespace Proyectopweb.Controllers
             
             if (respuesta.IsError == true)
             {
+                ModelState.AddModelError("Guardar Paciente", respuesta.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                {
+                    Status = StatusCodes.Status400BadRequest,
+                };
                 return BadRequest(respuesta.Mensaje);
             }
             return Ok(respuesta.Paciente);
@@ -58,15 +63,17 @@ namespace Proyectopweb.Controllers
         private Paciente MapearaPaciente(PacienteInputModel pacienteInputModel)
         {
             var paciente = new Paciente();
+            paciente.tipoDocumento=pacienteInputModel.tipoDocumento;
             paciente.identificacion = pacienteInputModel.identificacion;
             paciente.nombre = pacienteInputModel.nombre;
             paciente.apellido = pacienteInputModel.apellido;
-            paciente.edad = pacienteInputModel.edad;
+            paciente.fechaNacimiento=pacienteInputModel.fechaNacimiento;
             paciente.sexo = pacienteInputModel.sexo;
             paciente.telefono = pacienteInputModel.telefono;
             paciente.direccion = pacienteInputModel.direccion;
             paciente.correo = pacienteInputModel.correo;
             paciente.Eps = pacienteInputModel.Eps;
+            paciente.calcularEdad(paciente.fechaNacimiento);
             return paciente;
         } 
     }

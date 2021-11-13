@@ -19,6 +19,41 @@ namespace Datos.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Entidad.Agenda", b =>
+                {
+                    b.Property<int>("idAgenda")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("areaEspecializada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("areaPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("fechaDeseada")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("horaCita")
+                        .HasColumnType("time");
+
+                    b.Property<string>("idPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombrePsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("psicologoidentificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("idAgenda");
+
+                    b.HasIndex("psicologoidentificacion");
+
+                    b.ToTable("agendas");
+                });
+
             modelBuilder.Entity("Entidad.Cita", b =>
                 {
                     b.Property<int>("idCita")
@@ -99,6 +134,9 @@ namespace Datos.Migrations
                     b.Property<int>("edad")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("fechaNacimiento")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("nombre")
                         .HasColumnType("nvarchar(max)");
 
@@ -106,6 +144,9 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("tipoDocumento")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("identificacion");
@@ -127,6 +168,9 @@ namespace Datos.Migrations
                     b.Property<string>("areaEspecializada")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("areaPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("correo")
                         .HasColumnType("nvarchar(max)");
 
@@ -139,6 +183,9 @@ namespace Datos.Migrations
                     b.Property<string>("fechaFinalizacion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("fechaNacimiento")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("mesesExperiencia")
                         .HasColumnType("nvarchar(max)");
 
@@ -149,6 +196,9 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("tipoDocumento")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("identificacion");
@@ -191,6 +241,13 @@ namespace Datos.Migrations
                     b.HasIndex("pacienteidentificacion");
 
                     b.ToTable("tratamientos");
+                });
+
+            modelBuilder.Entity("Entidad.Agenda", b =>
+                {
+                    b.HasOne("Entidad.Psicologo", "psicologo")
+                        .WithMany("agendas")
+                        .HasForeignKey("psicologoidentificacion");
                 });
 
             modelBuilder.Entity("Entidad.Cita", b =>

@@ -1,9 +1,10 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { PersonaConsultaComponent } from './Administrador/persona-consulta/persona-consulta.component';
@@ -26,6 +27,8 @@ import { FiltroCitaPipe } from './pipe/filtro-cita.pipe';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
+import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
+import { AgendaComponent } from './Administrador/agenda/agenda.component';
 
 
 
@@ -54,12 +57,15 @@ import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
     LoginComponent,
     FooterComponent,
     ExamenMentalComponent,
+    AlertModalComponent,
+    AgendaComponent,
 
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    NgbModule,
     RouterModule.forRoot([
       { path: 'personaRegistro', component: PersonaRegistroComponent },
 
@@ -84,6 +90,7 @@ import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
           { path: 'Realizarevaluacion', component: EvaluacionComponent },
           { path: 'Registrartratamiento', component: TratamientoComponent },
           { path: 'RegistrarhistoriaClinica', component: RegistrarHistoriaClinicaComponent },
+          { path: 'RegistrarAgenda', component: AgendaComponent },
         ]
       },
 
@@ -101,6 +108,7 @@ import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
       { path: '', redirectTo: '/login', pathMatch: 'full' }
     ])
   ],
+  entryComponents:[AlertModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

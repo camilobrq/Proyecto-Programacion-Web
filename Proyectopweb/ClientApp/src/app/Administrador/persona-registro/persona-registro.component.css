@@ -20,9 +20,11 @@ p{
 }
 
 .contenedor-formulario{
+    position: relative;
     float: left;
     width: 35%;
     height: 100%;
+    padding-bottom: 20px;
 }
 
 .Fondo-login{

@@ -9,8 +9,9 @@ namespace Entidad
         public string Universidad {get; set;}
         public string fechaFinalizacion {get; set;}
         public string areaEspecializada {get; set;}
+        public string areaPsicologo {get; set;}
         public string mesesExperiencia {get; set;}
         public List<Evaluacion> evaluaciones { get; set; }
-        
+        public List<Agenda> agendas { get; set; }
     }
 }

@@ -57,10 +57,11 @@ namespace Proyectopweb.Controllers
         private Psicologo MapearaPsicologo(PsicologoInputModel PsicologoInputModel)
         {
             var psicologo = new Psicologo();
+           psicologo.tipoDocumento=PsicologoInputModel.tipoDocumento;
             psicologo.identificacion = PsicologoInputModel.identificacion;
             psicologo.nombre = PsicologoInputModel.nombre;
             psicologo.apellido = PsicologoInputModel.apellido;
-            psicologo.edad = PsicologoInputModel.edad;
+            psicologo.fechaNacimiento=PsicologoInputModel.fechaNacimiento;
             psicologo.sexo = PsicologoInputModel.sexo;
             psicologo.telefono = PsicologoInputModel.telefono;
             psicologo.direccion = PsicologoInputModel.direccion;
@@ -68,7 +69,9 @@ namespace Proyectopweb.Controllers
             psicologo.Universidad=PsicologoInputModel.Universidad;
            psicologo.fechaFinalizacion=PsicologoInputModel.fechaFinalizacion;
            psicologo.areaEspecializada=PsicologoInputModel.areaEspecializada;
+           psicologo.areaPsicologo=PsicologoInputModel.areaPsicologo;
            psicologo.mesesExperiencia=PsicologoInputModel.mesesExperiencia;
+            psicologo.calcularEdad(psicologo.fechaNacimiento);
             return psicologo;
         } 
     }

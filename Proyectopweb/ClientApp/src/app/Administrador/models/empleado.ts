@@ -1,15 +1,18 @@
 export class Empleado {
+    tipoDocumento:string;
     identificacion: string;
     nombre: string;
     apellido:string;
     sexo: string;
-    edad: number;
+    fechaNacimiento:Date;
     telefono: string; 
     direccion: string;
     correo: string;
     Universidad: string;
     fechaFinalizacion: Date;
-    areaEspecializada: string;
+    areaPsicologo: string;
     mesesExperiencia: string;
+    areaEspecializada: string;
+    
 }
  
