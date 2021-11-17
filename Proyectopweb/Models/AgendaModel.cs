@@ -27,13 +27,9 @@ namespace Proyectopweb.Models
             fechaDeseada = agenda.fechaDeseada;
             horaCita = agenda.horaCita;
             idAgenda = agenda.idAgenda;
-            nombrePsicologo = agenda.nombrePsicologo;
-            areaEspecializada=agenda.areaEspecializada;
-            areaPsicologo=agenda.areaPsicologo;
+           
         } 
         public int idAgenda { get; set; }
-          public string nombrePsicologo { get; set; }
-        public string areaEspecializada { get; set; }
-        public string areaPsicologo { get; set; }
+    
     }
 }

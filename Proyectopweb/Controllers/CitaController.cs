@@ -63,7 +63,7 @@ namespace Proyectopweb.Controllers
             
             paciente=new Paciente{
                 identificacion=citaInputModel.idPaciente,
-                nombre=citaInputModel.idPaciente,
+                
             },
             };
            

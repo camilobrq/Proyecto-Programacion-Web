@@ -1,32 +1,40 @@
+<body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-           
-            <form class="Form-Agenda">
-                
-                <h2>Registro de Agenda</h2>
+    <div class="contenedor-formulario">
+        <div class="iniciar-sesion">
 
-                <div class="form-group">
-                    <input type="text" name="identificacion" placeholder=" Identificacion del psicologo" [(ngModel)]="Agenda.idPsicologo" class="form-control" />
-                
+            <div class="container">
+                <div class="row">
+
+                            <h2>Registrar Agenda</h2>
+                            
+                            <div class="form-group">
+
+                                <input type="text" name="idPsicologo" placeholder=" Identificacion"
+                                    [(ngModel)]="agenda.idPsicologo" class="form-control" />
+
+                            </div>
+                           
+                           
+                            <div class="form-group">
+                                <label for="">Fecha deseada</label>
+                                 <input type="date" name="fechaDeseada"  [(ngModel)]="agenda.fechaDeseada" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="">Hora deseada</label>
+                                 <input type="time" name="horaCita"  [(ngModel)]="agenda.horaCita" class="form-control" />
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>
+                            </div>
+                    
                 </div>
-                 
-                <div class="form-group">
-                    <label for="">Fecha Deseada</label>
-                    <input type="date" name="fechaDisponible"  [(ngModel)]="Agenda.fechaDeseada" class="form-control" />
-                
-                </div>
-                <div class="form-group">
-                    <label for="">Hora Deseada</label>
-                    <input type="time" name="horaDisponible"  [(ngModel)]="Agenda.horaDeseada" class="form-control" />
-                
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
-                
-                </div>
-            </form>
+            </div>
+
+
+
         </div>
-    </div>
-</div>
+
+    </div>  
+</body>

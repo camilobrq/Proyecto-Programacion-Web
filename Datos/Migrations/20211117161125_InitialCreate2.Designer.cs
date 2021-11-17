@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    [Migration("20211111053757_InitialCreate1")]
-    partial class InitialCreate1
+    [Migration("20211117161125_InitialCreate2")]
+    partial class InitialCreate2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,41 @@ namespace Datos.Migrations
                 .HasAnnotation("ProductVersion", "3.1.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Entidad.Agenda", b =>
+                {
+                    b.Property<int>("idAgenda")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("areaEspecializada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("areaPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("fechaDeseada")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("horaCita")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("idPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombrePsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("psicologoidentificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("idAgenda");
+
+                    b.HasIndex("psicologoidentificacion");
+
+                    b.ToTable("agendas");
+                });
 
             modelBuilder.Entity("Entidad.Cita", b =>
                 {
@@ -208,6 +243,13 @@ namespace Datos.Migrations
                     b.HasIndex("pacienteidentificacion");
 
                     b.ToTable("tratamientos");
+                });
+
+            modelBuilder.Entity("Entidad.Agenda", b =>
+                {
+                    b.HasOne("Entidad.Psicologo", "psicologo")
+                        .WithMany("agendas")
+                        .HasForeignKey("psicologoidentificacion");
                 });
 
             modelBuilder.Entity("Entidad.Cita", b =>

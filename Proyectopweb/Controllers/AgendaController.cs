@@ -24,6 +24,7 @@ namespace Proyectopweb.Controllers
         [HttpPost]
         public ActionResult<AgendaViewModel> Guardar(AgendaInputModel AgendaInputModel)
         {
+            
             var agenda = MapearaAgenda(AgendaInputModel);
             var respuesta = _agendaService.Guardar(agenda);
 
@@ -57,6 +58,8 @@ namespace Proyectopweb.Controllers
         }
         private Agenda MapearaAgenda(AgendaInputModel AgendaInputModel)
         {
+           
+           
             var agenda = new Agenda
             {
                 idPsicologo = AgendaInputModel.idPsicologo,
@@ -64,13 +67,16 @@ namespace Proyectopweb.Controllers
                 horaCita = AgendaInputModel.horaCita,
                 psicologo = new Psicologo
                 {
-                    identificacion = AgendaInputModel.idPsicologo,
-                   
-                   
+                identificacion = AgendaInputModel.idPsicologo,
+                
                 },
+                 
+               
             };
 
             return agenda;
         }
+    
+
     }
 }

@@ -29,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 import { AgendaComponent } from './Administrador/agenda/agenda.component';
+import { ConsultarAgendaComponent } from './Administrador/consultar-agenda/consultar-agenda.component';
 
 
 
@@ -59,6 +60,7 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
     ExamenMentalComponent,
     AlertModalComponent,
     AgendaComponent,
+    ConsultarAgendaComponent,
 
   ],
   imports: [
@@ -91,6 +93,7 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
           { path: 'Registrartratamiento', component: TratamientoComponent },
           { path: 'RegistrarhistoriaClinica', component: RegistrarHistoriaClinicaComponent },
           { path: 'RegistrarAgenda', component: AgendaComponent },
+          { path: 'ConsultarAgenda', component: ConsultarAgendaComponent },
         ]
       },
 

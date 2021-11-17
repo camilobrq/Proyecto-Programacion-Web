@@ -35,8 +35,8 @@ namespace Datos.Migrations
                     b.Property<DateTime>("fechaDeseada")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("horaCita")
-                        .HasColumnType("time");
+                    b.Property<string>("horaCita")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("idPsicologo")
                         .HasColumnType("nvarchar(max)");

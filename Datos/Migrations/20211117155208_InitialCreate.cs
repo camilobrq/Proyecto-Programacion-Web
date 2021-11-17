@@ -12,9 +12,11 @@ namespace Datos.Migrations
                 columns: table => new
                 {
                     identificacion = table.Column<string>(nullable: false),
+                    tipoDocumento = table.Column<string>(nullable: true),
                     nombre = table.Column<string>(nullable: true),
                     apellido = table.Column<string>(nullable: true),
                     sexo = table.Column<string>(nullable: true),
+                    fechaNacimiento = table.Column<DateTime>(nullable: false),
                     edad = table.Column<int>(nullable: false),
                     telefono = table.Column<string>(nullable: true),
                     direccion = table.Column<string>(nullable: true),
@@ -31,9 +33,11 @@ namespace Datos.Migrations
                 columns: table => new
                 {
                     identificacion = table.Column<string>(nullable: false),
+                    tipoDocumento = table.Column<string>(nullable: true),
                     nombre = table.Column<string>(nullable: true),
                     apellido = table.Column<string>(nullable: true),
                     sexo = table.Column<string>(nullable: true),
+                    fechaNacimiento = table.Column<DateTime>(nullable: false),
                     edad = table.Column<int>(nullable: false),
                     telefono = table.Column<string>(nullable: true),
                     direccion = table.Column<string>(nullable: true),
@@ -41,6 +45,7 @@ namespace Datos.Migrations
                     Universidad = table.Column<string>(nullable: true),
                     fechaFinalizacion = table.Column<string>(nullable: true),
                     areaEspecializada = table.Column<string>(nullable: true),
+                    areaPsicologo = table.Column<string>(nullable: true),
                     mesesExperiencia = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -66,6 +71,31 @@ namespace Datos.Migrations
                         name: "FK_citas_pacientes_pacienteidentificacion",
                         column: x => x.pacienteidentificacion,
                         principalTable: "pacientes",
+                        principalColumn: "identificacion",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "agendas",
+                columns: table => new
+                {
+                    idAgenda = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    idPsicologo = table.Column<string>(nullable: true),
+                    psicologoidentificacion = table.Column<string>(nullable: true),
+                    nombrePsicologo = table.Column<string>(nullable: true),
+                    areaEspecializada = table.Column<string>(nullable: true),
+                    areaPsicologo = table.Column<string>(nullable: true),
+                    fechaDeseada = table.Column<DateTime>(nullable: false),
+                    horaCita = table.Column<TimeSpan>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_agendas", x => x.idAgenda);
+                    table.ForeignKey(
+                        name: "FK_agendas_psicologos_psicologoidentificacion",
+                        column: x => x.psicologoidentificacion,
+                        principalTable: "psicologos",
                         principalColumn: "identificacion",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -132,6 +162,11 @@ namespace Datos.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_agendas_psicologoidentificacion",
+                table: "agendas",
+                column: "psicologoidentificacion");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_citas_pacienteidentificacion",
                 table: "citas",
                 column: "pacienteidentificacion");
@@ -159,6 +194,9 @@ namespace Datos.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "agendas");
+
             migrationBuilder.DropTable(
                 name: "citas");
 

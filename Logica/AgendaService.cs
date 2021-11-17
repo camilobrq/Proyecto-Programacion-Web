@@ -26,7 +26,7 @@ namespace Logica
                 {
                     return new AgendaGuardarResponse($"No se encuentra registrado el psicologo en el sistema");
                    
-                }
+                } 
                
                 agenda.psicologo=Psicologo;
                 _context.agendas.Add(agenda);
@@ -62,6 +62,7 @@ namespace Logica
             }
             
         }
+
         public AgendaConsultaResponse Consultar()
         {
             try

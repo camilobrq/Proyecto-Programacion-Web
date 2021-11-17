@@ -18,5 +18,5 @@ export class ConsultarCitasComponent implements OnInit {
     this.apartarCitasService.get().subscribe(result => {
       this.citas = result;
    });
-  }
+  } 
 }
