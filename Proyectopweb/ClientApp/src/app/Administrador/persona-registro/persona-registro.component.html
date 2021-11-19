@@ -6,67 +6,83 @@
             <div class="container">
                 <div class="row">
 
-                            <h2>Vitalmente</h2>
-                            <div class="form-group">
-                                <label>Tipo de Documento</label>                
-                                <select type="text" name="tipoDocumento"  [(ngModel)]="persona.tipoDocumento" class="form-control">
-                                  <option>Cedula de ciudadania</option> 
-                                  <option>Registro civil</option>  
-                                  <option>Tarjeta de identidad</option> 
-                                  <option>Documento extrangero</option>  
-                                </select>
-                            </div>
-                            <div class="form-group">
+                    <h2>Vitalmente</h2>
 
-                                <input type="text" name="identificacion" placeholder=" Identificacion"
-                                    [(ngModel)]="persona.identificacion" class="form-control" />
+                    <form [formGroup]="formGroup">
 
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="nombre" placeholder=" Nombre" [(ngModel)]="persona.nombre"
-                                    class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="apellido" placeholder=" Apellido"
-                                    [(ngModel)]="persona.apellido" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label>Sexo</label>                
-                                <select type="text" name="sexo"  [(ngModel)]="persona.sexo" class="form-control">
-                                  <option>M</option>  
-                                  <option>F</option>   
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Fecha de Nacimiento</label>
-                                 <input type="date" name="edad"  [(ngModel)]="persona.fechaNacimiento" class="form-control" />
-                             </div>
-                            <div class="form-group">
+                        <div class="form-group">
+                            <input type="text" name="nombreusuario" placeholder="Nombre de Usuario"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Contraseña" placeholder="Contraseña" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" aria-label="Default select example disabled"
+                                [(ngModel)]="persona.tipoDocumento">
+                                <option selected disabled>Tipo de Documento</option>
+                                <option value="cedula">Cedula de ciudadania</option>
+                                <option value="registro">Registro civil</option>
+                                <option value="tarjeta">Tarjeta de identidad</option>
+                                <option value="extrangero">Documento extrangero</option>
+                            </select>
+                        </div>
 
-                                <input type="text" name="telefono" placeholder=" Telefono"
-                                    [(ngModel)]="persona.telefono" class="form-control" />
-                            </div>
-                            <div class="form-group">
+                        <div class="form-group">
 
-                                <input type="text" name="direccion" placeholder=" Direccion"
-                                    [(ngModel)]="persona.direccion" class="form-control" />
-                            </div>
-                            <div class="form-group">
+                            <input type="text" name="identificacion" placeholder=" Identificacion"
+                                [(ngModel)]="persona.identificacion" class="form-control" />
 
-                                <input type="text" name="correo" placeholder=" Correo" [(ngModel)]="persona.Correo"
-                                    class="form-control" />
-                            </div>
-                            <div class="form-group">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="persona.nombre"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="persona.apellido"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <select [(ngModel)]="persona.sexo" class="form-select" formControlName="sexo" 
+                                aria-label="Default select example disabled">
+                                <option selected disabled>Sexo</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                            </select>
+                        </div>
 
-                                <input type="text" name="nombreEps" placeholder=" Nombre Eps" [(ngModel)]="persona.eps"
-                                    class="form-control" />
-                            </div>
-                            <p>¿Ya tiene cuenta de paciente? <a [routerLink]='["/login"]'>Inicia Sesión</a></p>
+                        <div class="form-group">
+                            <h3>Fecha de Nacimiento</h3>
+                            <input type="date" name="edad" [(ngModel)]="persona.fechaNacimiento" class="form-control" />
+                        </div>
+                        <div class="form-group">
 
-                            <div class="text-center">
-                                <button class="btn btn-primary mr-1" (click)="add()">Registrate</button>
-                            </div>
-                    
+                            <input type="text" name="telefono" placeholder=" Telefono" [(ngModel)]="persona.telefono"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" name="direccion" placeholder=" Direccion" [(ngModel)]="persona.direccion"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" name="correo" placeholder=" Correo" [(ngModel)]="persona.Correo"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nombreEps" placeholder=" Nombre Eps" [(ngModel)]="persona.eps"
+                                class="form-control" />
+                        </div>
+                        <p>¿Ya tiene cuenta de paciente? <a [routerLink]='["/login"]'>Inicia Sesión</a></p>
+
+                        <div class="text-center">
+                            <button class="btn btn-primary mr-1" (click)="onSubmit()" 
+                            [disabled]="formGroup.invalid">Registrate</button>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
 
@@ -75,9 +91,9 @@
         </div>
 
     </div>
-        <div class="Fondo-login">
+    <div class="Fondo-login">
 
-        </div>
+    </div>
 
-    
+
 </body>

@@ -1,62 +1,81 @@
 <div class="contenedor">
 
     <h2>Registro de Psicologo</h2>
-    <div class="lado-derecho">
-        <label>Tipo de Documento</label>
-        <select type="text" name="tipoDocumento" [(ngModel)]="persona.tipoDocumento" class="form-control">
-            <option>Cedula de ciudadania</option>
-            <option>Registro civil</option>
-            <option>Tarjeta de identidad</option>
-            <option>Documento extrangero</option>
+
+
+    <div class="lado-izquierdo">
+
+        <input type="text" name="nombreusuario" placeholder="Nombre de usuario" class="form-control" />
+
+        <select class="form-select" aria-label="Default select example disabled" [(ngModel)]="empleado.tipoDocumento">
+            <option selected disabled>Tipo de Documento</option>
+            <option value="cedula">Cedula de ciudadania</option>
+            <option value="registro">Registro civil</option>
+            <option value="tarjeta">Tarjeta de identidad</option>
+            <option value="extrangero">Documento extrangero</option>
         </select>
+
+        <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="empleado.nombre" class="form-control" />
+
+        <select [(ngModel)]="empleado.sexo" class="form-select" aria-label="Default select example disabled">
+            <option selected disabled>Sexo</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+
+
+        <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono"
+            class="form-control" />
+
+        <input type="email" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
+
+
+
+    </div>
+
+
+    <div class="lado-derecho">
+        <input type="text" name="Contraseña" placeholder="Contraseña" class="form-control" />
+
         <input type="text" name="identificacion" placeholder="Identifiacion" [(ngModel)]="empleado.identificacion"
             class="form-control" />
         <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="empleado.apellido"
             class="form-control" />
-        <div class="form-group2">
-            <label for="">Fecha de Nacimiento</label>
-            <input type="date" name="fecha" [(ngModel)]="empleado.fechaNacimiento" class="form-control" />
-        </div>
+
+        <p>Fecha de Nacimiento</p>
+        <input type="date" name="fecha" [(ngModel)]="empleado.fechaNacimiento" class="form-control fechanacimiento" />
+
+
         <input type="text" name="direccion" placeholder="Direccion" [(ngModel)]="empleado.direccion"
             class="form-control" />
-        <input type="email" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
 
     </div>
 
-    <div class="lado-izquierdo">
-        <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="empleado.nombre" class="form-control" />
-        <div class="form-group">
-            <label>Sexo</label>
-            <select type="text" name="sexo" [(ngModel)]="empleado.sexo" class="form-control">
-                <option>M</option>
-                <option>F</option>
-            </select>
-        </div>
-        <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono"
-            class="form-control" />
+
+
+    <p class="fecha">Fecha Finalización de Estudios</p>
+
+    <div class="lado-izquierdo2">
         <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad"
             class="form-control" />
-
-    </div>
-
-    <p>Fecha Finalización de estudios</p>
-
-    <div class="lado-derecho2">
-        <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
+        <input type="text" name="areaPsicologo" placeholder="Area del Psicologo" [(ngModel)]="empleado.areaPsicologo"
+            class="form-control" />
         <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia"
             class="form-control" />
 
     </div>
 
-    <div class="lado-izquierdo2">
-        <input type="text" name="Area" placeholder="Area" [(ngModel)]="empleado.areaEspecializada"
+    <div class="lado-derecho2">
+        <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
+        <input type="text" name="areaespecializada" placeholder="Area Especializada" [(ngModel)]="empleado.areaEspecializada"
             class="form-control" />
 
     </div>
+
+
     <div class="form-group2">
 
-        <input type="text" name="areaPsicologo" placeholder="Area del Psicologo" [(ngModel)]="empleado.areaPsicologo"
-            class="form-control" />
+
     </div>
     <div class="text-center">
         <button class="btn btn-primary mr-1" (click)="add()">Registrar Psicologo</button>

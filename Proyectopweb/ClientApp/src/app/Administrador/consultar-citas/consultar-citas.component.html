@@ -1,26 +1,30 @@
-<div class="row">
-    <div class="col-6">
-        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Buscar Cita por terapia">
+<div class="consulta">
+    <div class="row">
+        <div class="col-6">
+            <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Buscar Cita por terapia">
+        </div>
     </div>
-<hr>
-<table class="table table-striped" *ngIf='citas && citas.length'>
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Id Cita</th>
-            <th scope="col">Id Paciente</th>
-            <th scope="col">Tipo de cita </th>
-            <th scope="col">Fecha de cita</th>
-           
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let cita of citas|filtroCita:searchText; index as i ">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ cita.idCita }} </td>
-            <td>{{ cita.idPaciente }} </td>
-            <td>{{ cita.tiposSolicitud }}</td>
-            <td>{{cita.fechaDeseada }}</td>      
-        </tr> 
-    </tbody>
-</table>
+    <hr>
+
+    <table class="table table-striped" *ngIf='citas && citas.length'>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id Cita</th>
+                <th scope="col">Id Paciente</th>
+                <th scope="col">Tipo de cita </th>
+                <th scope="col">Fecha de cita</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cita of citas|filtroCita:searchText; index as i ">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ cita.idCita }} </td>
+                <td>{{ cita.idPaciente }} </td>
+                <td>{{ cita.tiposSolicitud }}</td>
+                <td>{{cita.fechaDeseada }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

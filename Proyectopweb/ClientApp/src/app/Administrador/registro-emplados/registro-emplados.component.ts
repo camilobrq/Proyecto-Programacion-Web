@@ -14,6 +14,8 @@ empleados: Empleado[];
 
   ngOnInit() {
     this.empleado= new Empleado;
+    this.empleado.sexo = "Sexo";
+    this.empleado.tipoDocumento = "Tipo de Documento";
   }
   add(){
     this.empleadoService.post(this.empleado).subscribe(p=>{
