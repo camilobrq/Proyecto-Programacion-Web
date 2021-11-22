@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import  { tap, catchError}  from  'rxjs/operators';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
+import { Agenda } from '../Administrador/models/Agenda';
 import { Cita } from '../Administrador/models/Cita';
 
 @Injectable({
@@ -22,6 +23,14 @@ export class CitaService {
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
         catchError(this.handleErrorService.handleError<Cita[]>('Consulta cita', null))
+      );
+  }
+  getNombre(nombre: string): Observable<string[]> {
+    var nombreP=nombre.toString();
+    return this.http.get<string[]>(this.baseUrl + 'api/Cita/nombrePaciente?id='+nombreP)
+      .pipe(
+        tap(_ => this.handleErrorService),
+        catchError(this.handleErrorService.handleError<string[]>('Registrar cita', null))
       );
   }
   post(apartarCitas: Cita): Observable<Cita> {

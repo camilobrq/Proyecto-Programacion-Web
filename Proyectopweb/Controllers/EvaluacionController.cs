@@ -61,7 +61,16 @@ namespace Proyectopweb.Controllers
             identificacionPsicologo = evaluacionInputModel.identificacionPsicologo,
             fecha = evaluacionInputModel.fecha,
             diagnostico=evaluacionInputModel.diagnostico,
-            
+            nombrePaciente = evaluacionInputModel.nombrePaciente,
+            ocupacion = evaluacionInputModel.ocupacion,
+            lugar = evaluacionInputModel.lugar,
+            nombrePsicologo = evaluacionInputModel.nombrePsicologo,
+            consulta = evaluacionInputModel.consulta,
+            observacion = evaluacionInputModel.observacion,
+            prueba = evaluacionInputModel.prueba,
+            analisis = evaluacionInputModel.analisis,
+            pronostico = evaluacionInputModel.pronostico,
+            recomendacion = evaluacionInputModel.recomendacion,
             paciente=new Paciente{
                 identificacion=evaluacionInputModel.identificacionPaciente,
                 

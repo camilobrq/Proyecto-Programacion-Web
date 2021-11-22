@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    [Migration("20211117155208_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20211122150429_InitialCreate2")]
+    partial class InitialCreate2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,28 +28,27 @@ namespace Datos.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("areaEspecializada")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("areaPsicologo")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("citaidCita")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("fechaDeseada")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("horaCita")
-                        .HasColumnType("time");
-
-                    b.Property<string>("idPsicologo")
+                    b.Property<string>("horaCita")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("nombrePsicologo")
+                    b.Property<int>("idCita")
+                        .HasColumnType("int");
+
+                    b.Property<string>("idPsicologo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("psicologoidentificacion")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("idAgenda");
+
+                    b.HasIndex("citaidCita");
 
                     b.HasIndex("psicologoidentificacion");
 
@@ -63,10 +62,22 @@ namespace Datos.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("estado")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("fechaDeseada")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("horaCita")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("idPaciente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombrePaciente")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("pacienteidentificacion")
@@ -92,6 +103,12 @@ namespace Datos.Migrations
                     b.Property<string>("Psicologoidentificacion")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("analisis")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("consulta")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("diagnostico")
                         .HasColumnType("nvarchar(max)");
 
@@ -104,8 +121,32 @@ namespace Datos.Migrations
                     b.Property<string>("identificacionPsicologo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("lugar")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombrePaciente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombrePsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("observacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ocupacion")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("pacienteidentificacion")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("pronostico")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("prueba")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("recomendacion")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdEvaluacion");
 
@@ -168,9 +209,6 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("areaEspecializada")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("areaPsicologo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("correo")
@@ -247,6 +285,10 @@ namespace Datos.Migrations
 
             modelBuilder.Entity("Entidad.Agenda", b =>
                 {
+                    b.HasOne("Entidad.Cita", "cita")
+                        .WithMany("agenda")
+                        .HasForeignKey("citaidCita");
+
                     b.HasOne("Entidad.Psicologo", "psicologo")
                         .WithMany("agendas")
                         .HasForeignKey("psicologoidentificacion");

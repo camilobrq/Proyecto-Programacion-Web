@@ -6,6 +6,7 @@ using System.Linq;
 using Datos;
 using Proyectopweb.Models;
 using Entidad;
+using System;
 
 namespace Proyectopweb.Controllers
 {
@@ -45,7 +46,40 @@ namespace Proyectopweb.Controllers
             }
             return Ok(respuesta.Agendas.Select(p => new AgendaViewModel(p)));
         }
-
+        [HttpGet("List")]
+        public List<string> Get()
+        {
+            var respuesta = _agendaService.nuevaLista();
+           
+            return respuesta;
+        }
+        [HttpGet("horaAgenda")]
+        public ActionResult<string> getAgenda(DateTime fecha)
+        {
+            var respuesta = _agendaService.buscarFechaDisponible(fecha);
+            if (respuesta.Error == true)
+            {
+                return BadRequest(respuesta.Mensaje);
+            }
+            return Ok(respuesta.listaAgendas.Select(p => new string(p)));
+            
+        }
+        [HttpGet("TipoTerapia")]
+        public List<string> getTerapia(string nombrePsicologo)
+        {
+            
+            var respuesta = _agendaService.buscarTerapia(nombrePsicologo);
+         
+            return respuesta;
+            
+        }
+        [HttpGet("nombrePsicologo")]
+        public List<string> get(string hora)
+        {
+            var respuesta = _agendaService.buscarPsicologo(hora);
+            return respuesta;
+            
+        }
         [HttpGet("byId")]
         public ActionResult<AgendaViewModel> Gets(string id)
         {

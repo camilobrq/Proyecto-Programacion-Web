@@ -10,7 +10,6 @@ export class Empleado {
     correo: string;
     Universidad: string;
     fechaFinalizacion: Date;
-    areaPsicologo: string;
     mesesExperiencia: string;
     areaEspecializada: string;
     

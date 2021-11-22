@@ -57,9 +57,31 @@
                                     class="form-control" />
                             </div>
                             <div class="form-group">
+                                <label>Nombre Eps</label>                
+                                <select type="text" name="sexo"  [(ngModel)]="persona.eps" class="form-control">
+                                  <option>Salud Colmena E.P.S. S.A.</option>  
+                                  <option>Salud Total S.A. E.P.S.</option> 
+                                  <option>Cafesalud E.P.S. S.A.</option>   
+                                  <option>E.P.S.  Sanitas S.A.</option>   
+                                  <option>E.P.S. Unimec - Liquidación</option>   
+                                  <option>Compensar  E.P.S.	</option>   
+                                  <option>EPS Prog. Comfenalco Antioquia</option>   
+                                  <option>SuSalud EPS</option>   
+                                  <option>Colseguros E.P.S.</option>   
+                                  <option>Comfenalco Valle E.P.S.</option>   
+                                  <option>E.P.S.  Saludcoop</option>   
+                                  <option>Humana Vivir  S.A.  E.P.S.</option>   
+                                  <option>EPS Servicios Medicos Colpatria</option>   
+                                  <option>Coomeva E.P.S.</option>   
+                                  <option>E.P.S. Famisanar LTDA.  CAFAM-COLSUBSIDIO</option>   
+                                  <option>E.P.S Servicio Occidental de Salud S.A.-EPS-S.O.S.</option>   
+                                  <option>Solsalud S.A. EPS.</option>   
+                                  <option>SALUDVIDA S.A. EPS</option>     
+                                  <option>SALUDCOLOMBIA EPS S.A.</option>   
+                                  <option>RED SALUD ATENCION HUMANA EPS S.A.</option>   
+                                  <option>CajaCopi EPS</option>   
 
-                                <input type="text" name="nombreEps" placeholder=" Nombre Eps" [(ngModel)]="persona.eps"
-                                    class="form-control" />
+                                </select>
                             </div>
                             <p>¿Ya tiene cuenta de paciente? <a [routerLink]='["/login"]'>Inicia Sesión</a></p>
 

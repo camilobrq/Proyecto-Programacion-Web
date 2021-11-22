@@ -49,15 +49,27 @@
     </div>
 
     <div class="lado-izquierdo2">
-        <input type="text" name="Area" placeholder="Area" [(ngModel)]="empleado.areaEspecializada"
-            class="form-control" />
+            <label>Especializacion</label>
+            <select type="text" name="sexo" [(ngModel)]="empleado.areaEspecializada" class="form-control">
+                <option>Psicología cognitiva</option>
+                <option>Psicología clínica</option>
+                <option>Neuropsicología</option>
+                <option>Psicología biológica</option>
+                <option>Psicología comparativa o etología</option>
+                <option>Psicología educativa</option>
+                <option>Psicología evolutiva</option>
+                <option>Psicología de la salud</option>
+                <option>Psicología de pareja</option>
+                <option>Psicología de familia</option>
+                <option>Psicología empresarial y organizacional</option>
+                <option>Psicología escolar</option>
+                <option>Psicología gerontológica</option>
+                <option>Sexología</option>
+                <option>Psicología comunitaria</option>
+            </select>
 
     </div>
-    <div class="form-group2">
-
-        <input type="text" name="areaPsicologo" placeholder="Area del Psicologo" [(ngModel)]="empleado.areaPsicologo"
-            class="form-control" />
-    </div>
+   
     <div class="text-center">
         <button class="btn btn-primary mr-1" (click)="add()">Registrar Psicologo</button>
     </div>

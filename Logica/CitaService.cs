@@ -92,5 +92,24 @@ namespace Logica
             }
             
         }
+        public string nombrePaciente(string id){
+            
+            List<Cita> citas=_context.citas.ToList();
+            List<Paciente> pacientes=_context.pacientes.ToList();
+            string nombre="";
+            foreach(var item in citas){
+                if(item.idPaciente==id){
+                     foreach(var e in pacientes){
+                        if(item.idPaciente==e.identificacion){
+                            nombre=e.nombre+" "+e.apellido;
+                        }
+                    }
+                }
+               
+            }
+            return nombre;
+        }
+
+       
     }
 }

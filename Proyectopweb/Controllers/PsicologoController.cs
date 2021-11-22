@@ -69,7 +69,6 @@ namespace Proyectopweb.Controllers
             psicologo.Universidad=PsicologoInputModel.Universidad;
            psicologo.fechaFinalizacion=PsicologoInputModel.fechaFinalizacion;
            psicologo.areaEspecializada=PsicologoInputModel.areaEspecializada;
-           psicologo.areaPsicologo=PsicologoInputModel.areaPsicologo;
            psicologo.mesesExperiencia=PsicologoInputModel.mesesExperiencia;
             psicologo.calcularEdad(psicologo.fechaNacimiento);
             return psicologo;

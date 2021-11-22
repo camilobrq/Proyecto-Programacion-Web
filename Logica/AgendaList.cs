@@ -7,23 +7,17 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    public class AgendaConsultaResponse
+    public class AgendaList
     {
-        public List<Agenda> Agendas { get; set; }
         public List<string> listaAgendas { get; set; }
         public string Mensaje { get; set; }
         public bool Error { get; set; }
-        public AgendaConsultaResponse(List<Agenda> agendas)
-        {
-            Agendas = agendas;
-            Error = false;
-        }
-        public AgendaConsultaResponse(List<string> agendasList)
+        public AgendaList(List<string> agendasList)
         {
             listaAgendas = agendasList;
             Error = false;
         }
-        public AgendaConsultaResponse(string mensaje)
+        public AgendaList(string mensaje)
         {
             Mensaje = mensaje;
             Error = true;

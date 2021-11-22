@@ -54,7 +54,7 @@ namespace Logica
             
         }
         public PsicologoConsultaResponse Consultar()
-        {
+        { 
             try
             {
 
@@ -87,6 +87,29 @@ namespace Logica
             catch (Exception e)
             {
                 return new PsicologoBuscarResponse("Error inesperado al Buscar:" + e.Message);
+            }
+            
+        }
+        public CitaBuscarResponse BuscarTerapia(string tipoCita)
+        {
+            try
+            {
+        
+                var cita = _context.citas.Find(tipoCita);
+                if (cita == null)
+                {
+                    
+                    throw new CitaNoEncontradaException("No se encontraró un registro con la identificacion Solicitada");
+                }
+                return new CitaBuscarResponse(cita);
+            }
+            catch (CitaNoEncontradaException e)
+            {
+                return new CitaBuscarResponse("Error al Buscar:" + e.Message);
+            }
+            catch (Exception e)
+            {
+                return new CitaBuscarResponse("Error inesperado al Buscar:" + e.Message);
             }
             
         }

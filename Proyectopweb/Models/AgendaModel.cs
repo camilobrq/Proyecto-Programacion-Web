@@ -16,7 +16,6 @@ namespace Proyectopweb.Models
 
     public class AgendaViewModel : AgendaInputModel
     {
-
         public AgendaViewModel()
         {
 

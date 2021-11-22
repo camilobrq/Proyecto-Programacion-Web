@@ -9,8 +9,10 @@
             <th scope="col">#</th>
             <th scope="col">Id Cita</th>
             <th scope="col">Id Paciente</th>
+            <th scope="col">Nombre Psicologo</th>
             <th scope="col">Tipo de cita </th>
             <th scope="col">Fecha de cita</th>
+            <th scope="col">hora de cita</th>
            
         </tr>
     </thead>
@@ -19,8 +21,10 @@
             <th scope="row">{{ i + 1 }}</th>
             <td>{{ cita.idCita }} </td>
             <td>{{ cita.idPaciente }} </td>
+            <td>{{ cita.nombre }}</td>
             <td>{{ cita.tiposSolicitud }}</td>
-            <td>{{cita.fechaDeseada }}</td>      
+            <td>{{cita.fechaDeseada }}</td>  
+            <td>{{cita.horaCita }}</td>      
         </tr> 
     </tbody>
 </table>

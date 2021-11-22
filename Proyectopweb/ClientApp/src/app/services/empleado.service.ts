@@ -25,6 +25,7 @@ export class EmpleadoService {
         catchError(this.handleErrorService.handleError<Empleado[]>('Consulta cita', null))
       );
   }
+  
   post(empleado: Empleado): Observable<Empleado> {
     return this.http.post<Empleado>(this.baseUrl + 'api/Psicologo', empleado)
       .pipe(

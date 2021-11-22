@@ -19,7 +19,7 @@ namespace Logica
         {
             try
             {
-               // var citaRepetida=_context.citas.Find(cita.idPaciente);
+               
               
                 var Psicologo=_context.psicologos.Find(agenda.psicologo.identificacion);
                 if (Psicologo== null)
@@ -99,6 +99,69 @@ namespace Logica
                 return new AgendaBuscarResponse("Error inesperado al Buscar:" + e.Message);
             }
             
+        }
+        public List<string> nuevaLista(){
+            List<Agenda> agenda=_context.agendas.ToList();
+            List<string> listaHoraAgenda= new List<string>();
+
+            foreach (var item in agenda){
+               
+                var almacenado =item.fechaDeseada+ item.horaCita;
+                listaHoraAgenda.Add(almacenado);
+            }
+            return listaHoraAgenda;
+        }
+         public AgendaList buscarFechaDisponible(DateTime fecha){
+           
+           
+             try
+            {
+            List<Agenda> agenda=_context.agendas.ToList();
+            List<string> horaCita= new List<string>();
+            foreach (var item in agenda){
+               if(item.fechaDeseada == fecha){
+                var almacenado =item.horaCita;
+                horaCita.Add(almacenado);
+               }
+                
+            }
+                return new AgendaList(horaCita);
+
+            }
+            catch (Exception e)
+            {
+                return new AgendaList($"Error inesperado al Consultar: {e.Message}");
+            }
+        }
+
+        public List<string> buscarPsicologo(string hora){
+            List<Agenda> agenda=_context.agendas.ToList();
+            List<Psicologo> psicologo=_context.psicologos.ToList();
+            List<string> nombrePsicologo= new List<string>();
+            foreach(var item in agenda){
+                if(item.horaCita==hora){
+                    foreach(var e in psicologo){
+                        if(item.idPsicologo==e.identificacion){
+                            var almacenado= e.nombre +" "+ e.apellido;
+                            nombrePsicologo.Add(almacenado);
+                        }
+                    }
+                }
+            }
+            return nombrePsicologo;
+        }
+        public List<string> buscarTerapia(string nombrePsicologo){
+            List<Agenda> agenda=_context.agendas.ToList();
+            List<Psicologo> psicologo=_context.psicologos.ToList();
+            List<string> TerapiaPsicologo= new List<string>();
+            foreach(var item in psicologo){
+                var nombreCompleto=item.nombre+" "+item.apellido;
+                if(nombreCompleto==nombrePsicologo){
+                    var almacenarTerapia=item.areaEspecializada;
+                    TerapiaPsicologo.Add(almacenarTerapia);
+                }
+            }
+            return TerapiaPsicologo;
         }
     }
 }

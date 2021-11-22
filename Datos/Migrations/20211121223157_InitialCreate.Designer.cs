@@ -4,14 +4,16 @@ using Datos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Datos.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    partial class ConsultorioContextModelSnapshot : ModelSnapshot
+    [Migration("20211121223157_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,6 +28,12 @@ namespace Datos.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("areaEspecializada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("areaPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("citaidCita")
                         .HasColumnType("int");
 
@@ -39,6 +47,9 @@ namespace Datos.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("idPsicologo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombrePsicologo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("psicologoidentificacion")
@@ -60,9 +71,6 @@ namespace Datos.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("estado")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("fechaDeseada")
                         .HasColumnType("datetime2");
 
@@ -73,9 +81,6 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombrePaciente")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("pacienteidentificacion")
@@ -101,12 +106,6 @@ namespace Datos.Migrations
                     b.Property<string>("Psicologoidentificacion")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("analisis")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("consulta")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("diagnostico")
                         .HasColumnType("nvarchar(max)");
 
@@ -119,32 +118,8 @@ namespace Datos.Migrations
                     b.Property<string>("identificacionPsicologo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("lugar")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombrePaciente")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombrePsicologo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("observacion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ocupacion")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("pacienteidentificacion")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("pronostico")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("prueba")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("recomendacion")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdEvaluacion");
 

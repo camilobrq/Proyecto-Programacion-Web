@@ -13,10 +13,11 @@ namespace Proyectopweb.Controllers
     public class CitaController : ControllerBase
     {
         private readonly CitaService _citaService;
-       
+        private readonly PsicologoService _psicologoService;
         public CitaController(ConsultorioContext context)
         {
             _citaService = new CitaService(context);
+            _psicologoService = new PsicologoService(context);
         }
 
         
@@ -43,24 +44,34 @@ namespace Proyectopweb.Controllers
             }
             return Ok(respuesta.Citas.Select(p => new CitaViewModel(p)));
         }
-
+        [HttpGet("nombrePaciente")]
+        public string GetNombrePaciente(string id)
+        {
+            var respuesta = _citaService.nombrePaciente(id);
+          
+            return respuesta;
+        }
         [HttpGet("byId")]
         public ActionResult<CitaViewModel> Gets(string id)
         {
             var respuesta = _citaService.Buscar(id);
-            if (respuesta.IsError == true)
+            if (respuesta.IsError == true) 
             {
                 return BadRequest(respuesta.Mensaje);
             }
             return Ok(respuesta.Cita);
         }
+       
         private Cita MapearaCitas(CitaInputModel citaInputModel)
         {
             var cita = new Cita{
             idPaciente = citaInputModel.idPaciente,
             tiposSolicitud = citaInputModel.tiposSolicitud,
             fechaDeseada = citaInputModel.fechaDeseada,
-            
+            nombre=citaInputModel.nombre,
+            horaCita=citaInputModel.horaCita,
+            nombrePaciente=citaInputModel.nombrePaciente,
+            estado=citaInputModel.estado,
             paciente=new Paciente{
                 identificacion=citaInputModel.idPaciente,
                 

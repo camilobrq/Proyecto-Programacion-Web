@@ -19,7 +19,6 @@ namespace Proyectopweb.Models
         public DateTime fechaNacimiento { get; set; }
         public string fechaFinalizacion {get; set;}
       //  public byte[] certificado { get; set; }
-        public string areaPsicologo {get; set;}
         public string mesesExperiencia {get; set;}
     }
 

@@ -7,34 +7,48 @@
                 <div class="row">
 
                             <h2>Registrar Agenda</h2>
-                            
+                        <form [formGroup]="formGroup">    
                             <div class="form-group">
 
-                                <input type="text" name="idPsicologo" placeholder=" Identificacion"
-                                    [(ngModel)]="agenda.idPsicologo" class="form-control" />
-
+                                <input type="text" formControlName="idPsicologo" placeholder=" Identificacion" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.idPsicologo.errors }" />
+                                    <div *ngIf="control.idPsicologo.errors" class="invalid-feedback">
+                                        <div *ngIf="control.idPsicologo.errors.required">La indentificacion es obligatoria</div>
+                                    </div>
                             </div>
                            
                            
                             <div class="form-group">
                                 <label for="">Fecha deseada</label>
-                                 <input type="date" name="fechaDeseada"  [(ngModel)]="agenda.fechaDeseada" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="">Hora deseada</label>
-                                 <input type="time" name="horaCita"  [(ngModel)]="agenda.horaCita" class="form-control" />
-                            </div>
 
-                            <div class="text-center">
-                                <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>
+                                 <input type="date" formControlName="fechaDeseada"  class="form-control" 
+                                 [ngClass]="{ 'is-invalid':  control.fechaDeseada.errors }"/>
+                                 <div *ngIf="control.fechaDeseada.errors" class="invalid-feedback">
+                                    <div *ngIf="control.fechaDeseada.errors.required">La fecha es obligatoria</div>
+                                </div>
                             </div>
-                    
+                            <div class="form-group">  
+                                <label>Hora deseada</label>  
+                                <select type="text" formControlName="horaCita" class="form-control" 
+                                 [ngClass]="{ 'is-invalid':  control.horaCita.errors }">              
+                                
+                                    <option>6:00 A.m - 8:00 A.m</option>
+                                    <option>8:00 A.m - 10:00 A.m</option>
+                                    <option>10:00 A.m - 12:00 P.m</option>
+                                    <option>2:00 P.m - 4:00 P.m</option>
+                                    <option>4:00 P.m - 6:00 P.m</option>
+                                </select>
+                                <div *ngIf="control.horaCita.errors" class="invalid-feedback">
+                                    <div *ngIf="control.horaCita.errors.required">La hora es obligatoria</div>
+                                 </div>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary mr-1" (click)="onSubmit()"
+                                [disabled]="formGroup.invalid">Registrar</button>
+                            </div>
+                        </form>
                 </div>
             </div>
-
-
-
         </div>
-
     </div>  
 </body>

@@ -45,7 +45,6 @@ namespace Datos.Migrations
                     Universidad = table.Column<string>(nullable: true),
                     fechaFinalizacion = table.Column<string>(nullable: true),
                     areaEspecializada = table.Column<string>(nullable: true),
-                    areaPsicologo = table.Column<string>(nullable: true),
                     mesesExperiencia = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -62,7 +61,9 @@ namespace Datos.Migrations
                     idPaciente = table.Column<string>(nullable: true),
                     pacienteidentificacion = table.Column<string>(nullable: true),
                     tiposSolicitud = table.Column<string>(nullable: true),
-                    fechaDeseada = table.Column<DateTime>(nullable: false)
+                    fechaDeseada = table.Column<DateTime>(nullable: false),
+                    nombre = table.Column<string>(nullable: true),
+                    horaCita = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -71,31 +72,6 @@ namespace Datos.Migrations
                         name: "FK_citas_pacientes_pacienteidentificacion",
                         column: x => x.pacienteidentificacion,
                         principalTable: "pacientes",
-                        principalColumn: "identificacion",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "agendas",
-                columns: table => new
-                {
-                    idAgenda = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    idPsicologo = table.Column<string>(nullable: true),
-                    psicologoidentificacion = table.Column<string>(nullable: true),
-                    nombrePsicologo = table.Column<string>(nullable: true),
-                    areaEspecializada = table.Column<string>(nullable: true),
-                    areaPsicologo = table.Column<string>(nullable: true),
-                    fechaDeseada = table.Column<DateTime>(nullable: false),
-                    horaCita = table.Column<TimeSpan>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_agendas", x => x.idAgenda);
-                    table.ForeignKey(
-                        name: "FK_agendas_psicologos_psicologoidentificacion",
-                        column: x => x.psicologoidentificacion,
-                        principalTable: "psicologos",
                         principalColumn: "identificacion",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -161,6 +137,44 @@ namespace Datos.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "agendas",
+                columns: table => new
+                {
+                    idAgenda = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    idPsicologo = table.Column<string>(nullable: true),
+                    psicologoidentificacion = table.Column<string>(nullable: true),
+                    idCita = table.Column<int>(nullable: false),
+                    citaidCita = table.Column<int>(nullable: true),
+                    nombrePsicologo = table.Column<string>(nullable: true),
+                    areaEspecializada = table.Column<string>(nullable: true),
+                    areaPsicologo = table.Column<string>(nullable: true),
+                    fechaDeseada = table.Column<DateTime>(nullable: false),
+                    horaCita = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_agendas", x => x.idAgenda);
+                    table.ForeignKey(
+                        name: "FK_agendas_citas_citaidCita",
+                        column: x => x.citaidCita,
+                        principalTable: "citas",
+                        principalColumn: "idCita",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_agendas_psicologos_psicologoidentificacion",
+                        column: x => x.psicologoidentificacion,
+                        principalTable: "psicologos",
+                        principalColumn: "identificacion",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_agendas_citaidCita",
+                table: "agendas",
+                column: "citaidCita");
+
             migrationBuilder.CreateIndex(
                 name: "IX_agendas_psicologoidentificacion",
                 table: "agendas",
@@ -198,13 +212,13 @@ namespace Datos.Migrations
                 name: "agendas");
 
             migrationBuilder.DropTable(
-                name: "citas");
-
-            migrationBuilder.DropTable(
                 name: "evaluaciones");
 
             migrationBuilder.DropTable(
                 name: "tratamientos");
+
+            migrationBuilder.DropTable(
+                name: "citas");
 
             migrationBuilder.DropTable(
                 name: "psicologos");
