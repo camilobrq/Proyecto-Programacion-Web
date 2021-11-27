@@ -1,8 +1,10 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Datos;
 using Entidad;
-using System;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace Logica
 {
@@ -10,89 +12,55 @@ namespace Logica
     {
         private readonly ConsultorioContext _context;
 
+
         public TratamientoService(ConsultorioContext context)
         {
             _context = context;
         }
 
-        public TratamientoGuardarResponse Guardar(Tratamiento tratamiento)
+        public GuardarTratamientoResponse Guardar(Tratamiento tratamiento)
         {
             try
             {
-                var Paciente=_context.pacientes.Find(tratamiento.paciente.identificacion);
-                var Psicologo=_context.psicologos.Find(tratamiento.Psicologo.identificacion);
-                if (Paciente== null && Psicologo==null)
+                var TratamientoBuscadoidTratamiento = _context.tratamientos.Find(tratamiento.idTratamiento);
+                if (TratamientoBuscadoidTratamiento != null)
                 {
-                    return new TratamientoGuardarResponse($"No se encuentra registrada la persona en el sistema");
-                  
+                    return new GuardarTratamientoResponse("Error, ya existe un tratamiento con este id");
                 }
-                tratamiento.paciente=Paciente;
-                tratamiento.Psicologo=Psicologo;
                 _context.tratamientos.Add(tratamiento);
                 _context.SaveChanges();
-                return new TratamientoGuardarResponse(tratamiento);
+                return new GuardarTratamientoResponse(tratamiento);
             }
             catch (Exception e)
             {
-                return new TratamientoGuardarResponse($"Error inesperado al Guardar: { e.Message}");
+                return new GuardarTratamientoResponse($"Error de la aplicacion: {e.Message}");
             }
-
         }
-        public string Eliminar(string idTratamiento)
-        {
-            try
-            {
-                var Tratamiento = _context.tratamientos.Find(idTratamiento);
-                if (Tratamiento != null)
-                {
-                    _context.Remove(Tratamiento);
-                    _context.SaveChanges();
-                    return $"Se Eliminó el registro de la cita {idTratamiento}";
-                }
-                return $"No fue posible eliminar el registro, porque no existe una cita con el id {idTratamiento}";
-            }
-            catch (Exception e)
-            {
-                return $"Error inesperado al Eliminar: {e.Message}";
-            }
-            
-        }
-        public TratamientoConsultaResponse Consultar()
-        {
-            try
-            {
 
-                return new TratamientoConsultaResponse(_context.tratamientos.ToList());
-
-            }
-            catch (Exception e)
-            {
-                return new TratamientoConsultaResponse($"Error inesperado al Consultar: {e.Message}");
-            }
-            
-        }
-        public TratamientoBuscarResponse Buscar(string idTratamiento)
+        public List<Tratamiento> ConsultarTodosLosTratamientos()
         {
-            try
-            {
-        
-                var Tratamiento = _context.tratamientos.Find(idTratamiento);
-                if (Tratamiento == null)
-                {
-                    
-                    throw new TratamientoNoEncontradaException("No se encontraró un registro con la identificacion Solicitada");
-                }
-                return new TratamientoBuscarResponse(Tratamiento);
-            }
-            catch (TratamientoNoEncontradaException e)
-            {
-                return new TratamientoBuscarResponse("Error al Buscar:" + e.Message);
-            }
-            catch (Exception e)
-            {
-                return new TratamientoBuscarResponse("Error inesperado al Buscar:" + e.Message);
-            }
-            
+            List<Tratamiento> tratamientos = _context.tratamientos.ToList();
+            return tratamientos;
         }
     }
+
+
+    public class GuardarTratamientoResponse
+    {
+        public GuardarTratamientoResponse(Tratamiento tratamiento)
+        {
+            Error = false;
+            this.tratamiento = tratamiento;
+        }
+        public GuardarTratamientoResponse(string mensaje)
+        {
+            Error = true;
+            Mensaje = mensaje;
+        }
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public Tratamiento tratamiento { get; set; }
+
+    }
 }
+

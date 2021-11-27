@@ -56,19 +56,20 @@
     <p class="fecha">Fecha Finalización de Estudios</p>
 
     <div class="lado-izquierdo2">
-        <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad"
-            class="form-control" />
-        <input type="text" name="areaPsicologo" placeholder="Area del Psicologo" [(ngModel)]="empleado.areaPsicologo"
-            class="form-control" />
-        <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia"
-            class="form-control" />
+      <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
+      
+      <input type="text" name="areaPsicologo" placeholder="Area del Psicologo" [(ngModel)]="empleado.areaPsicologo"
+             class="form-control" />
+      <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia"
+             class="form-control" />
 
     </div>
 
     <div class="lado-derecho2">
-        <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
-        <input type="text" name="areaespecializada" placeholder="Area Especializada" [(ngModel)]="empleado.areaEspecializada"
-            class="form-control" />
+      <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad"
+             class="form-control" />
+      <input type="text" name="areaespecializada" placeholder="Area Especializada" [(ngModel)]="empleado.areaEspecializada"
+             class="form-control" />
 
     </div>
 

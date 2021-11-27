@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 //import { TratamientoService } from 'src/app/services/tratamiento.service';
 //import { Evaluacion } from '../models/evaluacion';
 //import { Tratamiento } from '../models/tratamiento';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tratamiento',
@@ -13,18 +12,10 @@ import { Router } from '@angular/router';
 export class TratamientoComponent implements OnInit {
 //tratamiento: Tratamiento;
 //tratamientos: Tratamiento[];
-  constructor(/*private tratamientoService: TratamientoService*/private router: Router) { }
+  constructor(/*private tratamientoService: TratamientoService*/) { }
 
   ngOnInit() {
     //this.tratamiento= new Tratamiento;
-  }
-
-  Siguiente(){
-    this.router.navigate(["/menuEmpleado/RegistrarhistoriaClinica"]);
-  }
-
-  Anterior(){
-    this.router.navigate(["/menuEmpleado/Realizarevaluacion"]);
   }
    
   /*

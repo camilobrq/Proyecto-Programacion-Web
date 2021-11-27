@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Persona } from '../Administrador/models/persona';
+import { Paciente } from '../Administrador/models/Paciente';
 
 @Pipe({
   name: 'filtroPaciente'
 })
 export class FiltroPacientePipe implements PipeTransform {
   
-  transform(persona: Persona[], searchText: string): any {
+  transform(persona: Paciente[], searchText: string): any {
     if (searchText == null) return persona;
     return persona.filter(p =>
       p.nombre.toLowerCase()

@@ -1,94 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Datos;
 using Entidad;
-using System;
-using System.Linq;
-using System.Collections.Generic;
+
 
 namespace Logica
 {
     public class PsicologoService
     {
+
         private readonly ConsultorioContext _context;
+
 
         public PsicologoService(ConsultorioContext context)
         {
             _context = context;
         }
 
-        public PsicologoGuardarResponse Guardar(Psicologo psicologo)
+        public GuardarPsicologoResponse Guardar(Psicologo psicologo)
         {
             try
             {
-
-                if (_context.psicologos.Find(psicologo.identificacion)== null)
+                var PsicologoBuscadoNombreUsuario = _context.psicologos.Find(psicologo.nombreUsuario);
+                var PsicologoBuscadoIdentificacion = _context.psicologos.Find(psicologo.nombreUsuario);
+                if (PsicologoBuscadoNombreUsuario != null || PsicologoBuscadoIdentificacion != null)
                 {
-                    _context.psicologos.Add(psicologo);
-                    _context.SaveChanges();
-                    return new PsicologoGuardarResponse(psicologo);
+                    return new GuardarPsicologoResponse("Error, ya existe un psicologo registrado con el nombre de usuario o el psicologo ya esta registrado");
                 }
-                return new PsicologoGuardarResponse($"No fue posible Guardar la información, porque ya existe un registro");
+               // psicologo.calcularEdad(psicologo.fechaNacimiento);
+                _context.psicologos.Add(psicologo);
+                _context.SaveChanges();
+                return new GuardarPsicologoResponse(psicologo);
             }
             catch (Exception e)
             {
-                return new PsicologoGuardarResponse($"Error inesperado al Guardar: { e.Message}");
+                return new GuardarPsicologoResponse($"Error de la aplicacion: {e.Message}");
             }
-
         }
-        public string Eliminar(string identificacion)
-        {
-            try
-            {
-                var Psicologo = _context.psicologos.Find(identificacion);
-                if (Psicologo != null)
-                {
-                    _context.Remove(Psicologo);
-                    _context.SaveChanges();
-                    return $"Se Eliminó el registro de la paciente con identificacion{identificacion}";
-                }
-                return $"No fue posible eliminar el registro, porque no existe la paciente con la identificacion {identificacion}";
-            }
-            catch (Exception e)
-            {
-                return $"Error inesperado al Eliminar: {e.Message}";
-            }
-            
-        }
-        public PsicologoConsultaResponse Consultar()
-        {
-            try
-            {
 
-                return new PsicologoConsultaResponse(_context.psicologos.ToList());
-
-            }
-            catch (Exception e)
-            {
-                return new PsicologoConsultaResponse($"Error inesperado al Consultar: {e.Message}");
-            }
-            
-        }
-        public PsicologoBuscarResponse Buscar(string identificacion)
+        public List<Psicologo> ConsultarTodosLosPsicologos()
         {
-            try
-            {
-        
-                var Psicologo = _context.psicologos.Find(identificacion);
-                if (Psicologo == null)
-                {
-                    
-                    throw new PsicologoNoEncontradaException("No se encontraró un registro con la identificacion Solicitada");
-                }
-                return new PsicologoBuscarResponse(Psicologo);
-            }
-            catch (PsicologoNoEncontradaException e)
-            {
-                return new PsicologoBuscarResponse("Error al Buscar:" + e.Message);
-            }
-            catch (Exception e)
-            {
-                return new PsicologoBuscarResponse("Error inesperado al Buscar:" + e.Message);
-            }
-            
+            List<Psicologo> psicologos = _context.psicologos.ToList();
+            return psicologos;
         }
     }
+
+
+    public class GuardarPsicologoResponse
+    {
+        public GuardarPsicologoResponse(Psicologo psicologo)
+        {
+            Error = false;
+            this.psicologo = psicologo;
+        }
+        public GuardarPsicologoResponse(string mensaje)
+        {
+            Error = true;
+            Mensaje = mensaje;
+        }
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public Psicologo psicologo { get; set; }
+
+    }
 }
+

@@ -1,5 +1,5 @@
 body{
-    height: 820px;
+    height: 850px;
     width: 100%;
 }
 .iniciar-sesion{
@@ -11,9 +11,16 @@ body{
     text-align: center;
 }
 
+button{
+    float: left;
+}
 
-h1{
-    padding-bottom: 20px;
+.centrar{
+    margin-left: 25%;
+}
+
+h1 {
+  padding-bottom: 20px;
 }
 
 p{
@@ -24,7 +31,7 @@ p{
     position: relative;
     float: left;
     width: 35%;
-    min-height: 800px;
+    height: 820px;
     padding-bottom: 20px;
 }
 

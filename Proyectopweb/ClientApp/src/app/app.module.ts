@@ -19,7 +19,6 @@ import { ConsultaEvaluacionComponent } from './Administrador/consulta-evaluacion
 import { ConsultaTratamientoComponent } from './Administrador/consulta-tratamiento/consulta-tratamiento.component';
 import { NavMenuEmpleadoComponent } from './nav-menu-empleado/nav-menu-empleado.component';
 import { NavMenuClienteComponent } from './nav-menu-Cliente/nav-menu-cliente.component';
-import { InstructivoComponent } from './Administrador/instructivo/instructivo.component';
 import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-historia-clinica/registrar-historia-clinica.component';
 import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
 import { FiltroPsicologoPipe } from './pipe/filtro-psicologo.pipe';
@@ -49,7 +48,6 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
     ConsultaTratamientoComponent,
     NavMenuEmpleadoComponent,
     NavMenuClienteComponent,
-    InstructivoComponent,
     RegistrarHistoriaClinicaComponent,
     FiltroPacientePipe,
     FiltroPsicologoPipe,
@@ -75,6 +73,7 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
       {
         path: 'menuAdministrador', component: NavMenuComponent,
         children: [
+          { path: 'Registrartratamiento', component: TratamientoComponent },
           { path: 'personaConsulta', component: PersonaConsultaComponent },
           { path: 'registroEmpleado', component: RegistroEmpladosComponent },
           { path: 'consultarEmpleado', component: ConsultarEmpleadoComponent },
@@ -82,7 +81,6 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
         ]
       },
 
-      { path: 'instructivo', component: InstructivoComponent },
 
       { path: 'login', component: LoginComponent },
 
@@ -90,7 +88,6 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
         path: 'menuEmpleado', component: NavMenuEmpleadoComponent,
         children: [
           { path: 'Realizarevaluacion', component: EvaluacionComponent },
-          { path: 'Registrartratamiento', component: TratamientoComponent },
           { path: 'RegistrarhistoriaClinica', component: RegistrarHistoriaClinicaComponent },
           { path: 'RegistrarAgenda', component: AgendaComponent },
         ]

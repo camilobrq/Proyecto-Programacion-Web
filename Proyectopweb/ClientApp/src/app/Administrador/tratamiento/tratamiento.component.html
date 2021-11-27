@@ -1,44 +1,23 @@
-<div class="container">
-     <div class="row">
-        <div class="col-md-6 offset-md-3">
+<div class="form-tratamiento">
+            <h2>Tratamiento</h2>
+            <div class="form-group">
 
-            <section class="form-tratamiento">
-                <h2>Tratamiento</h2>
-                <div class="form-group">
-                    <span>Fecha:</span>
-                    <input type="date" name="Fecha" 
-                   [(ngModel)]="tratamiento.fecha" class="form-control" />
-               </div>
-
-                <div class="form-group">
-
-                     <input type="text" name="psicologo" placeholder="identificacion del psicologo que autoriza"
-                    [(ngModel)]="tratamiento.identificacionPsicologo" class="form-control" />
-                </div>
-                <div class="form-group">
-
-                    <input type="text" name="Medicacion" placeholder=" Medicacion a suministrar al paciente"
-                    [(ngModel)]="tratamiento.medicacion" class="form-control" />
-                </div>
-
-                <div class="form-group">
-
-                    <input type="text" name="identificacion" placeholder=" Identificacion del paciente"
+              <input type="text" name="identificacion" placeholder="Id del Tratamiento"
                      [(ngModel)]="tratamiento.identificacionPaciente" class="form-control" />
-                </div>
+            </div>
 
-                <div class="form-group">
-                    <textarea name="tratamiento" placeholder=" Tratamiento a seguir"
-                    [(ngModel)]="tratamiento.tratamientoPaso" class="form-control"></textarea>
-                    
-                </div>
-                <div style="float: right;">
-                    <button class="btn btn-primary mr-1" (click)="Siguiente()">Siguiente</button>
-                </div>
-                <div style="float: left;">
-                    <button class="btn btn-primary mr-1" (click)="Anterior()">Anterior</button>
-                </div>
-            </section>
-        </div>
-    </div>
+            <div class="form-group">
+
+              <input type="text" name="identificacion" placeholder="Nombre del Tratamiento"
+                     [(ngModel)]="tratamiento.identificacionPaciente" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <textarea name="tratamiento" placeholder="Descripción del Tratamiento"
+                        [(ngModel)]="tratamiento.tratamientoPaso" class="form-control"></textarea>
+
+            </div>
+
+            <button type="button" class="btn btn-primary" >Registrar Tratamiento</button>
+
 </div>

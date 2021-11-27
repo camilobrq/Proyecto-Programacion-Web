@@ -1,9 +1,9 @@
-using Datos;
+﻿using Datos;
 using Entidad;
 using Proyectopweb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Logica;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 namespace Proyectopweb.Controllers
@@ -12,68 +12,48 @@ namespace Proyectopweb.Controllers
     [ApiController]
     public class TratamientoController : ControllerBase
     {
-        private readonly TratamientoService _tratamientoService;
-       
+        private readonly TratamientoService tratamientoService;
+
+
         public TratamientoController(ConsultorioContext context)
         {
-            _tratamientoService = new TratamientoService(context);
+            this.tratamientoService = new TratamientoService(context);
         }
 
-        
+
+        private Tratamiento MapearTratamiento(TratamientoInputModel tratamientoInputModel)
+        {
+            var tratamiento = new Tratamiento();
+            {
+                tratamiento.idTratamiento = tratamientoInputModel.idTratamiento;
+                tratamiento.nombreTratamiento = tratamientoInputModel.nombreTratamiento;
+                tratamiento.descripcionTratamiento = tratamientoInputModel.descripcionTratamiento;
+
+            }
+            return tratamiento;
+        }
+
         [HttpPost]
         public ActionResult<TratamientoViewModel> Guardar(TratamientoInputModel tratamientoInputModel)
         {
-            var tratamiento = MapearaTratamiento(tratamientoInputModel);
-            var respuesta = _tratamientoService.Guardar(tratamiento);
-            
-            if (respuesta.IsError == true)
-            {
-                return BadRequest(respuesta.Mensaje);
-            }
-            return Ok(respuesta.Tratamiento);
-        }
+            var tratamiento = MapearTratamiento(tratamientoInputModel);
+            var respuesta = this.tratamientoService.Guardar(tratamiento);
 
-        [HttpGet]
-        public ActionResult<IEnumerable<TratamientoViewModel>> Gets()
-        {
-            var respuesta = _tratamientoService.Consultar();
             if (respuesta.Error == true)
             {
                 return BadRequest(respuesta.Mensaje);
             }
-            return Ok(respuesta.Tratamientos.Select(p => new TratamientoViewModel(p)));
+            return Ok(respuesta.tratamiento);
         }
 
-        [HttpGet("byId")]
-        public ActionResult<TratamientoViewModel> Gets(string id)
+        [HttpGet]
+        public IEnumerable<TratamientoViewModel> Gets()
         {
-            var respuesta = _tratamientoService.Buscar(id);
-            if (respuesta.IsError == true)
-            {
-                return BadRequest(respuesta.Mensaje);
-            }
-            return Ok(respuesta.Tratamiento);
+            var tratamientos = this.tratamientoService.ConsultarTodosLosTratamientos().Select(p => new TratamientoViewModel(p));
+            return tratamientos;
+
         }
-        private Tratamiento MapearaTratamiento(TratamientoInputModel tratamientoInputModel)
-        {
-            var tratamiento = new Tratamiento{
-            identificacionPaciente = tratamientoInputModel.identificacionPaciente,
-            identificacionPsicologo = tratamientoInputModel.identificacionPsicologo,
-            fecha = tratamientoInputModel.fecha,
-            medicacion=tratamientoInputModel.medicacion,
-            tratamientoPaso=tratamientoInputModel.tratamientoPaso,
-            
-            paciente=new Paciente{
-                identificacion=tratamientoInputModel.identificacionPaciente,
-                
-            },
-            Psicologo=new Psicologo{
-                identificacion=tratamientoInputModel.identificacionPsicologo,
-                
-            },
-            };
-           
-            return tratamiento;
-        } 
+
+
     }
 }

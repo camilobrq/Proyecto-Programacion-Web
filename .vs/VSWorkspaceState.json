@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Logica",
-    "\\Proyectopweb\\ClientApp",
-    "\\Proyectopweb\\ClientApp\\src",
-    "\\Proyectopweb\\ClientApp\\src\\app",
-    "\\Proyectopweb\\ClientApp\\src\\app\\Administrador",
-    "\\Proyectopweb\\ClientApp\\src\\app\\Administrador\\persona-registro",
-    "\\Proyectopweb\\ClientApp\\src\\app\\login"
+    ""
   ],
-  "SelectedNode": "\\Logica\\AgendaBuscarResponse.cs",
+  "SelectedNode": "\\Datos",
   "PreviewInSolutionExplorer": false
 }

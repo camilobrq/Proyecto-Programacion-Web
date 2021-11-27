@@ -7,13 +7,10 @@ namespace Entidad
     public class Tratamiento
     {
         [Key]
-        public int IdTratamiento { get; set; }
-        public string identificacionPaciente {get; set;}
-        public Paciente paciente {get; set;}
-        public string identificacionPsicologo {get; set;}
-        public Psicologo Psicologo {get; set;}
-        public DateTime fecha { get; set; }
-        public string medicacion {get; set;}
-        public string tratamientoPaso {get; set;} 
+        public int idTratamiento { get; set; }
+        [Column(TypeName = "varchar(30)")]
+        public string nombreTratamiento { get; set; }
+        [Column(TypeName = "varchar(500)")]
+        public string descripcionTratamiento { get; set; }
     }
 }

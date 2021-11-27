@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleadoService } from 'src/app/services/empleado.service';
-import { Empleado } from '../models/empleado';
+import { Psicologo } from '../models/Psicologo';
 
 @Component({
   selector: 'app-consultar-empleado',
@@ -8,7 +8,7 @@ import { Empleado } from '../models/empleado';
   styleUrls: ['./consultar-empleado.component.css']
 })
 export class ConsultarEmpleadoComponent implements OnInit {
-  empleados:Empleado[];
+  empleados: Psicologo[];
   searchText:string;
   constructor(private empleadoService: EmpleadoService) { }
 

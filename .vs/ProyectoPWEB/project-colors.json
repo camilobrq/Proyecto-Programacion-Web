@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "17c70132-d32b-4b74-87d6-f6e3b26dc0fc": {
+      "ProjectGuid": "17c70132-d32b-4b74-87d6-f6e3b26dc0fc",
+      "DisplayName": "Logica",
+      "ColorIndex": 0
+    },
+    "681dc2dc-a1f1-4161-8cf1-b4ff60d9325b": {
+      "ProjectGuid": "681dc2dc-a1f1-4161-8cf1-b4ff60d9325b",
+      "DisplayName": "Entidad",
+      "ColorIndex": 1
+    },
+    "afd4f61c-346e-42b4-9b11-e818ad5fdafe": {
+      "ProjectGuid": "afd4f61c-346e-42b4-9b11-e818ad5fdafe",
+      "DisplayName": "Proyectopweb",
+      "ColorIndex": 2
+    },
+    "d1c1e714-1f4d-4732-8e89-4f3fbeedc882": {
+      "ProjectGuid": "d1c1e714-1f4d-4732-8e89-4f3fbeedc882",
+      "DisplayName": "Datos",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

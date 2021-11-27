@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleadoService } from 'src/app/services/empleado.service';
-import { Empleado } from '../models/empleado';
+import { Psicologo } from '../models/Psicologo';
 
 @Component({
   selector: 'app-registro-emplados',
@@ -8,12 +8,12 @@ import { Empleado } from '../models/empleado';
   styleUrls: ['./registro-emplados.component.css']
 })
 export class RegistroEmpladosComponent implements OnInit {
-empleado:Empleado;
-empleados: Empleado[];
+empleado:Psicologo;
+empleados: Psicologo[];
   constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit() {
-    this.empleado= new Empleado;
+    this.empleado= new Psicologo;
     this.empleado.sexo = "Sexo";
     this.empleado.tipoDocumento = "Tipo de Documento";
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CitaService } from 'src/app/services/apartar-citas.service';
 import {Cita } from '../models/Cita';
-import { Persona } from '../models/persona';
+import { Paciente } from '../models/Paciente';
 
 @Component({
   selector: 'app-consultar-citas',

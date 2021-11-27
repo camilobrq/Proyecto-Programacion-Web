@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
-import { Empleado } from '../Administrador/models/empleado';
-import { Persona } from '../Administrador/models/persona';
+import { Psicologo } from '../Administrador/models/Psicologo';
+import { Paciente } from '../Administrador/models/Paciente';
 import { tap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
@@ -18,18 +18,18 @@ export class EmpleadoService {
     private handleErrorService: HandleHttpErrorService) {
     this.baseUrl = baseUrl;
   }
-  get(): Observable<Empleado[]> {
-    return this.http.get<Empleado[]>(this.baseUrl + 'api/Psicologo')
+  get(): Observable<Psicologo[]> {
+    return this.http.get<Psicologo[]>(this.baseUrl + 'api/Psicologo')
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Empleado[]>('Consulta cita', null))
+        catchError(this.handleErrorService.handleError<Psicologo[]>('Consulta cita', null))
       );
   }
-  post(empleado: Empleado): Observable<Empleado> {
-    return this.http.post<Empleado>(this.baseUrl + 'api/Psicologo', empleado)
+  post(empleado: Psicologo): Observable<Psicologo> {
+    return this.http.post<Psicologo>(this.baseUrl + 'api/Psicologo', empleado)
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Empleado>('Registrar cita', null))
+        catchError(this.handleErrorService.handleError<Psicologo>('Registrar cita', null))
       );
   }
 }
