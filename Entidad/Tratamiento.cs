@@ -13,6 +13,11 @@ namespace Entidad
         public string identificacionPsicologo {get; set;}
         public Psicologo Psicologo {get; set;}
         public DateTime fecha { get; set; }
+        
+        public string codigo_3 { get; set; }
+        public string codigo_4 { get; set; }
+        public string descripcion_3 { get; set; }
+        public string descripcion_4 { get; set; }
         public string medicacion {get; set;}
         public string tratamientoPaso {get; set;} 
     }

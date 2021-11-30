@@ -18,7 +18,7 @@ import { ConsultarCitasComponent } from './Administrador/consultar-citas/consult
 import { ConsultaEvaluacionComponent } from './Administrador/consulta-evaluacion/consulta-evaluacion.component';
 import { ConsultaTratamientoComponent } from './Administrador/consulta-tratamiento/consulta-tratamiento.component';
 import { NavMenuEmpleadoComponent } from './nav-menu-empleado/nav-menu-empleado.component';
-import { NavMenuClienteComponent } from './nav-menu-Cliente/nav-menu-cliente.component';
+import { NavMenuClienteComponent } from './nav-menu-cliente/nav-menu-cliente.component';
 import { InstructivoComponent } from './Administrador/instructivo/instructivo.component';
 import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-historia-clinica/registrar-historia-clinica.component';
 import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';

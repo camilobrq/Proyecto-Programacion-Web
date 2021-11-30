@@ -1,0 +1,4 @@
+C:\Users\windows 10\Desktop\ProyectoPweb\Proyecto-Programacion-Web\publish\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoPweb\Proyecto-Programacion-Web\publish\Entidad.deps.json
+C:\Users\windows 10\Desktop\ProyectoPweb\Proyecto-Programacion-Web\publish\Entidad.pdb
+C:\Users\windows 10\Desktop\ProyectoPweb\Proyecto-Programacion-Web\publish\System.ComponentModel.Annotations.dll

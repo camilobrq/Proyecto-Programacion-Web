@@ -3,7 +3,8 @@ using Entidad;
 using System;
 using System.Linq;
 using System.Collections.Generic;
-
+using System.IO;
+using System.Data.OleDb;
 namespace Logica
 {
     public class AgendaService
@@ -19,22 +20,22 @@ namespace Logica
         {
             try
             {
-               
-              
-                var Psicologo=_context.psicologos.Find(agenda.psicologo.identificacion);
-                if (Psicologo== null)
+
+
+                var Psicologo = _context.psicologos.Find(agenda.psicologo.identificacion);
+                if (Psicologo == null)
                 {
                     return new AgendaGuardarResponse($"No se encuentra registrado el psicologo en el sistema");
-                   
-                } 
-               
-                agenda.psicologo=Psicologo;
+
+                }
+
+                agenda.psicologo = Psicologo;
                 _context.agendas.Add(agenda);
                 _context.SaveChanges();
-                
-                
-               
-               
+
+
+
+
                 return new AgendaGuardarResponse(agenda);
             }
             catch (Exception e)
@@ -60,7 +61,7 @@ namespace Logica
             {
                 return $"Error inesperado al Eliminar: {e.Message}";
             }
-            
+
         }
 
         public AgendaConsultaResponse Consultar()
@@ -75,17 +76,17 @@ namespace Logica
             {
                 return new AgendaConsultaResponse($"Error inesperado al Consultar: {e.Message}");
             }
-            
+
         }
         public AgendaBuscarResponse Buscar(string idAgenda)
         {
             try
             {
-        
+
                 var agenda = _context.agendas.Find(idAgenda);
                 if (agenda == null)
                 {
-                    
+
                     throw new AgendaNoEncontradaException("No se encontraró un registro con la identificacion Solicitada");
                 }
                 return new AgendaBuscarResponse(agenda);
@@ -98,33 +99,39 @@ namespace Logica
             {
                 return new AgendaBuscarResponse("Error inesperado al Buscar:" + e.Message);
             }
-            
-        }
-        public List<string> nuevaLista(){
-            List<Agenda> agenda=_context.agendas.ToList();
-            List<string> listaHoraAgenda= new List<string>();
 
-            foreach (var item in agenda){
-               
-                var almacenado =item.fechaDeseada+ item.horaCita;
+        }
+        public List<string> nuevaLista()
+        {
+            List<Agenda> agenda = _context.agendas.ToList();
+            List<string> listaHoraAgenda = new List<string>();
+
+            foreach (var item in agenda)
+            {
+
+                var almacenado = item.fechaDeseada + item.horaCita;
                 listaHoraAgenda.Add(almacenado);
             }
             return listaHoraAgenda;
         }
-         public AgendaList buscarFechaDisponible(DateTime fecha){
-           
-           
-             try
+
+        public AgendaList buscarFechaDisponible(DateTime fecha)
+        {
+
+
+            try
             {
-            List<Agenda> agenda=_context.agendas.ToList();
-            List<string> horaCita= new List<string>();
-            foreach (var item in agenda){
-               if(item.fechaDeseada == fecha){
-                var almacenado =item.horaCita;
-                horaCita.Add(almacenado);
-               }
-                
-            }
+                List<Agenda> agenda = _context.agendas.ToList();
+                List<string> horaCita = new List<string>();
+                foreach (var item in agenda)
+                {
+                    if (item.fechaDeseada == fecha)
+                    {
+                        var almacenado = item.horaCita;
+                        horaCita.Add(almacenado);
+                    }
+
+                }
                 return new AgendaList(horaCita);
 
             }
@@ -134,30 +141,62 @@ namespace Logica
             }
         }
 
-        public List<string> buscarPsicologo(string hora){
-            List<Agenda> agenda=_context.agendas.ToList();
-            List<Psicologo> psicologo=_context.psicologos.ToList();
-            List<string> nombrePsicologo= new List<string>();
-            foreach(var item in agenda){
-                if(item.horaCita==hora){
-                    foreach(var e in psicologo){
-                        if(item.idPsicologo==e.identificacion){
-                            var almacenado= e.nombre +" "+ e.apellido;
+        public List<string> buscarPsicologo(string hora)
+        {
+            List<Agenda> agenda = _context.agendas.ToList();
+            List<Psicologo> psicologo = _context.psicologos.ToList();
+            List<string> nombrePsicologo = new List<string>();
+            foreach (var item in agenda)
+            {
+                if (item.horaCita == hora)
+                {
+                    foreach (var e in psicologo)
+                    {
+                        if (item.idPsicologo == e.identificacion)
+                        {
+                            var almacenado = e.nombre + " " + e.apellido;
                             nombrePsicologo.Add(almacenado);
                         }
                     }
                 }
             }
             return nombrePsicologo;
+          
         }
-        public List<string> buscarTerapia(string nombrePsicologo){
-            List<Agenda> agenda=_context.agendas.ToList();
-            List<Psicologo> psicologo=_context.psicologos.ToList();
-            List<string> TerapiaPsicologo= new List<string>();
-            foreach(var item in psicologo){
-                var nombreCompleto=item.nombre+" "+item.apellido;
-                if(nombreCompleto==nombrePsicologo){
-                    var almacenarTerapia=item.areaEspecializada;
+        
+       /* public List<string> leerExcel()
+        {
+            List<string> listaExcel = new List<string>();
+            //Ruta del fichero Excel
+            string filePath = "";
+
+            using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = OpenXmlReader.CreateReader(stream))
+                {
+                    do
+                    {
+                        while (reader.Read())
+                        {
+                            reader.GetDouble(0);
+                        }
+                    } while (reader.NextResult());
+
+                }
+            }
+            return listaExcel;
+        }*/
+        public List<string> buscarTerapia(string nombrePsicologo)
+        {
+            List<Agenda> agenda = _context.agendas.ToList();
+            List<Psicologo> psicologo = _context.psicologos.ToList();
+            List<string> TerapiaPsicologo = new List<string>();
+            foreach (var item in psicologo)
+            {
+                var nombreCompleto = item.nombre + " " + item.apellido;
+                if (nombreCompleto == nombrePsicologo)
+                {
+                    var almacenarTerapia = item.areaEspecializada;
                     TerapiaPsicologo.Add(almacenarTerapia);
                 }
             }

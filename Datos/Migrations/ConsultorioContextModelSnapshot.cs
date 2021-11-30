@@ -91,6 +91,30 @@ namespace Datos.Migrations
                     b.ToTable("citas");
                 });
 
+            modelBuilder.Entity("Entidad.Enfermedad", b =>
+                {
+                    b.Property<int>("idEnfermedad")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo_3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Codigo_4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Descripcion_3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Descripcion_4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("idEnfermedad");
+
+                    b.ToTable("enfermedades");
+                });
+
             modelBuilder.Entity("Entidad.Evaluacion", b =>
                 {
                     b.Property<int>("IdEvaluacion")

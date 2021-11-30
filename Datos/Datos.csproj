@@ -4,11 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+
     <PackageReference Include="System.Collections" Version="4.3.0" />
     <ProjectReference Include="..\Entidad\Entidad.csproj" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
-
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.6.0" />
+   
    
   </ItemGroup>
 </Project>

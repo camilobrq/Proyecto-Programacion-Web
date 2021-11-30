@@ -1,39 +1,45 @@
 <div class="container">
-     <div class="row">
+    <div class="row">
         <div class="col-md-6 offset-md-3">
 
             <section class="form-tratamiento">
-                <h2>Tratamiento</h2>
+                <h2>Tratamiento</h2> 
+ 
                 <div class="form-group">
-                    <span>Fecha:</span>
-                    <input type="date" name="Fecha" 
-                   [(ngModel)]="tratamiento.fecha" class="form-control" />
+                    <span>Cod3</span>
+                    <input type="text" name="codigo_3" 
+                    [(ngModel)]="tratamiento.codigo_3" class="form-control" />
                </div>
+               <div class="form-group">
+                     <span>Descripcion categoria de tres caracteres</span>
+                    <select type="text" name="descripcion_3" [(ngModel)]="Tratamiento.descripcion_3" class="form-control" >
+                        <option [value]="enfermedades" *ngFor="let descripcion3 of enfermedades">
+                            {{descripcion3}}
+                        </option>
 
-                <div class="form-group">
-
-                     <input type="text" name="psicologo" placeholder="identificacion del psicologo que autoriza"
-                    [(ngModel)]="tratamiento.identificacionPsicologo" class="form-control" />
+                    </select>
                 </div>
                 <div class="form-group">
+                    <span>Cod3</span>
+                    <input type="text" name="codigo_4" 
+                    [(ngModel)]="tratamiento.codigo_3" class="form-control" />
+               </div>
+               <div class="form-group">
+                <span>Descripcion categoria de cuatro caracteres</span>
+               <select type="text" name="descripcion_3" [(ngModel)]="Tratamiento.descripcion_3" class="form-control" >
+                   <option [value]="descripciones3" *ngFor="let descripcion3 of descripciones3">
+                       {{descripcion3}}
+                   </option>
 
-                    <input type="text" name="Medicacion" placeholder=" Medicacion a suministrar al paciente"
-                    [(ngModel)]="tratamiento.medicacion" class="form-control" />
-                </div>
-
-                <div class="form-group">
-
-                    <input type="text" name="identificacion" placeholder=" Identificacion del paciente"
-                     [(ngModel)]="tratamiento.identificacionPaciente" class="form-control" />
-                </div>
-
+               </select>
+                 </div>
                 <div class="form-group">
                     <textarea name="tratamiento" placeholder=" Tratamiento a seguir"
                     [(ngModel)]="tratamiento.tratamientoPaso" class="form-control"></textarea>
                     
                 </div>
                 <div style="float: right;">
-                    <button class="btn btn-primary mr-1" (click)="Siguiente()">Siguiente</button>
+                    <button class="btn btn-primary mr-1" (click)="Siguiente()">Registrar</button>
                 </div>
                 <div style="float: left;">
                     <button class="btn btn-primary mr-1" (click)="Anterior()">Anterior</button>
