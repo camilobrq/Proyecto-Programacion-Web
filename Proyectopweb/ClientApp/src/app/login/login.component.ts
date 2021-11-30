@@ -34,12 +34,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usuario=new Usuario();
-    this.usuario.nombreUsuario="";
-    this.usuario.contrasena="";
+ 
     this.loginForm = this.formBuilder.group({
-      nombreUsuario: [ Validators.required],
-      contrasena: [ Validators.required]
+      nombreUsuario: ["", Validators.required],
+      contrasena: ["", Validators.required]
     });
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -48,6 +46,7 @@ export class LoginComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }
   onSubmit() {
+    console.log("aqui estoy");
     this.submitted = true;
     // stop here if form is invalid
     if (this.loginForm.invalid) {
@@ -58,7 +57,13 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate([this.returnUrl]);
+          console.log("estoy dentro");
+          //
+          console.log(data.tipoUsuario);
+          if(data.tipoUsuario=="Administrador")this.IngresarAdministrador();
+          if(data.tipoUsuario=="Paciente")this.IngresarPaciente();
+          if(data.tipoUsuario=="Psicologo")this.IngresarPsicologo();
+
         },
         error => {
           const modalRef = this.modalService.open(AlertModalComponent);

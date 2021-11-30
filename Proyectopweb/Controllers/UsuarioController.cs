@@ -39,7 +39,7 @@ namespace Proyectopweb.Controllers
             usuarioService = new UsuarioService(context);
         }
         [AllowAnonymous]
-        [HttpPost("Usuario")]
+        [HttpPost]
         public IActionResult Login(UsuarioInputModel model)
         {
             var user = usuarioService.Validate(model.nombreUsuario, model.contrasena);

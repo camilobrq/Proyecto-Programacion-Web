@@ -72,7 +72,7 @@ import { AuthGuard } from './services/auth.guard';
 
 
       {
-        path: 'menuAdministrador', component: NavMenuComponent,
+        path: 'menuAdministrador', component: NavMenuComponent,canActivate: [AuthGuard],
         children: [
           { path: 'Registrartratamiento', component: TratamientoComponent },
           { path: 'personaConsulta', component: PersonaConsultaComponent },

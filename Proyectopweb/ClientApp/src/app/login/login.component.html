@@ -6,30 +6,33 @@
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
         <div class="mb-3">
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Usuario"
-            [ngClass]="{ 'is-invalid': submitted && f.nombreUsuario.errors }"   />
+          <input type="text" formControlName="nombreUsuario" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Usuario"
+          [ngClass]="{ 'is-invalid': submitted && f.nombreUsuario.errors }"   />
           <div *ngIf="submitted && f.nombreUsuario.errors" class="invalid-feedback">
             <div *ngIf="f.nombreUsuario.errors.required">Nombre usuario is required</div>
           </div>
 
         </div>
         <div class="mb-3">
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña"
-            [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
-          <div *ngIf="submitted && f.nombreUsuario.errors" class="invalid-feedback">
-            <div *ngIf="f.nombreUsuario.errors.required">contraseña is required</div>
+          <input type="text" formControlName="contrasena" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña"
+          [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
+          <div *ngIf="submitted && f.contrasena.errors" class="invalid-feedback">
+            <div *ngIf="f.contrasena.errors.required">contraseña is required</div>
           </div>
         </div>
-
         <p>¿No has creado tu cuenta de paciente? <a [routerLink]='["/personaRegistro"]'>Creala aqui</a></p>
-        <button type="button" [disabled]="loading"  class="btn btn-primary">
+         <button [disabled]="loading" class="btn btn-primary">
                       <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                      Iniciar sesion
-                  </button>
-      </form>
+                      Login
+        </button>
+         
+      </form>   
     </div>
 
+
   </div>
+
+  
 
   <div class="Fondo-login">
 
