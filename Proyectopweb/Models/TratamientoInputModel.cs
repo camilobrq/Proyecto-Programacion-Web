@@ -5,24 +5,40 @@ namespace Proyectopweb.Models
 {
     public class TratamientoInputModel
     {
-        public int idTratamiento { get; set; }
-        public string nombreTratamiento { get; set; }
-        public string descripcionTratamiento { get; set; }
+        public string identificacionPaciente { get; set; }
+        public string identificacionPsicologo { get; set; }
+        public DateTime fecha { get; set; }
+
+        public string codigo_3 { get; set; }
+        public string codigo_4 { get; set; }
+        public string descripcion_3 { get; set; }
+        public string descripcion_4 { get; set; }
+        public string medicacion { get; set; }
+        public string tratamientoPaso { get; set; }
 
     }
 
-
     public class TratamientoViewModel : TratamientoInputModel
     {
-        public TratamientoViewModel(Tratamiento tratamiento)
+
+        public TratamientoViewModel()
         {
-            idTratamiento = tratamiento.idTratamiento;
-            nombreTratamiento = tratamiento.nombreTratamiento;
-            descripcionTratamiento = tratamiento.descripcionTratamiento;
-
-
 
         }
+        public TratamientoViewModel(Tratamiento tratamiento)
+        {
+            IdTratamiento = tratamiento.IdTratamiento;
+            identificacionPaciente = tratamiento.identificacionPaciente;
+            identificacionPsicologo = tratamiento.identificacionPsicologo;
+            codigo_3= tratamiento.codigo_3;
+            codigo_4=tratamiento.codigo_4;
+            descripcion_3=tratamiento.descripcion_3;
+            descripcion_4=tratamiento.descripcion_4;
+            fecha = tratamiento.fecha;
+            medicacion = tratamiento.medicacion;
+            tratamientoPaso = tratamiento.tratamientoPaso;
 
+        }
+        public int IdTratamiento { get; set; }
     }
 }

@@ -5,7 +5,8 @@
 
     <div class="lado-izquierdo">
 
-        <input type="text" name="nombreusuario" placeholder="Nombre de usuario" class="form-control" />
+        <input type="text" name="nombreusuario" placeholder="Nombre de usuario" [(ngModel)]="empleado.nombreUsuario" class="form-control" />
+        <input type="text" name="contrasena" placeholder="Contraseña" [(ngModel)]="empleado.contrasena" class="form-control" />
 
         <select class="form-select" aria-label="Default select example disabled" [(ngModel)]="empleado.tipoDocumento">
             <option selected disabled>Tipo de Documento</option>
@@ -14,8 +15,13 @@
             <option value="tarjeta">Tarjeta de identidad</option>
             <option value="extrangero">Documento extrangero</option>
         </select>
-
+        <input type="text" name="identificacion" placeholder="Identifiacion" [(ngModel)]="empleado.identificacion"
+            class="form-control" />
         <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="empleado.nombre" class="form-control" />
+        <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="empleado.apellido"
+            class="form-control" />
+            <p>   Fecha de Nacimiento</p>
+        <input type="date" name="fecha" [(ngModel)]="empleado.fechaNacimiento" class="form-control fechanacimiento" />
 
         <select [(ngModel)]="empleado.sexo" class="form-select" aria-label="Default select example disabled">
             <option selected disabled>Sexo</option>
@@ -23,11 +29,9 @@
             <option value="femenino">Femenino</option>
         </select>
 
+        
 
-        <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono"
-            class="form-control" />
-
-        <input type="email" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
+      
 
 
 
@@ -35,15 +39,17 @@
 
 
     <div class="lado-derecho">
-        <input type="text" name="Contraseña" placeholder="Contraseña" class="form-control" />
-
-        <input type="text" name="identificacion" placeholder="Identifiacion" [(ngModel)]="empleado.identificacion"
+        <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="empleado.telefono"
             class="form-control" />
-        <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="empleado.apellido"
-            class="form-control" />
+        <input type="email" name="correo" placeholder="correo" [(ngModel)]="empleado.correo" class="form-control" />
+        
+        <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.UniversidadEgreso"
+             class="form-control" />
+      <input type="text" name="areaespecializada" placeholder="Area Especializada" [(ngModel)]="empleado.areaEspecializada"
+             class="form-control" />
+        
 
-        <p>Fecha de Nacimiento</p>
-        <input type="date" name="fecha" [(ngModel)]="empleado.fechaNacimiento" class="form-control fechanacimiento" />
+        
 
 
         <input type="text" name="direccion" placeholder="Direccion" [(ngModel)]="empleado.direccion"
@@ -53,23 +59,18 @@
 
 
 
-    <p class="fecha">Fecha Finalización de Estudios</p>
+    <p class="fecha">       Fecha Finalización de Estudios</p>
 
     <div class="lado-izquierdo2">
       <input type="date" name="fechaestudios" [(ngModel)]="empleado.fechaFinalizacion" class="form-control" />
       
-      <input type="text" name="areaPsicologo" placeholder="Area del Psicologo" [(ngModel)]="empleado.areaPsicologo"
-             class="form-control" />
       <input type="text" name="Meses" placeholder="Meses de experiencia" [(ngModel)]="empleado.mesesExperiencia"
              class="form-control" />
 
     </div>
 
     <div class="lado-derecho2">
-      <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.Universidad"
-             class="form-control" />
-      <input type="text" name="areaespecializada" placeholder="Area Especializada" [(ngModel)]="empleado.areaEspecializada"
-             class="form-control" />
+      
 
     </div>
 

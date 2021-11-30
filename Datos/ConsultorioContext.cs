@@ -18,11 +18,12 @@ namespace Datos
         public DbSet<Administrador> administradores { get; set; }
         public DbSet<Agenda> agendas { get; set; }
         public DbSet<Cita> citas { get; set; }
-        public DbSet<Diagnostico> diagnosticos { get; set; }
+        public DbSet<Evaluacion> evaluaciones { get; set; }
         public DbSet<Disponibilidad> disponibilidades { get; set; }
         public DbSet<Tratamiento> tratamientos { get; set; }
         public DbSet<Usuario> usuarios { get; set; }
         public DbSet<Eps> eps { get; set; }
+        public DbSet<Enfermedad> enfermedades { get; set; }
     }
 
 }

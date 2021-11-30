@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/46ec957f-205f-475d-be9f-6671cd4d2834/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/Vitalment",
+    "appService.deploySubpath": "publish"
+}

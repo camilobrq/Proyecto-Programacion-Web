@@ -1,6 +1,6 @@
 export class Psicologo {
     nombreUsuario: string
-    contraseña: string
+    contrasena: string
     tipoUsuario: string
     tipoDocumento: string;
     identificacion: string;
@@ -12,9 +12,8 @@ export class Psicologo {
     direccion: string;
     estado:string;
     correo: string;
-    Universidad: string;
+    UniversidadEgreso: string;
     fechaFinalizacion: Date;
-    areaPsicologo: string;
     mesesExperiencia: string;
     areaEspecializada: string;
     

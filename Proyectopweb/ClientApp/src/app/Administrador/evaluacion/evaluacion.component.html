@@ -1,39 +1,98 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-                <section class="Form-Evaluacion">
-                        <section class="Form-Evaluacionp1">
-                            <h2>Evaluacion o Valoracion</h2>
-                            <div class="form-group">
-                            <SPan>Fecha:</SPan>
-                                <input  type="date" name="fecha"  [(ngModel)]="evaluacion.fecha"
-                                    class="form-control"  />
-                            </div>
-                    
-                            <div class="form-group">
-                            
-                                <input type="text" name="identifiacionPaciente" placeholder=" Identificacion del Paciente" [(ngModel)]="evaluacion.identificacionPaciente" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                            
-                                <input  type="text" name="identificacionPsicologo" placeholder=" identificacion del Psicologo" [(ngModel)]="evaluacion.identificacionPsicologo"
-                                    class="form-control"  />
-                            </div>                                       
-                            <div class="form-groupa">
-                                <span>Diagnostico</span>
-                                <textarea name="conceptoFinal" placeholder=" Concepto Final Psicologo" [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
-                            </div>                                                      
-                     </section>
-                            
-                            <div style="float: right;">
+            
+                <section class="Form-Evaluacionp1">
+                    <h2>Evaluacion o Valoracion</h2>
+                   
+                    <div class="form-group">
 
-                                <button class="btn btn-primary mr-1" (click)="Siguiente()">Siguiente</button>
-                              
-                            </div>
-                 </section>
+                        <input type="text" name="identifiacionPaciente" placeholder=" Identificacion del Paciente"
+                            [(ngModel)]="evaluacion.identificacionPaciente" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="text" name="ocupacion" placeholder="Ocupacion"
+                            [(ngModel)]="evaluacion.ocupacion" class="form-control" />
+                    </div>
+                   
+                    <div class="form-group">
+
+                        <input type="text" name="identificacionPsicologo" placeholder="identificacion del Psicologo"
+                            [(ngModel)]="evaluacion.identificacionPsicologo" class="form-control" />
+                    </div>
+                    <div class="form-groupa">
+                        <span>Motivo de la consulta</span>
+                        <textarea name="consulta" 
+                            [(ngModel)]="evaluacion.consulta" class="form-control"></textarea>
+                    </div>
+                    <div class="form-groupa">
+                        <span>Observaciones generales de conducta </span>
+                        <textarea name="observacion" 
+                            [(ngModel)]="evaluacion.observacion" class="form-control"></textarea>
+                    </div>
+                    <div class="form-groupa">
+                        <span>Prueba psicologica aplicada</span>
+                        <select type="text" name="prueba" [(ngModel)]="evaluacion.prueba"  class="form-control">
+                            <option>Test estandarizados</option>
+                            <option>Test no estandarizados</option>
+                            <option>Test verbales</option>
+                            <option>Test no verbales</option>
+                            <option>Test de nivel máximo</option>
+                            <option>Test de comportamiento típico</option>
+                            <option>Test de potencia</option>
+                            <option>Test vocacionales</option>
+                            <option>Test de rendimiento escolar</option>
+                            <option>Test proyectivos</option>
+                            <option>Test psicopatológicos</option>
+                            <option>Test neuropsicológicos</option>
+                            <option>Test de personalidad</option>
+                            <option>Test de aptitud</option>
+                            <option>Test de rendimiento</option>
+                            <option>Test de inteligencia</option>
+                            <option>Test psicométricos</option>
+                            <option>Test heteroadministrados</option>
+                        </select>
+            
+                    </div>
+                </section>
+                    <section class="Form-Evaluacionp2">
+                       
+                        
+                        
+                        <div class="form-groupa">
+                            <span>Analisis e interpretacion de resultados</span>
+                            <textarea name="analisis" 
+                                [(ngModel)]="evaluacion.analisis" class="form-control"></textarea>
+                        </div>
+                        <div class="form-groupa">
+                            <span>Diagnostico</span>
+                            <textarea name="conceptoFinal"
+                                [(ngModel)]="evaluacion.diagnostico" class="form-control"></textarea>
+                        </div>
+                        <div class="form-groupa">
+                            <span>Pronostico</span>
+                            <textarea name="pronostico"
+                                [(ngModel)]="evaluacion.pronostico" class="form-control"></textarea>
+                        </div>
+                        <div class="form-groupa">
+                            <span>Recomendaciones</span>
+                            <textarea name="recomendacion" 
+                                [(ngModel)]="evaluacion.recomendacion" class="form-control"></textarea>
+                        </div>
+                    </section>
+                
+                <div style="float: right;">
+
+                    <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>
+
+                </div>
+           
         </div>
     </div>
 </div>
-                            
-                
+© 2021 GitHub, Inc.
+Terms
+Pr
     

@@ -37,10 +37,9 @@ namespace Proyectopweb.Models
         public string fechaFinalizacion { get; set; }
         [Required(ErrorMessage = "El area especializada es requerida")]
         public string areaEspecializada { get; set; }
-        [Required(ErrorMessage = "El area del psicologo es requerido")]
-        public string areaPsicologo { get; set; }
         [Required(ErrorMessage = "Los meses de experiencia son requeridos")]
         public string mesesExperiencia { get; set; }
+        public Usuario usuario { get; set; }
     }
 
     public class PsicologoViewModel : PsicologoInputModel
@@ -49,22 +48,18 @@ namespace Proyectopweb.Models
         {
             
             identificacion = psicologo.identificacion;
-            tipoDocumento = psicologo.tipoDocumento;
-            nombre = psicologo.nombre;
-            apellido = psicologo.apellido;
-            sexo = psicologo.sexo;
-            fechaNacimiento = psicologo.fechaNacimiento;
-            
-            direccion = psicologo.direccion;
-            
-            UniversidadEgreso = psicologo.UniversidadEgreso;
-            fechaFinalizacion = psicologo.fechaFinalizacion;
-            areaEspecializada = psicologo.areaEspecializada;
-            areaPsicologo = psicologo.areaPsicologo;
-            mesesExperiencia = psicologo.mesesExperiencia;
-
+           nombre = psicologo.nombre;
+           apellido = psicologo.apellido;
+           sexo = psicologo.sexo;
+           
+           direccion =psicologo.direccion;
+          
+           UniversidadEgreso=psicologo.UniversidadEgreso;
+           fechaFinalizacion=psicologo.fechaFinalizacion;
+           areaEspecializada=psicologo.areaEspecializada;
+           mesesExperiencia=psicologo.mesesExperiencia;
 
         }
-
+        public int edad {get; set;}
     }
 }

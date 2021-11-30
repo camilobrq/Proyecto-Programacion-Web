@@ -1,0 +1,26 @@
+<div class="row">
+   
+    <hr>
+    <table class="table table-striped" *ngIf='agendas && agendas.length'>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">id Agenda</th>
+                <th scope="col">Id Psicologo</th>
+             
+                <th scope="col">Fecha de la cita </th>
+                <th scope="col">Hora de la cita</th>
+     
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Agenda of agendas index as i ">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ Agenda.idAgenda }} </td>
+                <td>{{ Agenda.idPsicologo }} </td>
+                <td>{{Agenda.fechaDeseada }}</td>
+                <td>{{ Agenda.horaCita }}</td>
+          
+            </tr>
+        </tbody>
+    </table>

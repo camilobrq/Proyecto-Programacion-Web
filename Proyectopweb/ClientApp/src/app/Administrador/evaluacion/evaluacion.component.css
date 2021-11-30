@@ -4,7 +4,7 @@
     background: #0E4BEF;
     padding: 1px;
     margin: -270px;
- 
+    margin-left: -900px;
     margin-top: 40px;
     margin-bottom: auto;
     font-family: 'calibri';
@@ -15,7 +15,7 @@
     background: white;
     padding: 1px;
     margin: 80px;
- 
+    margin-left: -300px;
     margin-top: 40px;
     margin-bottom: auto;
     font-family: 'calibri';
@@ -39,7 +39,7 @@
     padding: 1px;
     margin: 320px;
     
-    margin-top: -635px;
+    margin-top: -420px;
     margin-bottom: auto;
     font-family: 'calibri';
     color: black;

@@ -1,0 +1,3 @@
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\publish\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\publish\Entidad.deps.json
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\publish\Entidad.pdb

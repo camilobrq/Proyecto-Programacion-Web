@@ -1,0 +1,17 @@
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Logica.deps.json
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Logica.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\ref\Logica.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Logica.pdb
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Datos.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Datos.pdb
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Release\net5.0\Entidad.pdb
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.csproj.AssemblyReference.cache
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.AssemblyInfo.cs
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.csproj.CopyComplete
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\ref\Logica.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Release\net5.0\Logica.pdb

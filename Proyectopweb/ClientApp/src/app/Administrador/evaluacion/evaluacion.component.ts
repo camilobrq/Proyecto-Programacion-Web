@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { EvaluacionService } from 'src/app/services/evaluacion.service';
-//import { Evaluacion } from '../models/evaluacion';
+import { EvaluacionService } from 'src/app/services/evaluacion.service';
+import { Evaluacion } from '../models/evaluacion';
 
 
 @Component({
@@ -10,19 +10,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./evaluacion.component.css']
 })
 export class EvaluacionComponent implements OnInit {
-//evaluacion: Evaluacion;
+evaluacion: Evaluacion;
 
-//evaluaciones: Evaluacion[];
-  constructor(/*private evaluacionService: EvaluacionService*/ private router: Router) { }
+evaluaciones: Evaluacion[];
+  constructor(private evaluacionService: EvaluacionService, private router: Router) { }
 
   ngOnInit() {
-   // this.evaluacion= new Evaluacion;
+    this.evaluacion= new Evaluacion;
   }
  
   Siguiente(){
     this.router.navigate(["/menuEmpleado/Registrartratamiento"]);
   }
- /*
+ 
   add(){
     this.evaluacionService.post(this.evaluacion).subscribe(p=>{
       console.log(p);
@@ -34,7 +34,7 @@ export class EvaluacionComponent implements OnInit {
         alert('Error al intentar guardar la evaluacion');
       }
     });
-  }*/
+  }
 
 }
 

@@ -20,14 +20,23 @@ namespace Entidad
        
         public string apellido {get; set;}
 
-      
+        
         public string sexo {get; set;}
         public DateTime fechaNacimiento { get; set; }
        
-    
+        public int edad { get; set; }
         public string direccion {get; set;}
         
-         
+         public int calcularEdad(DateTime fechaNacimiento){
+            
+            edad=DateTime.Today.Year-fechaNacimiento.Year;
+            if(DateTime.Today.Year<=fechaNacimiento.Year){
+
+                return -1;
+            }else{     
+                return edad;
+            }
+        }
        
         
 

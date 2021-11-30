@@ -18,7 +18,7 @@ import { ConsultarCitasComponent } from './Administrador/consultar-citas/consult
 import { ConsultaEvaluacionComponent } from './Administrador/consulta-evaluacion/consulta-evaluacion.component';
 import { ConsultaTratamientoComponent } from './Administrador/consulta-tratamiento/consulta-tratamiento.component';
 import { NavMenuEmpleadoComponent } from './nav-menu-empleado/nav-menu-empleado.component';
-import { NavMenuClienteComponent } from './nav-menu-Cliente/nav-menu-cliente.component';
+import { NavMenuClienteComponent } from './nav-menu-cliente/nav-menu-cliente.component';
 import { RegistrarHistoriaClinicaComponent } from './Administrador/registrar-historia-clinica/registrar-historia-clinica.component';
 import { FiltroPacientePipe } from './pipe/filtro-paciente.pipe';
 import { FiltroPsicologoPipe } from './pipe/filtro-psicologo.pipe';
@@ -30,7 +30,7 @@ import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 import { AgendaComponent } from './Administrador/agenda/agenda.component';
 import {JwtInterceptor} from './services/jwt.interceptor';
 import { AuthGuard } from './services/auth.guard';
-
+import { ConsultaAgendaComponent } from './Administrador/consulta-agenda/consulta-agenda.component';
 
 
 @NgModule({
@@ -58,7 +58,7 @@ import { AuthGuard } from './services/auth.guard';
     ExamenMentalComponent,
     AlertModalComponent,
     AgendaComponent,
-    
+    ConsultaAgendaComponent,
 
   ],
   imports: [
@@ -91,6 +91,11 @@ import { AuthGuard } from './services/auth.guard';
           { path: 'Realizarevaluacion', component: EvaluacionComponent },
           { path: 'RegistrarhistoriaClinica', component: RegistrarHistoriaClinicaComponent },
           { path: 'RegistrarAgenda', component: AgendaComponent },
+          { path: 'ConsultarEvaluacion', component: ConsultaEvaluacionComponent },
+          { path: 'RegistrarTratamiento', component: TratamientoComponent },
+          { path: 'ConsultarTratamiento', component: ConsultaTratamientoComponent },
+          { path: 'ConsultarAgenda', component: ConsultaAgendaComponent },
+          
         ]
       },
 

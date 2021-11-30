@@ -9,8 +9,14 @@ namespace Entidad
     {
         [Key]        
         public int idAgenda{get; set; }
+        public string idPsicologo { get; set; }
         [JsonIgnore]
-        public List<Disponibilidad> disponibilidadesPsicologo { get; set;  }
+        public Psicologo psicologo {get; set; }
+        public int idCita { get; set; }
+        [JsonIgnore]
+        public Cita cita {get; set; }
+        public DateTime fechaDeseada{get; set; }
+        public string horaCita { get; set; }
 
     }
 }

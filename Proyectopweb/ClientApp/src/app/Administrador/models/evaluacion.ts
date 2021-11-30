@@ -1,8 +1,12 @@
 export class Evaluacion {
     identificacionPaciente: string;
     identificacionPsicologo: string;
-    nombrePaciente: string;
-    fecha:Date;
-    tipoCita: string;
-    diagnostico: string; 
+    diagnostico: string;
+    ocupacion: string;
+    consulta: string;
+    observacion: string;
+    analisis: string;
+    pronostico: string;
+    prueba:string;
+    recomendacion: string;
 }

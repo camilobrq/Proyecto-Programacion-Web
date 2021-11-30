@@ -9,7 +9,7 @@ export class FiltroCitaPipe implements PipeTransform {
   transform(cita: Cita[], searchText: string): any {
     if (searchText == null) return cita;
     return cita.filter(p =>
-      p.tiposSolicitud.toLowerCase()
+      p.idCita.toLowerCase()
      .indexOf(searchText.toLowerCase()) !== -1);
      
     }

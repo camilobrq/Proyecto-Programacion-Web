@@ -20,7 +20,7 @@ empleados: Psicologo[];
     this.empleado.tipoDocumento = "Tipo de Documento";
   }
   add(){
-    this.empleado.tipoDocumento="Psicologo";
+    this.empleado.tipoUsuario="Psicologo";
     this.empleado.estado="AC";
     this.empleadoService.post(this.empleado).subscribe(p=>{
       if(p!=null){

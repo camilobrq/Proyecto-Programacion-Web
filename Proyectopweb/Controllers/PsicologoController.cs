@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Proyectopweb.Controllers
 {
-    [Authorize]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class PsicologoController : ControllerBase
@@ -35,7 +35,7 @@ namespace Proyectopweb.Controllers
 
             if (respuesta.Error == true)
             {
-                ModelState.AddModelError("Guardar Paciente", respuesta.Mensaje);
+                ModelState.AddModelError("Guardar Psicologo", respuesta.Mensaje);
                 var problemDetails = new ValidationProblemDetails(ModelState)
                 {
                     Status = StatusCodes.Status400BadRequest,
@@ -47,36 +47,54 @@ namespace Proyectopweb.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<PsicologoViewModel> Gets()
-        {
-            var psicologos = this._psicologoService.ConsultarTodosLosPsicologos().Select(p => new PsicologoViewModel(p));
-            return psicologos;
-
-        }
-
-        private Psicologo MapearPsicologo(PsicologoInputModel psicologoInputModel)
-        {
-            var psicologo = new Psicologo();
+         [HttpGet]
+      public ActionResult<IEnumerable<PsicologoViewModel>> Gets()
+      {
+            var respuesta = _psicologoService.Consultar();
+            if (respuesta.Error == true)
             {
-               
-                psicologo.tipoDocumento = psicologoInputModel.tipoDocumento;
-                psicologo.identificacion = psicologoInputModel.identificacion;
-                psicologo.nombre = psicologoInputModel.nombre;
-                psicologo.apellido = psicologoInputModel.apellido;
-                psicologo.fechaNacimiento = psicologoInputModel.fechaNacimiento;
-                psicologo.sexo = psicologoInputModel.sexo;
-               
-                psicologo.direccion = psicologoInputModel.direccion;
-                
-                //psicologo.calcularEdad();
-                //psicologo.edad = psicologoInputModel.edad;
-                psicologo.UniversidadEgreso = psicologoInputModel.UniversidadEgreso;
-                psicologo.fechaFinalizacion = psicologoInputModel.fechaFinalizacion;
-                psicologo.areaEspecializada = psicologoInputModel.areaEspecializada;
-                psicologo.areaPsicologo = psicologoInputModel.areaPsicologo;
-                psicologo.mesesExperiencia = psicologoInputModel.mesesExperiencia;
-
+                return BadRequest(respuesta.Mensaje);
             }
+            return Ok(respuesta.Psicologo.Select(p => new PsicologoViewModel(p)));
+      }
+        [HttpGet("byId")]
+        public ActionResult<PsicologoViewModel> Gets(string id)
+        {
+           var respuesta = _psicologoService.Buscar(id);
+            if (respuesta.IsError == true)
+            {
+                return BadRequest(respuesta.Mensaje);
+            }
+            return Ok(respuesta.Psicologo);
+        }
+        private Psicologo MapearPsicologo(PsicologoInputModel PsicologoInputModel)
+        {
+            var psicologo = new Psicologo(){
+            tipoDocumento=PsicologoInputModel.tipoDocumento,
+            identificacion = PsicologoInputModel.identificacion,
+            nombre = PsicologoInputModel.nombre,
+            apellido = PsicologoInputModel.apellido,
+            fechaNacimiento=PsicologoInputModel.fechaNacimiento,
+            sexo = PsicologoInputModel.sexo,
+            direccion = PsicologoInputModel.direccion,
+            UniversidadEgreso=PsicologoInputModel.UniversidadEgreso,
+           fechaFinalizacion=PsicologoInputModel.fechaFinalizacion,
+           areaEspecializada=PsicologoInputModel.areaEspecializada,
+           mesesExperiencia=PsicologoInputModel.mesesExperiencia,
+            usuario=new Usuario{
+                    tipoUsuario="Psicologo",
+                    nombreUsuario=PsicologoInputModel.nombreUsuario,
+                    contrasena=PsicologoInputModel.contrasena,
+                    correo=PsicologoInputModel.correo,
+                    estado="Ac",
+                    telefono=PsicologoInputModel.telefono,
+
+            },
+
+
+            };
+                    
+            
             return psicologo;
         }
     }

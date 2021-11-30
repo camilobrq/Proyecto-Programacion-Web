@@ -1,0 +1,12 @@
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Release\net5.0\Entidad.deps.json
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Release\net5.0\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Release\net5.0\ref\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Release\net5.0\Entidad.pdb
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.csproj.AssemblyReference.cache
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.AssemblyInfo.cs
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\ref\Entidad.dll
+C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Release\net5.0\Entidad.pdb

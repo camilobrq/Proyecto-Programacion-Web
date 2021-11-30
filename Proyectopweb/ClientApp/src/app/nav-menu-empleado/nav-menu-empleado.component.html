@@ -12,9 +12,10 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/RegistrarAgenda']">Realizar Agenda</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/Realizarevaluacion']">Registrar Diagnostico</a>
+            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/Realizarevaluacion']">Registrar Evaluacion</a>
             </li>
-
+            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/RegistrarTratamiento']">Registrar Tratamiento</a>
+            </li>
           </ul>
         </li>
 
@@ -24,13 +25,14 @@
             Opciones de Consulta
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Consultar Agenda</a></li>
-            <li><a class="dropdown-item" href="#">Consultar Diagnosticos</a></li>
-            <li><a class="dropdown-item" href="#">Consultar Historia Clinica</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/ConsultarAgenda']">Consultar Agenda</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/ConsultarEvaluacion']">Consultar Evaluacion</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/ConsultarTratamiento']">Consultar Tratamiento</a></li>
 
           </ul>
+
         </li>
-        <li class="nav-item" *ngIf="!currentUser">
+        <li class="nav-item" >
           <a class="nav-link" [routerLink]='["/login"]' (click)="logout()">Salir</a>
         </li>
                  
