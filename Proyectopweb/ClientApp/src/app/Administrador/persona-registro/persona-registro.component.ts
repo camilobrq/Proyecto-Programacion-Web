@@ -86,7 +86,7 @@ export class PersonaRegistroComponent implements OnInit {
 
 
   add() {
-    this.paciente.tipoDocumento="Paciente";
+    this.paciente.tipoUsuario="Paciente";
     this.paciente.estado="AC";
     this.paciente = this.formGroup.value;
     this.pacienteService.post(this.paciente).subscribe(p => {
