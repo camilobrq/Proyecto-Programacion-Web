@@ -46,7 +46,7 @@ namespace Proyectopweb.Controllers
             var administrador = new Administrador();
             {
                 administrador.nombreUsuario = administradorInputModel.nombreUsuario;
-                administrador.contraseña = administradorInputModel.contraseña;
+                administrador.contrasena = administradorInputModel.contraseña;
                 administrador.tipoUsuario = administradorInputModel.tipoUsuario;
                
             }

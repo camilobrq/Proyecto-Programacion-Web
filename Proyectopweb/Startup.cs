@@ -10,6 +10,12 @@ using Microsoft.OpenApi.Models;
 using System;
 using Datos;
 using System.Text.Json.Serialization;
+using Proyectopweb.Hubs;
+using WebPulsaciones.Config;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using WebPulsaciones;
 
 namespace Proyectopweb
 {
@@ -28,9 +34,36 @@ namespace Proyectopweb
             // Configurar cadena de Conexion con EF
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ConsultorioContext>(p => p.UseSqlServer(connectionString));
-
+            services.AddSignalR();
             services.AddControllersWithViews();
+            services.AddScoped<JwtService>();
             // In production, the Angular files will be served from this directory
+            #region    configure strongly typed settings objects
+            var appSettingsSection = Configuration.GetSection("AppSetting");
+            services.Configure<AppSetting>(appSettingsSection);
+            #endregion
+
+            #region Configure jwt authentication inteprete el token 
+            var appSettings = appSettingsSection.Get<AppSetting>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+            #endregion
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -56,8 +89,30 @@ namespace Proyectopweb
                     Url = new Uri("https://example.com/license"),
                 }
             });
+            c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme{
+                Name="Authorization",
+                Type=SecuritySchemeType.Http,
+                Scheme="bearer",
+                BearerFormat="JWT",
+                In=ParameterLocation.Header,
+                Description ="JWT Authorization header using the Bearer Scheme."
+            });
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement{
+               {
+                   new OpenApiSecurityScheme
+                   {
+                       Reference=new OpenApiReference
+                       {
+                           Type=ReferenceType.SecurityScheme,
+                           Id="bearerAuth"
+                       }
+                   },
+                   new string[]{}
+               } 
+            });
+            
         });
-        
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,8 +121,8 @@ namespace Proyectopweb
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                 
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+
             });
             if (env.IsDevelopment())
             {
@@ -88,9 +143,19 @@ namespace Proyectopweb
             }
 
             app.UseRouting();
+            #region global cors policy activate Authentication/Authorization
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+            #endregion
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHub<SignalHub>("/signalHub");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");

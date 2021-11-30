@@ -6,22 +6,29 @@ using Microsoft.AspNetCore.Http;
 using Logica;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR;
+using Proyectopweb.Hubs;
+using Microsoft.AspNetCore.Authorization;
+
 namespace Proyectopweb.Controllers
 {
+    [Authorize(Roles ="Paciente")]
     [Route("api/[controller]")]
     [ApiController]
     public class PacienteController : ControllerBase
     {
         private readonly PacienteService _pacienteService;
-
-        public PacienteController(ConsultorioContext context)
+        private readonly IHubContext<SignalHub> _hubContext;
+        public PacienteController(ConsultorioContext context, IHubContext<SignalHub> hubContext)
         {
+            _hubContext = hubContext;
             _pacienteService = new PacienteService(context);
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
-        public ActionResult<PacienteViewModel> Guardar(PacienteInputModel pacienteInputModel)
+        public async Task<ActionResult<PacienteViewModel>> Post(PacienteInputModel pacienteInputModel)
         {
             var paciente = MapearaPaciente(pacienteInputModel);
             var respuesta = _pacienteService.Guardar(paciente);
@@ -33,7 +40,8 @@ namespace Proyectopweb.Controllers
                 {
                     Status = StatusCodes.Status400BadRequest,
                 };
-                return BadRequest(respuesta.Mensaje);
+                await _hubContext.Clients.All.SendAsync("SignalMessageReceived", pacienteInputModel);
+                return BadRequest(problemDetails);
             }
             return Ok(respuesta.Paciente);
         }
@@ -62,19 +70,29 @@ namespace Proyectopweb.Controllers
         }
         private Paciente MapearaPaciente(PacienteInputModel pacienteInputModel)
         {
-            var paciente = new Paciente();
-            paciente.nombreUsuario = pacienteInputModel.nombreUsuario;
-            paciente.contraseña = pacienteInputModel.contrasena;
-            paciente.tipoDocumento = pacienteInputModel.tipoDocumento;
-            paciente.identificacion = pacienteInputModel.identificacion;
-            paciente.nombre = pacienteInputModel.nombre;
-            paciente.apellido = pacienteInputModel.apellido;
-            paciente.fechaNacimiento = pacienteInputModel.fechaNacimiento;
-            paciente.sexo = pacienteInputModel.sexo;
-            paciente.telefono = pacienteInputModel.telefono;
-            paciente.direccion = pacienteInputModel.direccion;
-            paciente.correo = pacienteInputModel.correo;
-            paciente.Eps = pacienteInputModel.Eps;
+            var paciente = new Paciente()
+            {
+                tipoDocumento = pacienteInputModel.tipoDocumento,
+                identificacion = pacienteInputModel.identificacion,
+                nombre = pacienteInputModel.nombre,
+                apellido = pacienteInputModel.apellido,
+                fechaNacimiento = pacienteInputModel.fechaNacimiento,
+                sexo = pacienteInputModel.sexo,
+                direccion = pacienteInputModel.direccion,
+                Eps = pacienteInputModel.Eps,
+                usuario=new Usuario{
+                    tipoUsuario="Paciente",
+                    nombreUsuario=pacienteInputModel.nombreUsuario,
+                    contrasena=pacienteInputModel.contrasena,
+                    correo=pacienteInputModel.correo,
+                    estado="Ac",
+                    telefono=pacienteInputModel.telefono,
+
+                }
+
+            };
+
+
             return paciente;
         }
     }

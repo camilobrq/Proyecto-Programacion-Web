@@ -22,9 +22,9 @@ namespace Logica
         {
             try
             {
-                var PacienteBuscado = _context.pacientes.Find(paciente.nombreUsuario);
+               /* var PacienteBuscado = _context.pacientes.Find(paciente.nombreUsuario);*/
                 var PacienteBuscadoIdentificacion = _context.pacientes.Find(paciente.identificacion);
-                if (PacienteBuscado != null || PacienteBuscadoIdentificacion != null)
+                if (/*PacienteBuscado != null ||/*/ PacienteBuscadoIdentificacion != null)
                 {
                     return new GuardarPacienteResponse("Error, el paciente ya esta registrado o el nombre de usuario no esta Disponible.");
                 }

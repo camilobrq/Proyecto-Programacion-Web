@@ -6,7 +6,7 @@ namespace Proyectopweb.Models
 {
     public class PacienteInputModel
     {
-        [Required(ErrorMessage = "el nombre de usuario es requerido")]
+        [Required(ErrorMessage = "el nombre de usuario es requerido")] 
         public string nombreUsuario { get; set; }
         [Required(ErrorMessage = "La contraseña es requerida")]
         public string contrasena { get; set; }
@@ -30,7 +30,10 @@ namespace Proyectopweb.Models
         public string correo { get; set; }
         [Required(ErrorMessage = "La Eps es requerida")]
         public string Eps { get; set; }
-
+        public Usuario usuario { get; set; }
+        public string tipoUsuario { get; set; }
+        public string estado { get; set; }
+        
     }
     public class SexoValidacion : ValidationAttribute
     {
@@ -54,18 +57,18 @@ namespace Proyectopweb.Models
         }
         public PacienteViewModel(Paciente paciente)
         {
-            nombreUsuario = paciente.nombreUsuario;
-            contrasena = paciente.contraseña;
+            
             tipoDocumento = paciente.tipoDocumento;
             identificacion = paciente.identificacion;
             nombre = paciente.nombre;
             apellido = paciente.apellido;
             sexo = paciente.sexo;
             fechaNacimiento = paciente.fechaNacimiento;
-            telefono = paciente.telefono;
             direccion = paciente.direccion;
-            correo = paciente.correo;
             Eps = paciente.Eps;
+            
+            
+            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Proyectopweb.Models
         public AdministradorViewModel(Administrador administrador)
         {
             nombreUsuario = administrador.nombreUsuario;
-            contraseña = administrador.contraseña;
+            contraseña = administrador.contrasena;
             tipoUsuario = administrador.tipoUsuario;
             
 

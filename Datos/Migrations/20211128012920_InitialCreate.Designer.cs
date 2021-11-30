@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(ConsultorioContext))]
-    [Migration("20211126203428_InitialCreate")]
+    [Migration("20211128012920_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,9 @@ namespace Datos.Migrations
 
                     b.Property<string>("contraseña")
                         .HasColumnType("varchar(20)");
+
+                    b.Property<string>("estado")
+                        .HasColumnType("varchar(10)");
 
                     b.Property<string>("tipoUsuario")
                         .HasColumnType("varchar(20)");
@@ -148,6 +151,9 @@ namespace Datos.Migrations
                     b.Property<string>("direccion")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("estado")
+                        .HasColumnType("varchar(10)");
+
                     b.Property<DateTime>("fechaNacimiento")
                         .HasColumnType("datetime2");
 
@@ -202,6 +208,9 @@ namespace Datos.Migrations
 
                     b.Property<string>("direccion")
                         .HasColumnType("varchar(20)");
+
+                    b.Property<string>("estado")
+                        .HasColumnType("varchar(10)");
 
                     b.Property<string>("fechaFinalizacion")
                         .HasColumnType("nvarchar(max)");

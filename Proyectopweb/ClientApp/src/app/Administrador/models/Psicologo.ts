@@ -10,6 +10,7 @@ export class Psicologo {
     fechaNacimiento:Date;
     telefono: string; 
     direccion: string;
+    estado:string;
     correo: string;
     Universidad: string;
     fechaFinalizacion: Date;

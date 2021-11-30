@@ -9,6 +9,7 @@ export class Paciente {
     sexo: string;
     fechaNacimiento:Date;
     telefono: string;
+    estado:string;
     direccion: string;
     correo: string;
     eps: string;

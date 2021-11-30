@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
@@ -28,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ExamenMentalComponent } from './examen-mental/examen-mental.component';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
 import { AgendaComponent } from './Administrador/agenda/agenda.component';
-
+import {JwtInterceptor} from './services/jwt.interceptor';
+import { AuthGuard } from './services/auth.guard';
 
 
 
@@ -108,7 +109,7 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
     ])
   ],
   entryComponents:[AlertModalComponent],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

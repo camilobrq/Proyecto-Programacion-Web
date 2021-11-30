@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CitaService } from 'src/app/services/apartar-citas.service';
-import { PacienteService } from 'src/app/services/Pacienteservice';
+
 import { Cita } from '../models/Cita';
 import { Paciente } from '../models/Paciente';
 

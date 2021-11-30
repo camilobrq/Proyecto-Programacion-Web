@@ -7,30 +7,35 @@
                 <h2>Apartar Cita</h2>
                 
                 <div class="form-group">
-                  
+                   
                     <input type="text" name="identificacion" placeholder="Identifiacion del Paciente" [(ngModel)]="cita.idPaciente"
                         class="form-control" /> 
                 </div>
+               
+                <div class="form-group">
+                    <span>Fecha deseada de la cita:</span>
+                    <input type="date" name="fecha" [(ngModel)]="cita.fechaDeseada" class="form-control" (click)="verificando()"/>
+                </div>
                 
-                <div class="form-group">  
-                    <label>Seleccione el Tipo de cita</label>                
-                    <select type="text" name="tipoCita"  [(ngModel)]="cita.tiposSolicitud" class="form-control">
-                      <option>Terapia psicoanalítica</option>  
-                      <option>Terapia cognitivo-conductual</option>  
-                      <option>Terapia sistémica breve</option>  
-                      <option>Terapia neuropsicológica</option>  
-                      <option>Terapia Gestalt</option>  
-                      <option>Terapia racional emotiva racional (TREC)</option>  
-                      <option>Terapia cognitiva</option>  
-                      <option>Terapia Breve Centrada en Soluciones</option>  
-                      <option>Terapia Counseling</option>  
+                <div class="form-group">
+                    <span>Hora deseada de la cita:</span>
+                    <select type="text" name="horaCita" [(ngModel)]="cita.horaCita" class="form-control" (click)="verificandoNombre() ">
+                        <option [value]="agenda" *ngFor="let agenda of agendaHora"> 
+                            {{agenda}}
+                        </option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <span>Fecha deseada de la cita:</span>
-                    <input type="date" name="fecha" [(ngModel)]="cita.fechaDeseada" class="form-control" />
+                    <span>Nombre Piscologo</span>
+                    <select type="text" name="nombre" [(ngModel)]="cita.nombre" class="form-control" >
+                        <option [value]="agendaNombrePsicologo" *ngFor="let agenda of agendaNombrePsicologo"> 
+                            {{agenda}}
+                        </option>
+                    </select>
+                    
                 </div>
-           
+               
+               
                 <div class="text-center">
                     <button class="btn btn-primary mr-1" (click)="add()">Enviar</button>
                 </div>

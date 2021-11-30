@@ -4,7 +4,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -12,11 +12,12 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/RegistrarAgenda']">Realizar Agenda</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/Realizarevaluacion']">Registrar Diagnostico</a></li>
-            
+            <li><a class="dropdown-item" [routerLink]="['/menuEmpleado/Realizarevaluacion']">Registrar Diagnostico</a>
+            </li>
+
           </ul>
-        </li>  
-          
+        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -26,13 +27,13 @@
             <li><a class="dropdown-item" href="#">Consultar Agenda</a></li>
             <li><a class="dropdown-item" href="#">Consultar Diagnosticos</a></li>
             <li><a class="dropdown-item" href="#">Consultar Historia Clinica</a></li>
-            
-          </ul>
-        </li>  
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]='["/login"]'>Salir</a>
-        </li>
 
+          </ul>
+        </li>
+        <li class="nav-item" *ngIf="!currentUser">
+          <a class="nav-link" [routerLink]='["/login"]' (click)="logout()">Salir</a>
+        </li>
+                 
       </ul>
       <form class="d-flex">
         <a class="navbar-brand" href="#"><img src="../../assets/brain (3).png" alt="icono">Vitalmente</a>
@@ -51,7 +52,3 @@
     <router-outlet></router-outlet>
   </body>
 </div>
-
-  
-  
-  

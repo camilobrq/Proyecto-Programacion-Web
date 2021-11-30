@@ -24,9 +24,9 @@ namespace Logica
         {
             try
             {
-                var PsicologoBuscadoNombreUsuario = _context.psicologos.Find(psicologo.nombreUsuario);
-                var PsicologoBuscadoIdentificacion = _context.psicologos.Find(psicologo.nombreUsuario);
-                if (PsicologoBuscadoNombreUsuario != null || PsicologoBuscadoIdentificacion != null)
+               // var PsicologoBuscadoNombreUsuario = _context.psicologos.Find(psicologo.nombreUsuario);
+                var PsicologoBuscadoIdentificacion = _context.psicologos.Find(psicologo.identificacion);
+                if (/*PsicologoBuscadoNombreUsuario != null ||*/ PsicologoBuscadoIdentificacion != null)
                 {
                     return new GuardarPsicologoResponse("Error, ya existe un psicologo registrado con el nombre de usuario o el psicologo ya esta registrado");
                 }

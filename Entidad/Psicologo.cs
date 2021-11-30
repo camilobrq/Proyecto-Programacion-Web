@@ -19,11 +19,8 @@ namespace Entidad
         public string mesesExperiencia {get; set;}
         [JsonIgnore]
         public Agenda agendaPsicologo { get; set; }
-
-        public Psicologo()
-        {
-            this.tipoUsuario = "Psicologo";
-        }
+        [JsonIgnore]
+        public Usuario usuario { get; set; }
 
     }
 }

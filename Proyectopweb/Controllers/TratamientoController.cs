@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Logica;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+
 namespace Proyectopweb.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TratamientoController : ControllerBase

@@ -8,78 +8,120 @@
 
           <h2>Vitalmente</h2>
 
+          <form [formGroup]="formGroup">
 
+            <div class="form-group">
+              <input type="text" formControlName="nombreUsuario" placeholder="Nombre de Usuario" class="form-control"
+                [ngClass]="{'is-invalid':control.nombreUsuario.errors }" />
+              <div *ngIf=" control.nombreUsuario.errors" class="invalid-feedback">
+                <div *ngIf="control.nombreUsuario.errors.required">El usuario es requerido</div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <input type="text" name="nombreusuario" placeholder="Nombre de Usuario" class="form-control" [(ngModel)]="paciente.nombreUsuario" />
-          </div>
+            <div class="form-group">
+              <input type="text" formControlName="contrasena" placeholder="Contraseña" class="form-control"
+                [ngClass]="{ 'is-invalid':  control.contrasena.errors }" />
+              <div *ngIf=" control.contrasena.errors" class="invalid-feedback">
+                <div *ngIf="control.contrasena.errors.required">La contraseña es requerida</div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <input type="text" name="Contraseña" placeholder="Contraseña" class="form-control" [(ngModel)]="paciente.contrasena" />
-          </div>
+            <div class="form-group">
+              <select class="form-select" formControlName="tipoDocumento"
+                [ngClass]="{ 'is-invalid':  control.tipoDocumento.errors }">
+                <option selected disabled>Tipo de Documento</option>
+                <option value="cedula">Cedula de ciudadania</option>
+                <option value="registro">Registro civil</option>
+                <option value="tarjeta">Tarjeta de identidad</option>
+                <option value="extrangero">Documento extrangero</option>
+              </select>
+              <div *ngIf=" control.tipoDocumento.errors" class="invalid-feedback">
+                <div *ngIf="control.tipoDocumento.errors.required">El tipo de documento es requerido</div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <select class="form-select" aria-label="Default select example disabled"
-                    [(ngModel)]="paciente.tipoDocumento">
-              <option selected disabled>Tipo de Documento</option>
-              <option value="cedula">Cedula de ciudadania</option>
-              <option value="registro">Registro civil</option>
-              <option value="tarjeta">Tarjeta de identidad</option>
-              <option value="extrangero">Documento extrangero</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <input type="text" formControlName="identificacion" placeholder="Identificacion" [ngClass]="{ 'is-invalid':  control.identificacion.errors }"
+                class="form-control" />
+              <div *ngIf=" control.identificacion.errors" class="invalid-feedback">
+                <div *ngIf="control.identificacion.errors.required">La identificacion es requerida</div>
+              </div>
+            </div>
 
-          <div class="form-group">
+            <div class="form-group">
+              <input type="text" formControlName="nombre" placeholder="Nombre" [ngClass]="{ 'is-invalid':  control.nombre.errors }"
+                class="form-control" />
+              <div *ngIf=" control.nombre.errors" class="invalid-feedback">
+                <div *ngIf="control.nombre.errors.required">El nombre es requerido</div>
+              </div>
+            </div>
 
-            <input type="text" name="identificacion" placeholder=" Identificacion"
-                   [(ngModel)]="paciente.identificacion" class="form-control" />
+            <div class="form-group">
+              <input type="text" formControlName="apellido" placeholder="Apellido"
+                [ngClass]="{ 'is-invalid':  control.apellido.errors }" class="form-control" />
+              <div *ngIf=" control.apellido.errors" class="invalid-feedback">
+                <div *ngIf="control.apellido.errors.required">El apellido es requerido</div>
+              </div>
+            </div>
 
-          </div>
+            <div class="form-group">
+              <select class="form-select" formControlName="sexo"
+                [ngClass]="{ 'is-invalid':  control.sexo.errors }">
+                <option selected disabled>Sexo</option>
+                <option value="cedula">Masculino</option>
+                <option value="registro">Femenino</option>
+              </select>
+              <div *ngIf=" control.sexo.errors" class="invalid-feedback">
+                <div *ngIf="control.sexo.errors.required">El sexo es requerido</div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="paciente.nombre"
-                   class="form-control" />
-          </div>
+            <div class="form-group">
+              <h3>Fecha de Nacimiento</h3>
+              <input type="date" formControlName="fechaNacimiento" [ngClass]="{ 'is-invalid':  control.fechaNacimiento.errors }"
+                class="form-control" />
+              <div *ngIf=" control.fechaNacimiento.errors" class="invalid-feedback">
+                <div *ngIf="control.fechaNacimiento.errors.required">La fecha de nacimiento es requerida</div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="paciente.apellido"
-                   class="form-control" />
-          </div>
+            <div class="form-group">
 
-          <div class="form-group">
-            <select class="form-select" aria-label="Default select example disabled"
-                    [(ngModel)]="paciente.sexo">
-              <option selected disabled>Sexo</option>
-              <option value="cedula">Masculino</option>
-              <option value="registro">Femenino</option>
-            </select>
-          </div>
+              <input type="text" formControlName="telefono" placeholder=" Telefono"
+                [ngClass]="{ 'is-invalid':  control.telefono.errors }" class="form-control" />
+              <div *ngIf=" control.telefono.errors" class="invalid-feedback">
+                <div *ngIf="control.telefono.errors.required">El telefono es requerido</div>
+              </div>
+            </div>
+            <div class="form-group">
 
-          <div class="form-group">
-            <h3>Fecha de Nacimiento</h3>
-            <input type="date" name="edad" [(ngModel)]="paciente.fechaNacimiento" class="form-control" />
-          </div>
+              <input type="text" formControlName="direccion" placeholder=" Direccion"
+                [ngClass]="{ 'is-invalid':  control.direccion.errors }" class="form-control" />
+              <div *ngIf=" control.direccion.errors" class="invalid-feedback">
+                <div *ngIf="control.direccion.errors.required">La direccion es requerida</div>
+              </div>
+            </div>
+            <div class="form-group">
 
-          <div class="form-group">
+              <input type="text" formControlName="correo" placeholder=" Correo"
+                [ngClass]="{ 'is-invalid':  control.correo.errors }" class="form-control" />
+              <div *ngIf=" control.correo.errors" class="invalid-feedback">
+                <div *ngIf="control.correo.errors.required">El correo es requerido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <select type="text" formControlName="eps" placeholder=" Nombre Eps"
+                [ngClass]="{ 'is-invalid':  control.eps.errors }" class="form-control" >
+                <option [value]="epses" *ngFor="let camilo of epses"> 
+                  {{camilo}}
+                </option>
+              </select>
 
-            <input type="text" name="telefono" placeholder=" Telefono" [(ngModel)]="paciente.telefono"
-                   class="form-control" />
-          </div>
-          <div class="form-group">
-
-            <input type="text" name="direccion" placeholder=" Direccion" [(ngModel)]="paciente.direccion"
-                   class="form-control" />
-          </div>
-          <div class="form-group">
-
-            <input type="text" name="correo" placeholder=" Correo" [(ngModel)]="paciente.correo"
-                   class="form-control" />
-          </div>
-          <div class="form-group">
-            <input type="text" name="nombreEps" placeholder=" Nombre Eps" [(ngModel)]="paciente.eps"
-                   class="form-control" />
-          </div>
-
+              <div *ngIf=" control.eps.errors" class="invalid-feedback">
+                <div *ngIf="control.eps.errors.required">La eps es requerida</div>
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="text-center centrar">
@@ -89,9 +131,7 @@
         </div>
 
         <div class="text-center">
-          <button class="btn btn-primary mr-1" (click)="add()">
-            Registrate
-          </button>
+          <button class="btn btn-primary mr-1" (click)=" onSubmit()" [disabled]="formGroup.invalid">Registrate</button>
         </div>
 
       </div>
@@ -107,5 +147,3 @@
 
 
 </body>
-
-

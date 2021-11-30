@@ -13,7 +13,8 @@ namespace Datos.Migrations
                 {
                     nombreUsuario = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     contraseña = table.Column<string>(type: "varchar(20)", nullable: true),
-                    tipoUsuario = table.Column<string>(type: "varchar(20)", nullable: true)
+                    tipoUsuario = table.Column<string>(type: "varchar(20)", nullable: true),
+                    estado = table.Column<string>(type: "varchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -40,6 +41,7 @@ namespace Datos.Migrations
                     Eps = table.Column<string>(type: "varchar(40)", nullable: true),
                     contraseña = table.Column<string>(type: "varchar(20)", nullable: true),
                     tipoUsuario = table.Column<string>(type: "varchar(20)", nullable: true),
+                    estado = table.Column<string>(type: "varchar(10)", nullable: true),
                     identificacion = table.Column<string>(type: "varchar(30)", nullable: true),
                     tipoDocumento = table.Column<string>(type: "varchar(20)", nullable: true),
                     nombre = table.Column<string>(type: "varchar(30)", nullable: true),
@@ -90,6 +92,7 @@ namespace Datos.Migrations
                     agendaPsicologoidAgenda = table.Column<int>(type: "int", nullable: true),
                     contraseña = table.Column<string>(type: "varchar(20)", nullable: true),
                     tipoUsuario = table.Column<string>(type: "varchar(20)", nullable: true),
+                    estado = table.Column<string>(type: "varchar(10)", nullable: true),
                     identificacion = table.Column<string>(type: "varchar(30)", nullable: true),
                     tipoDocumento = table.Column<string>(type: "varchar(20)", nullable: true),
                     nombre = table.Column<string>(type: "varchar(30)", nullable: true),

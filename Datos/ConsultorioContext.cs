@@ -21,6 +21,8 @@ namespace Datos
         public DbSet<Diagnostico> diagnosticos { get; set; }
         public DbSet<Disponibilidad> disponibilidades { get; set; }
         public DbSet<Tratamiento> tratamientos { get; set; }
+        public DbSet<Usuario> usuarios { get; set; }
+        public DbSet<Eps> eps { get; set; }
     }
 
 }

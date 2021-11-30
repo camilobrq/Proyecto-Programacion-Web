@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 import { Psicologo } from '../models/Psicologo';
 
@@ -10,7 +12,7 @@ import { Psicologo } from '../models/Psicologo';
 export class RegistroEmpladosComponent implements OnInit {
 empleado:Psicologo;
 empleados: Psicologo[];
-  constructor(private empleadoService: EmpleadoService) { }
+  constructor(private empleadoService: EmpleadoService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.empleado= new Psicologo;
@@ -18,14 +20,14 @@ empleados: Psicologo[];
     this.empleado.tipoDocumento = "Tipo de Documento";
   }
   add(){
+    this.empleado.tipoDocumento="Psicologo";
+    this.empleado.estado="AC";
     this.empleadoService.post(this.empleado).subscribe(p=>{
       if(p!=null){
-        alert('psicologo Creado!');
+        const messageBox = this.modalService.open(AlertModalComponent)
+        messageBox.componentInstance.title = "Resultado Operación";
+        messageBox.componentInstance.message = 'Persona creada!!! :-)';
         this.empleado=p;
-      }
-      
-      if(p==null){
-        alert('Error al intentar guardar al paciente');
       }
     });
   }

@@ -1,28 +1,37 @@
 <body>
-    <div class="contenedor-formulario">
-        <div class="iniciar-sesion">
-           <h1>Vitalmente</h1>
-            <div class="mb-3">
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Usuario">
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
-              </div>
-              
-              <select class="form-select" aria-label="Default select example disabled" [(ngModel)]="tipousuario">
-                <option selected >Tipo de usuario</option>
-                <option value="1">Paciente</option>
-                <option value="2">Administrador</option>
-                <option value="3">Psiciologo</option>
-              </select>
+  <div class="contenedor-formulario">
 
-              <p>¿No has creado tu cuenta de paciente? <a [routerLink]='["/personaRegistro"]'>Creala aqui</a></p>
-              <button type="button" class="btn btn-primary" (click)="Ingresar()"  >iniciar sesion</button>
+    <div class="iniciar-sesion">
+      <h1>Vitalmente</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Usuario"
+            [ngClass]="{ 'is-invalid': submitted && f.nombreUsuario.errors }"   />
+          <div *ngIf="submitted && f.nombreUsuario.errors" class="invalid-feedback">
+            <div *ngIf="f.nombreUsuario.errors.required">Nombre usuario is required</div>
+          </div>
+
         </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña"
+            [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
+          <div *ngIf="submitted && f.nombreUsuario.errors" class="invalid-feedback">
+            <div *ngIf="f.nombreUsuario.errors.required">contraseña is required</div>
+          </div>
+        </div>
+
+        <p>¿No has creado tu cuenta de paciente? <a [routerLink]='["/personaRegistro"]'>Creala aqui</a></p>
+        <button type="button" [disabled]="loading"  class="btn btn-primary">
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                      Iniciar sesion
+                  </button>
+      </form>
     </div>
 
-    <div class="Fondo-login">
-        
-    </div>
+  </div>
+
+  <div class="Fondo-login">
+
+  </div>
 </body>
-

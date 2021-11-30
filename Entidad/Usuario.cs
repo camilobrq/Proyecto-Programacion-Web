@@ -11,11 +11,17 @@ namespace Entidad
     public class Usuario
     {
         [Key]
+        public int idUsuario { get; set; }
         public string nombreUsuario { get; set; }
 
-        [Column(TypeName = "varchar(20)")]
-        public string contraseña { get; set; }
-        [Column(TypeName = "varchar(20)")]
+        public string contrasena { get; set; }
+      
         public string tipoUsuario { get; set; }
-    }
+        
+        public string estado { get; set; }
+        public string correo {get; set;}
+         public string telefono {get; set;}
+         public List<Paciente> pacientes { get; set; }
+        public List<Psicologo> psicologos { get; set; }
+    } 
 }

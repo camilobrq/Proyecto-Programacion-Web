@@ -6,29 +6,42 @@ using Microsoft.AspNetCore.Http;
 using Logica;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.SignalR;
+using Proyectopweb.Hubs;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+
 namespace Proyectopweb.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PsicologoController : ControllerBase
     {
         private readonly PsicologoService _psicologoService;
-
-        public PsicologoController(ConsultorioContext context)
+        private readonly IHubContext<SignalHub> _hubContext;
+        public PsicologoController(ConsultorioContext context,IHubContext<SignalHub> hubContext)
         {
+             _hubContext=hubContext;
            this._psicologoService  = new PsicologoService(context);
         }
 
 
         [HttpPost]
-        public ActionResult<PsicologoViewModel> Guardar(PsicologoInputModel psicologoInputModel)
+        public async Task<ActionResult<PsicologoViewModel>> Guardar(PsicologoInputModel psicologoInputModel)
         {
             var psicologo = MapearPsicologo(psicologoInputModel);
             var respuesta = _psicologoService.Guardar(psicologo);
 
             if (respuesta.Error == true)
             {
-                return BadRequest(respuesta.Mensaje);
+                ModelState.AddModelError("Guardar Paciente", respuesta.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                {
+                    Status = StatusCodes.Status400BadRequest,
+                };
+                await _hubContext.Clients.All.SendAsync("SignalMessageReceived",psicologoInputModel);
+                return BadRequest(problemDetails);
             }
             return Ok(respuesta.psicologo);
         }
@@ -45,18 +58,16 @@ namespace Proyectopweb.Controllers
         {
             var psicologo = new Psicologo();
             {
-                psicologo.nombreUsuario = psicologoInputModel.nombreUsuario;
-                psicologo.contraseña = psicologoInputModel.contraseña;
-                psicologo.tipoUsuario = psicologoInputModel.tipoUsuario;
+               
                 psicologo.tipoDocumento = psicologoInputModel.tipoDocumento;
                 psicologo.identificacion = psicologoInputModel.identificacion;
                 psicologo.nombre = psicologoInputModel.nombre;
                 psicologo.apellido = psicologoInputModel.apellido;
                 psicologo.fechaNacimiento = psicologoInputModel.fechaNacimiento;
                 psicologo.sexo = psicologoInputModel.sexo;
-                psicologo.telefono = psicologoInputModel.telefono;
+               
                 psicologo.direccion = psicologoInputModel.direccion;
-                psicologo.correo = psicologoInputModel.correo;
+                
                 //psicologo.calcularEdad();
                 //psicologo.edad = psicologoInputModel.edad;
                 psicologo.UniversidadEgreso = psicologoInputModel.UniversidadEgreso;
