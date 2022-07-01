@@ -11,8 +11,6 @@
         <select class="form-select" aria-label="Default select example disabled" [(ngModel)]="empleado.tipoDocumento">
             <option selected disabled>Tipo de Documento</option>
             <option value="cedula">Cedula de ciudadania</option>
-            <option value="registro">Registro civil</option>
-            <option value="tarjeta">Tarjeta de identidad</option>
             <option value="extrangero">Documento extrangero</option>
         </select>
         <input type="text" name="identificacion" placeholder="Identifiacion" [(ngModel)]="empleado.identificacion"
@@ -45,8 +43,24 @@
         
         <input type="text" name="Universidad" placeholder="Universidad de egreso" [(ngModel)]="empleado.UniversidadEgreso"
              class="form-control" />
-      <input type="text" name="areaespecializada" placeholder="Area Especializada" [(ngModel)]="empleado.areaEspecializada"
-             class="form-control" />
+             <label>Especializacion</label>
+             <select type="text" name="areaEspecializada" [(ngModel)]="empleado.areaEspecializada" class="form-control">
+                 <option>Psicología cognitiva</option>
+                 <option>Psicología clínica</option>
+                 <option>Neuropsicología</option>
+                 <option>Psicología biológica</option>
+                 <option>Psicología comparativa o etología</option>
+                 <option>Psicología educativa</option>
+                 <option>Psicología evolutiva</option>
+                 <option>Psicología de la salud</option>
+                 <option>Psicología de pareja</option>
+                 <option>Psicología de familia</option>
+                 <option>Psicología empresarial y organizacional</option>
+                 <option>Psicología escolar</option>
+                 <option>Psicología gerontológica</option>
+                 <option>Sexología</option>
+                 <option>Psicología comunitaria</option>
+             </select>
         
 
         

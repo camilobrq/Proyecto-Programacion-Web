@@ -10,18 +10,19 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Id Cita</th>
+                
                 <th scope="col">Id Paciente</th>
                 <th scope="col">Fecha de cita</th>
+                <th scope="col">Hora cita</th>
 
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let cita of citas|filtroCita:searchText; index as i ">
                 <th scope="row">{{ i + 1 }}</th>
-                <td>{{ cita.idCita }} </td>
                 <td>{{ cita.idPaciente }} </td>
                 <td>{{cita.fechaDeseada }}</td>
+                <td>{{cita.horaCita }}</td>
             </tr>
         </tbody>
     </table>

@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="row">
+        
+        <div style="float: right;">
+            <button class="btn btn-primary mr-1"  (click)="Atras()">Regresar</button>
+        </div>
+    </div>
+    <hr>
+    <table class="table table-striped" *ngIf='agendas && agendas.length'>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Fecha disponible de la cita </th>
+                <th scope="col">Hora disponible de la cita</th>
+     
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Agenda of agendas index as i ">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{Agenda.fechaDeseada }}</td>
+                <td>{{ Agenda.horaCita }}</td>
+          
+            </tr>
+        </tbody>
+    </table>
+

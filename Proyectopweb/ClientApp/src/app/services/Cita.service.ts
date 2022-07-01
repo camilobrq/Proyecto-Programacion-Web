@@ -21,8 +21,8 @@ export class CitaService {
   get(): Observable<Cita[]> {
     return this.http.get<Cita[]>(this.baseUrl + 'api/Cita')
       .pipe(
-        tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Cita[]>('Consulta cita', null))
+        tap(_ => this.handleErrorService),
+        catchError(this.handleErrorService.handleError<Cita[]>(null))
       );
   }
   getNombre(nombre: string): Observable<string[]> {

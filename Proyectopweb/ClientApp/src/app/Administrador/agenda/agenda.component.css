@@ -1,0 +1,20 @@
+.form-group{
+    width: 100%;
+    background: white;
+    padding: 2px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    
+    font-family: 'calibri';
+    font-size: 18px;
+}
+.container{
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: black;
+ }

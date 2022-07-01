@@ -22,8 +22,8 @@ export class AgendaService {
   get(): Observable<Agenda[]> {
     return this.http.get<Agenda[]>(this.baseUrl + 'api/Agenda')
       .pipe(
-        tap(_ => this.handleErrorService.log('Agenda Consultado')),
-        catchError(this.handleErrorService.handleError<Agenda[]>('Consulta Agenda', null))
+        tap(_ => this.handleErrorService),
+        catchError(this.handleErrorService.handleError<Agenda[]>( null))
       );
   }
   getList(): Observable<string[]> {

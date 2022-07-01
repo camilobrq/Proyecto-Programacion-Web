@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { AgendaService } from 'src/app/services/Agenda.service';
 import { CitaService } from 'src/app/services/apartar-citas.service';
@@ -25,7 +26,7 @@ export class GestionCitaComponent implements OnInit {
   persona: Paciente;
   fecha: Date;
   hora:string;
-  constructor(private apartarCitasService: CitaService, private agendaService: AgendaService) { 
+  constructor(private apartarCitasService: CitaService, private agendaService: AgendaService,private router: Router) { 
     this.cita = new Cita;
   }
 
@@ -78,7 +79,9 @@ export class GestionCitaComponent implements OnInit {
      }
    }
       
-    
+   Agenda() {
+    this.router.navigate(["/menuPaciente/consultarAgendaPaciente"]);
+  }
     add(){
      this.cita.estado="Activa";
       this.apartarCitasService.post(this.cita).subscribe(p=>{

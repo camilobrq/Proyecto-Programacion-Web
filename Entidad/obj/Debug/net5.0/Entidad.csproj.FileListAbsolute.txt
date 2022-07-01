@@ -58,3 +58,27 @@ C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Ent
 C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
 C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
 C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.deps.json
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\ref\Entidad.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.deps.json
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\bin\Debug\net5.0\Entidad.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\refint\Entidad.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\ref\Entidad.dll

@@ -1,0 +1,32 @@
+<div class="consulta">
+    <div class="row">
+        <div class="col-6">
+            <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Buscar enfermedad por descripcion">
+        </div>
+        <div style="float: right;">
+            <button class="btn btn-primary mr-1"  (click)="Atras()">Regresar</button>
+        </div>
+    </div>
+    <hr>
+    <table class="table table-striped" *ngIf='enfermedades && enfermedades.length'>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Codigo de 3 caracteres</th>
+                <th scope="col">Descripcion codigo 3 caracteres </th>
+                <th scope="col">Codigo de 4 caracteres</th>
+                <th scope="col">Descripcion de codigo 4 caracteres</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let enfermedad of enfermedades|filtroEnfermedad:searchText; index as i ">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ enfermedad.codigo_3 }} </td>
+                <td>{{ enfermedad.descripcion_3 }}</td>
+                <td>{{enfermedad.codigo_4 }}</td>
+                <td>{{ enfermedad.descripcion_4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

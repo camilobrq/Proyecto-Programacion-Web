@@ -19,6 +19,17 @@ namespace Proyectopweb.Controllers
             _enfermedadgoService = new EnfermedadService(context);
         }
 
+        [HttpGet]
+        public ActionResult<List<EnfermedadViewModel>> GetConsulta()
+        {
+            var respuesta = _enfermedadgoService.Consultar();
+            if (respuesta.Error == true)
+            {
+                return BadRequest(respuesta.Mensaje);
+            }
+            return Ok(respuesta.Enfermedades.Select(p => new EnfermedadViewModel(p)));
+            //return Ok(new List<PacienteViewModel>());
+        }
 
         [HttpGet("codigo3")]
         public List<string> Gets()

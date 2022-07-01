@@ -5746,30 +5746,32 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+      "projectUniqueName": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+      "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
       "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\obj\\",
+      "outputPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
+            "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
+              "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-              "projectPath": "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+            "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+              "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
             }
           }
         }
@@ -5798,7 +5800,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -19,8 +19,8 @@ export class EvaluacionService {
   get(): Observable<Evaluacion[]> {
     return this.http.get<Evaluacion[]>(this.baseUrl + 'api/Evaluacion')
       .pipe(
-        tap(_ => this.handleErrorService.log('tratamiento Consultado')),
-        catchError(this.handleErrorService.handleError<Evaluacion[]>('Consulta Evaluacion', null))
+        tap(_ => this.handleErrorService),
+        catchError(this.handleErrorService.handleError<Evaluacion[]>( null))
       );
   }
   post(evaluacion: Evaluacion): Observable<Evaluacion> {

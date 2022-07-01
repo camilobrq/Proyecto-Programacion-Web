@@ -22,6 +22,7 @@ namespace Entidad
         public List<Agenda> agendas { get; set; }
         [JsonIgnore]
          public Usuario usuario { get; set; }
+         
 
     }
 }

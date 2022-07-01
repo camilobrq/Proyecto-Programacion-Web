@@ -9,20 +9,28 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">identificación Paciente</th>
-            <th scope="col">Nombre  </th>
-            <th scope="col">Tipo cita</th>
-            <th scope="col">Diagnostico</th>
-           
+            <th scope="col">Ocupacion</th>
+            <th scope="col">Consulta</th>
+            <th scope="col">Obervacion</th>
+            <th scope="col">Analisi</th>
+            <th scope="col">Pronostico</th>
+            <th scope="col">Prueba</th>
+            <th scope="col">Recomendacion</th>
+            <th scope="col">Diagnostico  </th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let evaluacion of Evaluacion; index as i ">
+        <tr *ngFor="let evaluacion of evaluaciones; index as i ">
             <th scope="row">{{ i + 1 }}</th>
-            <td>{{ evaluacion.idEvaluacion }} </td>
             <td>{{ evaluacion.identificacionPaciente }} </td>
+            <td>{{evaluacion.ocupacion }}</td>
+            <td>{{ evaluacion.consulta }}</td>
+            <td>{{ evaluacion.observacion }} </td>
             <td>{{ evaluacion.identificacionPsicologo }} </td>
-            <td>{{evaluacion.tipoCita }}</td>
-            <td>{{ evaluacion.diagnostico }}</td>
+            <td>{{evaluacion.analisis }}</td>
+            <td>{{ evaluacion.pronostico }}</td>
+            <td>{{evaluacion.prueba }}</td>
+            <td>{{ evaluacion.recomendacion }}</td>
          
         </tr> 
     </tbody>

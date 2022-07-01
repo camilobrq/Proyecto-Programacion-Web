@@ -1,20 +1,109 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+<body>
 
-            <section class="form-tratamiento">
-                <h2>Tratamiento</h2>
-                
-                <div>
-                    <input type="text" name="identificacionPaciente" placeholder="identificacion del paciente" 
-                    [(ngModel)]="tratamiento.identificacionPaciente" class="form-control" />
-                </div>
-                
-                <div style="float: right;">
-                    <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>
-                </div>
+    <div class="contenedor-formulario">
+        <div class="iniciar-sesion">
 
-            </section>
+            <div class="container">
+                <div class="row">
+
+                            <h2>Registrar tratamiento</h2>
+                        <form [formGroup]="formGroup">    
+                            <div class="form-group">
+
+                                <input type="text" formControlName="identificacionPaciente" placeholder=" identifiacion Paciente" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.identificacionPaciente.errors }" />
+                                    <div *ngIf="control.identificacionPaciente.errors" class="invalid-feedback">
+                                        <div *ngIf="control.identificacionPaciente.errors.required">La indentificacion del paciente es obligatoria</div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="text" formControlName="identificacionPsicologo" placeholder=" identifiacion Psicologo" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.identificacionPsicologo.errors }" />
+                                    <div *ngIf="control.identificacionPsicologo.errors" class="invalid-feedback">
+                                        <div *ngIf="control.identificacionPsicologo.errors.required">La indentificacion del psicologo  es obligatoria</div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+
+                                <select type="text" formControlName="codigo_3" placeholder=" codigo de 3 caracteres" class="form-control" 
+                                    [ngClass]="{ 'is-invalid':  control.codigo_3.errors }" (click)="listDescripcion3()" (click)="listCodigo4()" >
+                                    <option [value]="codigo_3" *ngFor="let codigo_3 of codigos_3">
+                                        {{codigo_3}}
+                                    </option>
+                                </select>
+                                    <div *ngIf="control.codigo_3.errors" class="invalid-feedback">
+                                        <div *ngIf="control.codigo_3.errors.required">el codigo de 3 caracteres es obligatorio</div>
+                                    </div>
+                            </div>
+                             
+                            <div class="form-group">
+
+                                <select type="text" formControlName="descripcion_3" placeholder=" descripcion de 3 caracteres" class="form-control" 
+                                    [ngClass]="{ 'is-invalid':  control.descripcion_3.errors }" >
+                                    <option [value]="descripcion_3" *ngFor="let descripcion_3 of descripciones_3">
+                                        {{descripcion_3}}
+                                    </option>
+                                </select>
+                                    <div *ngIf="control.descripcion_3.errors" class="invalid-feedback">
+                                        <div *ngIf="control.descripcion_3.errors.required">La descripcion de 3 caracteres es obligatoria</div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+
+                                <select type="text" formControlName="codigo_4" placeholder=" codigo 4 caracteres" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.codigo_4.errors }" (click)="listDescripcion()">
+                                <option [value]="codigo_4" *ngFor="let codigo_4 of codigos_4">
+                                    {{codigo_4}}
+                                </option>
+                                </select>
+                                    <div *ngIf="control.codigo_4.errors" class="invalid-feedback">
+                                        <div *ngIf="control.codigo_4.errors.required">El codigo de 4 caracteres es obligatorio</div>
+                                    </div>
+                            </div>
+                           
+                            <div class="form-group">
+
+                                <select type="text" formControlName="descripcion_4" placeholder=" descripcion codigo 4 caracteres" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.descripcion_4.errors }" >
+                                <option [value]="descripcion_4" *ngFor="let descripcion_4 of descripciones_4">
+                                    {{descripcion_4}}
+                                </option>
+                                </select>
+                                    <div *ngIf="control.descripcion_4.errors" class="invalid-feedback">
+                                        <div *ngIf="control.descripcion_4.errors.required">La descripcion de 4 caracteres es obligatoria</div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="text" formControlName="tratamientoPaso" placeholder=" tratamiento paso a paso" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.tratamientoPaso.errors }" />
+                                    <div *ngIf="control.tratamientoPaso.errors" class="invalid-feedback">
+                                        <div *ngIf="control.tratamientoPaso.errors.required">El tratamiento es obligatorio</div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="text" formControlName="medicacion" placeholder=" Medicacion" class="form-control" 
+                                [ngClass]="{ 'is-invalid':  control.medicacion.errors }" />
+                                    <div *ngIf="control.medicacion.errors" class="invalid-feedback">
+                                        <div *ngIf="control.medicacion.errors.required">La medicacion es obligatoria</div>
+                                    </div>
+                            </div>
+                           
+                      
+                            <div class="text-center">
+                                <button class="btn btn-primary mr-1" (click)="Enfermedad()"
+                                >Ver tabla de enfermedades</button>
+                                <button class="btn btn-primary mr-1" (click)="onSubmit()"
+                                [disabled]="formGroup.invalid">Registrar</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
         </div>
+    </div>  
+    <div class="Fondo-login">
+
     </div>
-</div>
+</body>

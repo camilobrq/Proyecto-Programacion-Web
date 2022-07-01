@@ -31,6 +31,11 @@ import { AgendaComponent } from './Administrador/agenda/agenda.component';
 import {JwtInterceptor} from './services/jwt.interceptor';
 import { AuthGuard } from './services/auth.guard';
 import { ConsultaAgendaComponent } from './Administrador/consulta-agenda/consulta-agenda.component';
+import { ConsultarEnfermedadesComponent } from './Administrador/consultar-enfermedades/consultar-enfermedades.component';
+import { FiltroPersonaPipe } from './pipe/filtro-persona.pipe';
+import { FiltroEnfermedadPipe } from './pipe/filtro-enfermedad.pipe';
+import { ConsultarHistoriaClinicaComponent } from './Administrador/consultar-historia-clinica/consultar-historia-clinica.component';
+import { ConsultaAgendaPacienteComponent } from './Administrador/consulta-agenda-paciente/consulta-agenda-paciente.component';
 
 
 @NgModule({
@@ -59,6 +64,11 @@ import { ConsultaAgendaComponent } from './Administrador/consulta-agenda/consult
     AlertModalComponent,
     AgendaComponent,
     ConsultaAgendaComponent,
+    ConsultarEnfermedadesComponent,
+    FiltroPersonaPipe,
+    FiltroEnfermedadPipe,
+    ConsultarHistoriaClinicaComponent,
+    ConsultaAgendaPacienteComponent,
 
   ],
   imports: [
@@ -69,7 +79,7 @@ import { ConsultaAgendaComponent } from './Administrador/consulta-agenda/consult
     NgbModule,
     RouterModule.forRoot([
       { path: 'personaRegistro', component: PersonaRegistroComponent },
-
+      
 
       {
         path: 'menuAdministrador', component: NavMenuComponent,canActivate: [AuthGuard],
@@ -95,6 +105,7 @@ import { ConsultaAgendaComponent } from './Administrador/consulta-agenda/consult
           { path: 'RegistrarTratamiento', component: TratamientoComponent },
           { path: 'ConsultarTratamiento', component: ConsultaTratamientoComponent },
           { path: 'ConsultarAgenda', component: ConsultaAgendaComponent },
+          { path: 'consultarEnfermedad', component: ConsultarEnfermedadesComponent },
           
         ]
       },
@@ -106,7 +117,8 @@ import { ConsultaAgendaComponent } from './Administrador/consulta-agenda/consult
           { path: 'consultarCitas', component: ConsultarCitasComponent },
           { path: 'consultarEvaluacion', component: ConsultaEvaluacionComponent },
           { path: 'consultarTratamiento', component: ConsultaTratamientoComponent },
-          
+          { path: 'consultarAgendaPaciente', component: ConsultaAgendaPacienteComponent },
+          { path: 'consultarHistoriaClinica', component: ConsultarHistoriaClinicaComponent },
         ]
         
       },

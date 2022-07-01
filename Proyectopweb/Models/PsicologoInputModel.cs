@@ -53,7 +53,7 @@ namespace Proyectopweb.Models
            sexo = psicologo.sexo;
            
            direccion =psicologo.direccion;
-          
+            edad=psicologo.edad;
            UniversidadEgreso=psicologo.UniversidadEgreso;
            fechaFinalizacion=psicologo.fechaFinalizacion;
            areaEspecializada=psicologo.areaEspecializada;

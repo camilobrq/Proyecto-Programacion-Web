@@ -45,7 +45,7 @@ namespace Proyectopweb.Controllers
             }
             return Ok(respuesta.Paciente);
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult<List<PacienteViewModel>> Gets()
         {
@@ -57,7 +57,7 @@ namespace Proyectopweb.Controllers
             return Ok(respuesta.Pacientes.Select(p => new PacienteViewModel(p)));
             //return Ok(new List<PacienteViewModel>());
         }
-
+        [AllowAnonymous]
         [HttpGet("byId")]
         public ActionResult<PacienteViewModel> Gets(string id)
         {
@@ -80,6 +80,7 @@ namespace Proyectopweb.Controllers
                 sexo = pacienteInputModel.sexo,
                 direccion = pacienteInputModel.direccion,
                 Eps = pacienteInputModel.Eps,
+                
                 usuario=new Usuario{
                     tipoUsuario="Paciente",
                     nombreUsuario=pacienteInputModel.nombreUsuario,
@@ -91,6 +92,7 @@ namespace Proyectopweb.Controllers
                 }
 
             };
+            paciente.calcularEdad(paciente.fechaNacimiento);
 
 
             return paciente;

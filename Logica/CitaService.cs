@@ -19,8 +19,11 @@ namespace Logica
         {
             try
             {
+                
                 var Paciente=_context.pacientes.Find(cita.paciente.identificacion);
-                if (Paciente== null)
+                var respuesta= buscar(cita.fechaDeseada,cita.horaCita);
+
+                if (Paciente== null && respuesta==true)
                 {
                     return new CitaGuardarResponse($"No se encuentra registrada la persona en el sistema");
                   
@@ -35,6 +38,17 @@ namespace Logica
                 return new CitaGuardarResponse($"Error inesperado al Guardar: { e.Message}");
             }
 
+        }
+        public bool buscar(DateTime fecha, string hora){
+            List<Cita> citas=_context.citas.ToList();
+            bool bandera=false;
+            foreach(var item in citas){
+                if(item.fechaDeseada.Equals(fecha) && item.horaCita.Trim().Equals(hora) ){
+                    bandera=true;
+                    
+                }
+            }
+            return bandera;
         }
         public string Eliminar(string idCita)
         {

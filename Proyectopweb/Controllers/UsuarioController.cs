@@ -29,10 +29,10 @@ namespace Proyectopweb.Controllers
             this.usuarioService = new UsuarioService(context);
 
            
-            
+            /*
                 _context.usuarios.Add(new Entidad.Usuario() { nombreUsuario = "admin", contrasena = "admin", correo = "admin@gmail.com", estado = "AC", telefono = "31800000000", tipoUsuario="Administrador" });
                  var i = _context.SaveChanges();
-            
+            */
             //_jwtService= jwtService;
             _jwtService = new JwtService(appSettings);
             usuarioService = new UsuarioService(context);

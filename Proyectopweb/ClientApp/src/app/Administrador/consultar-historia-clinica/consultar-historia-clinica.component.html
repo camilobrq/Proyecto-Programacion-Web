@@ -1,0 +1,108 @@
+
+<div class="lado-Izquierdo">
+
+<div class="consulta">
+   
+    <hr>
+    <table class="table table-striped" *ngIf='personas && personas.length'>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">identificación</th>
+                <th scope="col">Nombre </th>
+                <th scope="col">Apellido </th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Nombre Eps</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of personas|filtroPaciente:searchText; index as i  ">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ persona.identificacion }} </td>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.apellido }}</td>
+                <td>{{persona.sexo }}</td>
+                <td>{{ persona.edad }}</td>
+                <td>{{ persona.eps }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+    
+</div>
+
+<div class="lado-Derecho">
+    <div class="row">
+        <div class="col-6">
+            <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="Type to filter">
+        </div>
+    </div>
+    <hr>
+    <table class="table table-striped" *ngIf='evaluaciones && evaluaciones.length'>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">identificación Paciente</th>
+                <th scope="col">Ocupacion</th>
+                <th scope="col">Consulta</th>
+                <th scope="col">Obervacion</th>
+                <th scope="col">Analisi</th>
+                <th scope="col">Pronostico</th>
+                <th scope="col">Prueba</th>
+                <th scope="col">Recomendacion</th>
+                <th scope="col">Diagnostico  </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let evaluacion of evaluaciones; index as i ">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ evaluacion.identificacionPaciente }} </td>
+                <td>{{evaluacion.ocupacion }}</td>
+                <td>{{ evaluacion.consulta }}</td>
+                <td>{{ evaluacion.observacion }} </td>
+                <td>{{ evaluacion.identificacionPsicologo }} </td>
+                <td>{{evaluacion.analisis }}</td>
+                <td>{{ evaluacion.pronostico }}</td>
+                <td>{{evaluacion.prueba }}</td>
+                <td>{{ evaluacion.recomendacion }}</td>
+             
+            </tr> 
+        </tbody>
+    </table>
+    
+</div>
+<div class="Abajo">
+    
+<hr>
+<table class="table table-striped" *ngIf='tratamientos && tratamientos.length'>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">id Pciente</th>
+            <th scope="col">Codigo de 3 caracteres</th>
+            <th scope="col">descripcion de 3 caracteres</th>
+            <th scope="col">codigo de 4 caracteres</th>
+            <th scope="col">descripcion de 4 caracteres</th>
+            <th scope="col">medicacion</th>
+            <th scope="col">Tratamiento a seguir</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tratamiento of tratamientos; index as i ">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ tratamiento.identificacionPaciente }} </td>
+            <td>{{ tratamiento.codigo_3 }}</td>
+            <td>{{tratamiento.descripcion_3 }}</td>
+            <td>{{ tratamiento.codigo_4 }}</td>
+            <td>{{ tratamiento.descripcion_4 }}</td>
+            <td>{{ tratamiento.medicacion }}</td>
+            <td>{{ tratamiento.tratamientoPaso }}</td>
+        </tr> 
+    </tbody>
+</table>
+
+</div>

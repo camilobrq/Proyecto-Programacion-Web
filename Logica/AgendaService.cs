@@ -23,7 +23,8 @@ namespace Logica
 
 
                 var Psicologo = _context.psicologos.Find(agenda.psicologo.identificacion);
-                if (Psicologo == null)
+                
+                if (Psicologo == null )
                 {
                     return new AgendaGuardarResponse($"No se encuentra registrado el psicologo en el sistema");
 
@@ -44,6 +45,7 @@ namespace Logica
             }
 
         }
+        
         public string Eliminar(string idAgenda)
         {
             try

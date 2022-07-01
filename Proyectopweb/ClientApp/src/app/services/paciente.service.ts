@@ -20,8 +20,8 @@ export class PacienteService {
   get(): Observable<Paciente[]> {
     return this.http.get<Paciente[]>(this.baseUrl + 'api/Paciente')
       .pipe(
-        tap(_ => this.handleErrorService.log(_.toString())),
-        catchError(this.handleErrorService.handleError<Paciente[]>('Consulta Paciente', null))
+        tap(_ => this.handleErrorService),
+        catchError(this.handleErrorService.handleError<Paciente[]>(null))
       );
   }
   post(paciente: Paciente): Observable<Paciente> {

@@ -1,10 +1,49 @@
-.form-tratamiento {
-  width: 50%;
-  text-align: center;
-  margin-left: 25%;
-  margin-top: 10%;
+body{
+    height: 1080px;
+    width: 100%;
 }
-.form-group {
-  width: 80%;
-  margin-left: 10%;
+.iniciar-sesion{
+    width: 76%;
+    height: 90%;
+    margin-left: 12%;
+    margin-top: 5%;
+    height: 100%;
+    text-align: center;
+}
+
+button{
+    float: left;
+}
+
+.centrar{
+    margin-left: 50%;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+p{
+    padding-top: 5px;
+}
+
+.contenedor-formulario{
+    position: center;
+    float: left;
+    width: 35%;
+    height: 820px;
+    padding-bottom: 20px;
+}
+
+.Fondo-login{
+    float: left;
+    width: 65%;
+    height: 100%;
+    background-image: url(../../../assets/4703436.jpg);
+    background-size: cover;
+}
+
+h3{
+    text-align: left;
+    font-size: 15px;
 }

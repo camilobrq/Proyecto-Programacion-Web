@@ -66,9 +66,11 @@ namespace Proyectopweb.Models
             fechaNacimiento = paciente.fechaNacimiento;
             direccion = paciente.direccion;
             Eps = paciente.Eps;
+            edad=paciente.edad;
             
             
             
         }
+        public int edad { get; set; }
     }
 }

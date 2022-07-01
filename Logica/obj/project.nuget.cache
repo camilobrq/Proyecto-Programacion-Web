@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d4L7NoL+QUvn2pdzVP5bPHZK+VSvOwZIUENeRVzCoqHNDyWArQmmSaouN9xDDeA8ehNrNEgFgFcAjW9ql6eJxg==",
+  "dgSpecHash": "YX0ZOzimKGOyaSWQLdQP+yionq8kgyz+YhbTg/mI9A7rr4rehPpzUt0tmiZS5Chhmlu2UQ7Wzrgo6HFcsZyjkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\windows 10\\Desktop\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+  "projectFilePath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\windows 10\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\windows 10\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -65,3 +65,37 @@ C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Log
 C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.dll
 C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\ref\Logica.dll
 C:\Users\windows 10\Desktop\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.deps.json
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\ref\Logica.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.pdb
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\ref\Logica.dll
+C:\Users\windows 10\Desktop\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.deps.json
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Logica.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Datos.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\bin\Debug\net5.0\Entidad.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\refint\Logica.dll
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.pdb
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\ref\Logica.dll

@@ -26,7 +26,7 @@ namespace Proyectopweb.Controllers
            this._psicologoService  = new PsicologoService(context);
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult<PsicologoViewModel>> Guardar(PsicologoInputModel psicologoInputModel)
         {
@@ -46,7 +46,7 @@ namespace Proyectopweb.Controllers
             return Ok(respuesta.psicologo);
         }
 
-        [HttpGet]
+        [AllowAnonymous]
          [HttpGet]
       public ActionResult<IEnumerable<PsicologoViewModel>> Gets()
       {
@@ -57,6 +57,7 @@ namespace Proyectopweb.Controllers
             }
             return Ok(respuesta.Psicologo.Select(p => new PsicologoViewModel(p)));
       }
+      [AllowAnonymous]
         [HttpGet("byId")]
         public ActionResult<PsicologoViewModel> Gets(string id)
         {
@@ -80,7 +81,8 @@ namespace Proyectopweb.Controllers
             UniversidadEgreso=PsicologoInputModel.UniversidadEgreso,
            fechaFinalizacion=PsicologoInputModel.fechaFinalizacion,
            areaEspecializada=PsicologoInputModel.areaEspecializada,
-           mesesExperiencia=PsicologoInputModel.mesesExperiencia,
+           mesesExperiencia=PsicologoInputModel.mesesExperiencia
+           ,
             usuario=new Usuario{
                     tipoUsuario="Psicologo",
                     nombreUsuario=PsicologoInputModel.nombreUsuario,
@@ -94,7 +96,7 @@ namespace Proyectopweb.Controllers
 
             };
                     
-            
+            psicologo.calcularEdad(psicologo.fechaNacimiento);
             return psicologo;
         }
     }
