@@ -6,14 +6,14 @@
             <div class="container">
                 <div class="row">
 
-                            <h2>Registrar Agenda</h2>
+                            <h2>Registrar Agenda </h2>
                         <form [formGroup]="formGroup">    
                             <div class="form-group">
 
                                 <input type="text" formControlName="idPsicologo" placeholder=" Identificacion" class="form-control" 
                                 [ngClass]="{ 'is-invalid':  control.idPsicologo.errors }" />
                                     <div *ngIf="control.idPsicologo.errors" class="invalid-feedback">
-                                        <div *ngIf="control.idPsicologo.errors.required">La indentificacion es obligatoria</div>
+                                        <div *ngIf="control.idPsicologo.errors.required">La indentificacion es obligatoria </div>
                                     </div>
                             </div>
                            
