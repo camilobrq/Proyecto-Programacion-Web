@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "42hTWaQwb1ngdNfVWfgqAioeFYjrE6HfgvJV8AY/pMxTRfY26RkPGI/yt0A2soybwD+kcJXVnakeexezJhli0w==",
+  "dgSpecHash": "F6tV15NBdPHpCmLjNGqAMnnTh1O9R7909yTMJI1RS9gcaqAzhjPxLcbq2oEk2AhzbtMWHm4jQ5ajYBVBeS7lqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\windows 10\\Desktop\\ProyectoPweb\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+  "projectFilePath": "C:\\Users\\Camilo\\Desktop\\Programacion\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\windows 10\\.nuget\\packages\\system.componentmodel.annotations\\6.0.0-preview.4.21253.7\\system.componentmodel.annotations.6.0.0-preview.4.21253.7.nupkg.sha512"
+    "C:\\Users\\Camilo\\.nuget\\packages\\system.componentmodel.annotations\\6.0.0-preview.4.21253.7\\system.componentmodel.annotations.6.0.0-preview.4.21253.7.nupkg.sha512",
+    "C:\\Users\\Camilo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Camilo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Camilo\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
