@@ -24,13 +24,13 @@ p{
     float: left;
     width: 35%;
     height: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 500px;
 }
 
 .Fondo-login{
     float: left;
     width: 65%;
     height: 100%;
-    background-image: url(../../../assets/3872886.jpg);
+    background-image: url(/assets/psicologos.jpg);
     background-size: cover;
 }

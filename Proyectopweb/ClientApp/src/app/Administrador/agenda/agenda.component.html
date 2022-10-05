@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
 
-                            <h2>Registrar Agenda </h2>
+                            <h2>Registrar agenda psicologo</h2>
                         <form [formGroup]="formGroup">    
                             <div class="form-group">
 
@@ -19,7 +19,7 @@
                            
                            
                             <div class="form-group">
-                                <label for="">Fecha deseada</label>
+                                <label for="">Fecha de la cita</label>
 
                                  <input type="date" formControlName="fechaDeseada"  class="form-control" 
                                  [ngClass]="{ 'is-invalid':  control.fechaDeseada.errors }"/>
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="form-group">  
-                                <label>Hora deseada</label>  
+                                <label>Hora de la cita</label>  
                                 <select type="text" formControlName="horaCita" class="form-control" 
                                  [ngClass]="{ 'is-invalid':  control.horaCita.errors }">              
                                 
@@ -44,7 +44,7 @@
                             </div>
                             <div class="text-center">
                                 <button class="btn btn-primary mr-1" (click)="onSubmit()"
-                                [disabled]="formGroup.invalid">Registrar</button>
+                                [disabled]="formGroup.invalid">Agendar</button>
                             </div>
                         </form>
                 </div>
