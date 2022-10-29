@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>Proyectopweb</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>afd4f61c-346e-42b4-9b11-e818ad5fdafe</ProjectGuid>
+  <FullPath>D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\ProyectoPWEB\Proyectopweb.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\.sonarqube\conf\3\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\.sonarqube\out\3.Razor\Issues.Views.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\.sonarqube\out\3.Razor</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net5.0</TargetFramework>
+</ProjectInfo>

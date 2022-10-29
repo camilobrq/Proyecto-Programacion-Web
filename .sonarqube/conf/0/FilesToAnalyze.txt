@@ -1,0 +1,12 @@
+﻿D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Administrador.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Agenda.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Cita.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Disponibilidad.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Enfermedad.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Eps.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Evaluacion.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Paciente.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Persona.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Psicologo.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Tratamiento.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Usuario.cs

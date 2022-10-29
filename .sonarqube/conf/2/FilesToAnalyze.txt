@@ -1,0 +1,10 @@
+﻿D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\AdministradorService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\AgendaService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\CitaService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\EnfermedadService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\EpsService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\EvaluacionService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\PacienteService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\PsicologoService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\TratamientoService.cs
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\UsuarioService.cs

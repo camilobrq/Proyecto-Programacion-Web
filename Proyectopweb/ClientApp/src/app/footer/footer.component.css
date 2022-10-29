@@ -1,11 +1,11 @@
 *{
-    color: #978c8c;
+    color: #131414;
 }
 
 .contendor-footer{
     width: 100%;
     height: 200px;
-    background-color: #385A64;
+    background-color: #0cafe0;
     color: white;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: large;
@@ -30,7 +30,7 @@
 p{
     margin: 0px;
     font-size: 15px;
-
+    text-align: center;
 }
 
 a{

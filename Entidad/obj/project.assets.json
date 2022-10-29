@@ -111,20 +111,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\windows 10\\.nuget\\packages\\": {}
+    "C:\\Users\\Camilo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+      "projectUniqueName": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
       "projectName": "Entidad",
-      "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
-      "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-      "outputPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\obj\\",
+      "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+      "packagesPath": "C:\\Users\\Camilo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -169,7 +177,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,599 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador de Microsoft (R) Visual C#",
+        "version": "4.2.0.0",
+        "fileVersion": "4.2.0-4.22220.2 (1e40aa11)",
+        "semanticVersion": "4.2.0",
+        "language": "es-MX"
+      },
+      "results": [
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/AgendaService.cs",
+                "region": {
+                  "startLine": 170,
+                  "startColumn": 1,
+                  "endLine": 170,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EnfermedadService.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PacienteService.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 16,
+                  "endLine": 25,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 16,
+                  "endLine": 33,
+                  "endColumn": 69
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 205,
+                  "startColumn": 19,
+                  "endLine": 205,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 205,
+                  "startColumn": 13,
+                  "endLine": 205,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 205,
+                  "startColumn": 13,
+                  "endLine": 205,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'CitaNoEncontradaException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'CitaNoEncontradaException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/UsuarioService.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 16,
+                  "endLine": 22,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 19,
+                  "endLine": 177,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 13,
+                  "endLine": 177,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/PsicologoService.cs",
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 13,
+                  "endLine": 177,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'PsicologoNoEncontradaException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'PsicologoNoEncontradaException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EvaluacionService.cs",
+                "region": {
+                  "startLine": 150,
+                  "startColumn": 18,
+                  "endLine": 150,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EvaluacionService.cs",
+                "region": {
+                  "startLine": 150,
+                  "startColumn": 12,
+                  "endLine": 150,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EvaluacionService.cs",
+                "region": {
+                  "startLine": 150,
+                  "startColumn": 12,
+                  "endLine": 150,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'EvaluacionNoEncontradaException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'EvaluacionNoEncontradaException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/AgendaService.cs",
+                "region": {
+                  "startLine": 279,
+                  "startColumn": 19,
+                  "endLine": 279,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/AgendaService.cs",
+                "region": {
+                  "startLine": 279,
+                  "startColumn": 13,
+                  "endLine": 279,
+                  "endColumn": 18
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/AgendaService.cs",
+                "region": {
+                  "startLine": 279,
+                  "startColumn": 13,
+                  "endLine": 279,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'AgendaNoEncontradaException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'AgendaNoEncontradaException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/TratamientoService.cs",
+                "region": {
+                  "startLine": 151,
+                  "startColumn": 18,
+                  "endLine": 151,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/TratamientoService.cs",
+                "region": {
+                  "startLine": 151,
+                  "startColumn": 12,
+                  "endLine": 151,
+                  "endColumn": 17
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/TratamientoService.cs",
+                "region": {
+                  "startLine": 151,
+                  "startColumn": 12,
+                  "endLine": 151,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add 'System.SerializableAttribute' attribute on 'TratamientoNoEncontradaException' because it implements 'ISerializable'.",
+              "1": "Add a 'protected' constructor 'TratamientoNoEncontradaException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/CitaService.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 49,
+                  "endLine": 26,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3267",
+          "level": "warning",
+          "message": "Loop should be simplified by calling Select(item => item.Administradora))",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EpsService.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 33,
+                  "endLine": 40,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3267",
+          "level": "warning",
+          "message": "Loop should be simplified by calling Select(item => item.Codigo_3))",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EnfermedadService.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 33,
+                  "endLine": 40,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3267",
+          "level": "warning",
+          "message": "Loop should be simplified by calling Select(item => item.idPaciente))",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/CitaService.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 33,
+                  "endLine": 114,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'almacenar'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EpsService.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 17,
+                  "endLine": 39,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'enfermedads'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/EnfermedadService.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 30,
+                  "endLine": 36,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'agenda'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Upc/ProyectoModificaciones/Proyecto-Programacion-Web/Logica/AgendaService.cs",
+                "region": {
+                  "startLine": 191,
+                  "startColumn": 26,
+                  "endLine": 191,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "Redundant Boolean literals should be removed from expressions to improve readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3267": {
+          "id": "S3267",
+          "shortDescription": "Loops should be simplified with \"LINQ\" expressions",
+          "fullDescription": "When a loop is filtering, selecting or aggregating, those functions can be handled with a clearer, more concise LINQ expression instead.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3267",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S3925": {
+          "id": "S3925",
+          "shortDescription": "\"ISerializable\" should be implemented correctly",
+          "fullDescription": "The ISerializable interface is the mechanism to control the type serialization process. If not implemented correctly this could result in an invalid serialization and hard to detect bugs.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3925",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

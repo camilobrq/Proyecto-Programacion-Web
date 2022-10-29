@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {}
+    "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
+    "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-        "outputPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\obj\\",
+        "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\Camilo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Datos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -28,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+              "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+                "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -72,22 +78,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+    "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
-        "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-        "outputPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\obj\\",
+        "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj",
+        "packagesPath": "C:\\Users\\Camilo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -132,22 +144,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {
+    "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
-        "packagesPath": "C:\\Users\\windows 10\\.nuget\\packages\\",
-        "outputPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Logica\\obj\\",
+        "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Logica\\Logica.csproj",
+        "packagesPath": "C:\\Users\\Camilo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Logica\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Camilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -160,11 +178,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
-                "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
+              "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Datos\\Datos.csproj"
               },
-              "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
-                "projectPath": "D:\\Upc\\ProyectoModificaciones\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
+              "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj": {
+                "projectPath": "C:\\Users\\Camilo\\Downloads\\Proyecto-Programacion-Web\\Proyecto-Programacion-Web\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -193,7 +211,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }

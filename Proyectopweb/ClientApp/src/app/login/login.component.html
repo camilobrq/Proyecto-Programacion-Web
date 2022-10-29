@@ -2,11 +2,11 @@
   <div class="contenedor-formulario">
 
     <div class="iniciar-sesion">
-      <h1>Vitalmente</h1>
+      <h1>Psicotec</h1>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
         <div class="mb-3">
-          <input type="text" formControlName="nombreUsuario" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Usuario"
+          <input type="text" formControlName="nombreUsuario" class="form-control" id="usuario" placeholder="Nombre de Usuario"
           [ngClass]="{ 'is-invalid': submitted && f.nombreUsuario.errors }"   />
           <div *ngIf="submitted && f.nombreUsuario.errors" class="invalid-feedback">
             <div *ngIf="f.nombreUsuario.errors.required">Nombre usuario is required</div>
@@ -14,14 +14,14 @@
 
         </div>
         <div class="mb-3">
-          <input type="password" formControlName="contrasena" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña"
+          <input type="password" formControlName="contrasena" class="form-control" id="contrasena" placeholder="Contraseña"
           [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
           <div *ngIf="submitted && f.contrasena.errors" class="invalid-feedback">
             <div *ngIf="f.contrasena.errors.required">contraseña is required</div>
           </div>
         </div>
-        <p>¿No has creado tu cuenta de paciente? <a [routerLink]='["/personaRegistro"]'>Creala aqui</a></p>
-         <button [disabled]="loading" class="btn btn-primary">
+        <p>Crea tu cuenta de paciente. <a [routerLink]='["/personaRegistro"]'>Creala aqui</a></p>
+         <button [disabled]="loading" class="btn-primary">
                       <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                       Login
         </button>

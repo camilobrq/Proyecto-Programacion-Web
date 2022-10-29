@@ -1,0 +1,13 @@
+_
+VD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\AdministradorService.csutf-8X
+OD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\AgendaService.csutf-8V
+MD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\CitaService.csutf-8\
+SD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\EnfermedadService.csutf-8U
+LD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\EpsService.csutf-8\
+SD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\EvaluacionService.csutf-8Z
+QD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\PacienteService.csutf-8[
+RD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\PsicologoService.csutf-8]
+TD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\TratamientoService.csutf-8Y
+PD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\UsuarioService.csutf-8‰
+~D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.csutf-8q
+fD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.csutf-8

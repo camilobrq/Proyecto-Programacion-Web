@@ -1,0 +1,15 @@
+Y
+PD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Administrador.csutf-8R
+ID:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Agenda.csutf-8P
+GD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Cita.csutf-8Z
+QD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Disponibilidad.csutf-8V
+MD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Enfermedad.csutf-8O
+FD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Eps.csutf-8V
+MD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Evaluacion.csutf-8T
+KD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Paciente.csutf-8S
+JD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Persona.csutf-8U
+LD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Psicologo.csutf-8W
+ND:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Tratamiento.csutf-8S
+JD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\Usuario.csutf-8Š
+D:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.csutf-8s
+hD:\Upc\ProyectoModificaciones\Proyecto-Programacion-Web\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.csutf-8

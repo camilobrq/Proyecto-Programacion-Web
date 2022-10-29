@@ -1,19 +1,40 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using Entidad;
 
 namespace Proyectopweb.Models
 {
     public class EvaluacionInputModel
     {
+        [Required(ErrorMessage ="debe llenar el campo de identificacion")]
+        [StringLength(10, ErrorMessage = "la identificacion debe tener de 7-10 digitos", MinimumLength = 7)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
         public string identificacionPaciente {get; set;}
+        [Required(ErrorMessage = "debe llenar el campo de identificacion")]
+        [StringLength(10, ErrorMessage = "la identificacion debe tener de 7-10 digitos", MinimumLength = 7)]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "* Solo se permiten números.")]
         public string identificacionPsicologo {get; set;}
+        [Required(ErrorMessage = "debe llenar el campo de diagnostico")]
+        [StringLength(200, ErrorMessage = "numero maximo de caracteres es de 200")]
         public string diagnostico {get; set;}
-        public string ocupacion { get; set; } 
+        [Required(ErrorMessage = "debe llenar el campo de ocupacion")]
+        [StringLength(20, ErrorMessage = "numero maximo de caracteres es de 20")]
+        public string ocupacion { get; set; }
+        [Required(ErrorMessage = "debe llenar el campo de consulta")]
+        [StringLength(50, ErrorMessage = "numero maximo de caracteres es de 50")]
         public string consulta { get; set; }
+        [Required(ErrorMessage = "debe llenar el campo de observacion")]
+        [StringLength(50, ErrorMessage = "numero maximo de caracteres es de 50")]
         public string observacion { get; set; }
         public string prueba { get; set; }
+        [Required(ErrorMessage = "debe llenar el campo de analisis")]
+        [StringLength(50, ErrorMessage = "numero maximo de caracteres es de 50")]
         public string analisis { get; set; }
+        [Required(ErrorMessage = "debe llenar el campo de pronostico")]
+        [StringLength(50, ErrorMessage = "numero maximo de caracteres es de 50")]
         public string pronostico { get; set; }
+        [Required(ErrorMessage = "debe llenar el campo de recomendacion")]
+        [StringLength(200, ErrorMessage = "numero maximo de caracteres es de 200")]
         public string recomendacion { get; set; }
 
     }
